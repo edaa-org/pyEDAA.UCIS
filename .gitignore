@@ -1,0 +1,10 @@
+# Python cache and object files
+__pycache__/
+*.py[cod]
+
+# Sphinx documentation
+doc/_build
+doc/_theme
+
+# PyCharm project
+/.idea/workspace.xml
