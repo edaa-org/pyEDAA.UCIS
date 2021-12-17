@@ -32,6 +32,14 @@ The pyEDAA.UCIS Documentation
 
 Unified Coverage Interoperability Standard (UCIS).
 
+.. image:: _static/work-in-progress.png
+   :height: 275 px
+   :align: center
+   :target: https://GitHub.com/edaa-org/pyEDAA.UCIS
+
+.. raw:: html
+
+    <br>
 
 .. _contributors:
 
