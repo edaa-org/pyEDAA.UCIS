@@ -4,11 +4,11 @@
    # percent encoding so that the URL is properly parsed.
 
 .. # Sourcecode link to GitHub
-.. |SHIELD:svg:UCIS-github| image:: https://img.shields.io/badge/pyEDAA-pyEDAA.UCIS-29b6f6.svg?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
+.. |SHIELD:svg:UCIS-github| image:: https://img.shields.io/badge/pyEDAA-UCIS-29b6f6.svg?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
    :alt: Sourcecode on GitHub
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS
-.. |SHIELD:png:UCIS-github| image:: https://raster.shields.io/badge/pyEDAA-pyEDAA.UCIS-29b6f6.svg?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
+.. |SHIELD:png:UCIS-github| image:: https://raster.shields.io/badge/pyEDAA-UCIS-29b6f6.svg?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
    :alt: Sourcecode on GitHub
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS
