@@ -55,9 +55,10 @@ python ucdb2cobertura.py -i ucdb.xml -o cobertura.xml
 
 ## Contributors
 * [Patrick Lehmann](https://github.com/Paebbels) (Maintainer)
+* [Unai Martinez-Corral](https://GitHub.com/umarcor) (Maintainer)
 * [Artur Porebski (Aldec Inc.)](https://github.com/por3bski)
 * [Michal Pacula (Aldec Inc.)](https://github.com/mikep996)
-* [and more...](https://github.com/pyTooling/pyTooling.CLIAbstraction/graphs/contributors)
+* [and more...](https://github.com/edaa-org/pyEDAA.UCIS/graphs/contributors)
 
 
 ## License

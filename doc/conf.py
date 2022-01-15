@@ -7,23 +7,31 @@ from os.path import abspath
 from pathlib import Path
 from json import loads
 
+from pyTooling.Packaging import extractVersionInformation
 
 ROOT = Path(__file__).resolve().parent
 
 sys_path.insert(0, abspath('.'))
 sys_path.insert(0, abspath('..'))
+sys_path.insert(0, abspath('../pyEDAA/UCIS'))
+#sys_path.insert(0, abspath('_extensions'))
 
 
 # ==============================================================================
-# Project information
+# Project information and versioning
 # ==============================================================================
-project =   "pyEDAA.UCIS"
-copyright = "2021-2021 Patrick Lehmann - Boetzingen, Germany"
-author =    "Patrick Lehmann"
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+project =     "pyEDAA.UCIS"
 
-version = "latest"     # The short X.Y version.
-release = "latest"   # The full version, including alpha/beta/rc tags.
+packageInformationFile = Path(f"../{project.replace('.', '/')}/__init__.py")
+versionInformation = extractVersionInformation(packageInformationFile)
 
+author =    versionInformation.Author
+copyright = versionInformation.Copyright
+version =   ".".join(versionInformation.Version.split(".")[:2])  # e.g. 2.3    The short X.Y version.
+release =   versionInformation.Version
 
 # ==============================================================================
 # Miscellaneous settings
