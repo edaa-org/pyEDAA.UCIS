@@ -126,8 +126,8 @@ License
    :caption: Appendix
    :hidden:
 
-   Coverage Report ➚ <https://pyTooling.GitHub.io/pyTooling.CLIAbstraction/coverage/>
-   Static Type Check Report ➚ <https://pyTooling.GitHub.io/pyTooling.CLIAbstraction/typing/>
+   Coverage Report ➚ <https://edaa-org.GitHub.io/pyEDAA.UCIS/coverage/>
+   Static Type Check Report ➚ <https://edaa-org.GitHub.io/pyEDAA.UCIS/typing/>
    License
    Doc-License
    Glossary
