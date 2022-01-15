@@ -31,6 +31,18 @@ Unified Coverage Interoperability Standard (UCIS)
   <a title="edaa-org.github.io/pyEDAA.UCIS" href="https://edaa-org.github.io/pyEDAA.UCIS"><img height="275px" src="doc/_static/work-in-progress.png"/></a>
 </p>
 
+
+## Usage
+
+```Bash
+# Convert ACDB file into UCDB file (XML format)
+acdb2xml -i aggregate.acdb -o ucdb.xml
+
+# Convert UCDB file into Cobertura format
+python ucdb2cobertura.py -i ucdb.xml -o cobertura.xml
+```
+
+
 # References
 
 - [accellera.org/activities/working-groups/ucis](https://www.accellera.org/activities/working-groups/ucis/)
@@ -39,3 +51,19 @@ Unified Coverage Interoperability Standard (UCIS)
   - [fvutils/pyucis-viewer](https://github.com/fvutils/pyucis-viewer)
 - [Open Source Verification Bundle (OSVB): Open Source Verification Report (OSVR)](https://umarcor.github.io/osvb/apis/logging.html#unified-coverage-database-ucdb)
 - [UCIS licensing [umarcor/umarcor#3]](https://github.com/umarcor/umarcor/issues/3)
+
+
+## Contributors
+* [Patrick Lehmann](https://github.com/Paebbels) (Maintainer)
+* [Artur Porebski (Aldec Inc.)](https://github.com/por3bski)
+* [Michal Pacula (Aldec Inc.)](https://github.com/mikep996)
+* [and more...](https://github.com/pyTooling/pyTooling.CLIAbstraction/graphs/contributors)
+
+
+## License
+
+This Python package (source code) licensed under [Apache License 2.0](LICENSE.md).  
+The accompanying documentation is licensed under [Creative Commons - Attribution 4.0 (CC-BY 4.0)](doc/Doc-License.rst).
+
+-------------------------
+SPDX-License-Identifier: Apache-2.0
