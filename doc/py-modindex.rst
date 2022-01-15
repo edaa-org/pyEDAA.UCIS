@@ -1,4 +1,4 @@
 .. This file is a placeholder and will be replaced
 
-Module Index
-############
+Python Module Index
+###################

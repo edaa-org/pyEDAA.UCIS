@@ -41,19 +41,82 @@ Unified Coverage Interoperability Standard (UCIS).
 
     <br>
 
+
+.. _goals:
+
+Main Goals
+**********
+
+*tbd*
+
+
+.. _usecase:
+
+Use Cases
+*********
+
+*tbd*
+
+
 .. _contributors:
 
 Contributors
 ************
 
 * `Patrick Lehmann <https://GitHub.com/Paebbels>`__ (Maintainer)
+* `Artur Porebski (Aldec Inc.) <https://github.com/por3bski>`__
+* `Michal Pacula (Aldec Inc.) <https://github.com/mikep996>`__
 * `Unai Martinez-Corral <https://GitHub.com/umarcor/>`__
 * `and more... <https://GitHub.com/edaa-org/pyEDAA.UCIS/graphs/contributors>`__
+
+
+.. _license:
+
+License
+*******
+
+.. only:: html
+
+   This Python package (source code) is licensed under `Apache License 2.0 <Code-License.html>`__. |br|
+   The accompanying documentation is licensed under `Creative Commons - Attribution 4.0 (CC-BY 4.0) <Doc-License.html>`__.
+
+.. only:: latex
+
+   This Python package (source code) is licensed under **Apache License 2.0**. |br|
+   The accompanying documentation is licensed under **Creative Commons - Attribution 4.0 (CC-BY 4.0)**.
+
 
 .. toctree::
    :hidden:
 
    Used as a layer of EDA² ➚ <https://edaa-org.github.io/>
+
+.. toctree::
+   :caption: Introduction
+   :hidden:
+
+   Installation
+   Dependency
+
+.. raw:: latex
+
+   \part{Main Documentation}
+
+.. toctree::
+   :caption: Main Documentation
+   :hidden:
+
+   UCDB2Cobertura
+
+.. raw:: latex
+
+   \part{References}
+
+.. toctree::
+   :caption: References
+   :hidden:
+
+   pyEDAA.UCIS/index
 
 .. raw:: latex
 
@@ -63,6 +126,11 @@ Contributors
    :caption: Appendix
    :hidden:
 
+   Coverage Report ➚ <https://pyTooling.GitHub.io/pyTooling.CLIAbstraction/coverage/>
+   Static Type Check Report ➚ <https://pyTooling.GitHub.io/pyTooling.CLIAbstraction/typing/>
+   License
+   Doc-License
+   Glossary
    genindex
 
 .. #
