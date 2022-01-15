@@ -74,12 +74,12 @@ class UcdbParser:
 		self.coverage.add_statement(source, file_name, line, count)
 
 
-if __name__ == "__main__":
+def main():
 	import argparse
 
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-i", "--input", help="Input UCDB XML file")
-	parser.add_argument("-o", "--output", help="Output Cobertura XML file")
+	parser.add_argument("-i", "--input", help="Input UCDB XML file.")
+	parser.add_argument("-o", "--output", help="Output Cobertura XML file.")
 
 	args = parser.parse_args()
 
@@ -89,4 +89,9 @@ if __name__ == "__main__":
 	with open(args.output, 'w') as output_file:
 		output_file.write(model.get_xml().decode("utf-8"))
 
-	print("Covered {}% of statements".format(model.lines_covered / model.lines_valid * 100))
+	coverage = model.lines_covered / model.lines_valid * 100
+	print(f"Covered {coverage} % of statements")
+
+
+if __name__ == "__main__":
+	main()

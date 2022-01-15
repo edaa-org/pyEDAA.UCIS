@@ -31,16 +31,22 @@
 #
 """Data model of the Cobertura format."""
 from datetime import time
+from typing import Dict, Set
 
 from lxml import etree
 
 
 class Class:
+	source_file: str
+	lines: Dict[int, int]
+	lines_valid: int
+	lines_covered: int
+
 	def __init__(self, source_file: str):
-		self.source_file = source_file  # type: str
-		self.lines = {}  # type: dict[int, int]
-		self.lines_valid = 0  # type: int
-		self.lines_covered = 0  # type: int
+		self.source_file = source_file
+		self.lines = {}
+		self.lines_valid = 0
+		self.lines_covered = 0
 
 	def add_statement(self, line: int, count: int) -> None:
 		assert line not in self.lines.keys()
@@ -71,11 +77,16 @@ class Class:
 
 
 class Package:
+	name: str
+	classes: Dict[str, Class]
+	lines_valid: int
+	lines_covered: int
+
 	def __init__(self, name: str):
-		self.name = name  # type: str
-		self.classes = {}  # type: dict[str, Class]
-		self.lines_valid = 0  # type: int
-		self.lines_covered = 0  # type: int
+		self.name = name
+		self.classes = {}
+		self.lines_valid = 0
+		self.lines_covered = 0
 
 	def add_statement(self, class_name: str, source_file: str, line: int, count: int) -> None:
 		try:
@@ -105,11 +116,16 @@ class Package:
 
 
 class Coverage:
+	sources: Set
+	packages: Dict[str, Package]
+	lines_valid: int
+	lines_covered: int
+
 	def __init__(self):
-		self.sources = set()  # type: set
-		self.packages = {}  # type: dict[str, Package]
-		self.lines_valid = 0  # type: int
-		self.lines_covered = 0  # type: int
+		self.sources = set()
+		self.packages = {}
+		self.lines_valid = 0
+		self.lines_covered = 0
 
 	def add_statement(self, source: str, file: str, line: int, count: int) -> None:
 		try:
