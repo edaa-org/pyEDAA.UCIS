@@ -1,0 +1,2637 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ux:ucdb version="Riviera-PRO 2021.10" xmlns:ux="www.aldec.com">
+<ux:attr key="path_separator" type="str">/</ux:attr>
+<ux:attr key="hier_mode" type="int">1</ux:attr>
+<ux:hnode logical_name="merge" physical_name="cov/aggregate/aggregate.acdb" type="2">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:associated" type="int">0</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/PLC2/GitLab-CI/Sanity-Check</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-fyunidjg-project-1237-concurrent-1</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Merge</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2021.10</ux:attr>
+<ux:attr key="UCIS:args" type="str">acdb merge -o cov/aggregate/aggregate.acdb -i cov/out4/out4.acdb -path /scenario4/UUT -i cov/aggregate/aggregate.acdb -path /</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.00058500000000000002</ux:attr>
+<ux:hnode logical_name="out4" physical_name="out4.acdb" type="1">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:compulsory" type="int">0</ux:attr>
+<ux:attr key="UCIS:sim_time" type="double">335</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.00091</ux:attr>
+<ux:attr key="UCIS:cost" type="double">0</ux:attr>
+<ux:attr key="UCIS:date" type="str">2022-01-16 16:58</ux:attr>
+<ux:attr key="UCIS:time_unit" type="str">ns</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/PLC2/GitLab-CI/Sanity-Check</ux:attr>
+<ux:attr key="UCIS:seed" type="str">1</ux:attr>
+<ux:attr key="UCIS:cmd" type="str"></ux:attr>
+<ux:attr key="UCIS:args" type="str">asim -acdb scenario4</ux:attr>
+<ux:attr key="UCIS:username" type="str">root</ux:attr>
+<ux:attr key="UCIS:associated" type="int">0</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-fyunidjg-project-1237-concurrent-1</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Simulator</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2021.10</ux:attr>
+</ux:hnode>
+<ux:hnode logical_name="merge.55566235" physical_name="cov/aggregate/aggregate.acdb" type="2">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:associated" type="int">0</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/PLC2/GitLab-CI/Sanity-Check</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-fyunidjg-project-1237-concurrent-1</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Merge</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2021.10</ux:attr>
+<ux:attr key="UCIS:args" type="str">acdb merge -o cov/aggregate/aggregate.acdb -i cov/out3/out3.acdb -path /scenario3/UUT -i cov/aggregate/aggregate.acdb -path /</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.0042430000000000002</ux:attr>
+<ux:hnode logical_name="out3" physical_name="out3.acdb" type="1">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:compulsory" type="int">0</ux:attr>
+<ux:attr key="UCIS:sim_time" type="double">195</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.000213</ux:attr>
+<ux:attr key="UCIS:cost" type="double">0</ux:attr>
+<ux:attr key="UCIS:date" type="str">2022-01-16 16:58</ux:attr>
+<ux:attr key="UCIS:time_unit" type="str">ns</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/PLC2/GitLab-CI/Sanity-Check</ux:attr>
+<ux:attr key="UCIS:seed" type="str">1</ux:attr>
+<ux:attr key="UCIS:cmd" type="str"></ux:attr>
+<ux:attr key="UCIS:args" type="str">asim -acdb scenario3</ux:attr>
+<ux:attr key="UCIS:username" type="str">root</ux:attr>
+<ux:attr key="UCIS:associated" type="int">0</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-fyunidjg-project-1237-concurrent-1</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Simulator</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2021.10</ux:attr>
+</ux:hnode>
+<ux:hnode logical_name="merge.16652621" physical_name="cov/aggregate/aggregate.acdb" type="2">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:associated" type="int">0</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/PLC2/GitLab-CI/Sanity-Check</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-fyunidjg-project-1237-concurrent-1</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Merge</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2021.10</ux:attr>
+<ux:attr key="UCIS:args" type="str">acdb merge -o cov/aggregate/aggregate.acdb -i cov/out1/out1.acdb -path /scenario1/UUT -i cov/out2/out2.acdb -path /scenario2/UUT</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.0073530000000000002</ux:attr>
+<ux:hnode logical_name="out1" physical_name="out1.acdb" type="1">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:compulsory" type="int">0</ux:attr>
+<ux:attr key="UCIS:sim_time" type="double">185</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.00033799999999999998</ux:attr>
+<ux:attr key="UCIS:cost" type="double">0</ux:attr>
+<ux:attr key="UCIS:date" type="str">2022-01-16 16:58</ux:attr>
+<ux:attr key="UCIS:time_unit" type="str">ns</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/PLC2/GitLab-CI/Sanity-Check</ux:attr>
+<ux:attr key="UCIS:seed" type="str">1</ux:attr>
+<ux:attr key="UCIS:cmd" type="str"></ux:attr>
+<ux:attr key="UCIS:args" type="str">asim -acdb scenario1</ux:attr>
+<ux:attr key="UCIS:username" type="str">root</ux:attr>
+<ux:attr key="UCIS:associated" type="int">0</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-fyunidjg-project-1237-concurrent-1</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Simulator</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2021.10</ux:attr>
+</ux:hnode>
+<ux:hnode logical_name="out2" physical_name="out2.acdb" type="1">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:compulsory" type="int">0</ux:attr>
+<ux:attr key="UCIS:sim_time" type="double">185</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.00033300000000000002</ux:attr>
+<ux:attr key="UCIS:cost" type="double">0</ux:attr>
+<ux:attr key="UCIS:date" type="str">2022-01-16 16:58</ux:attr>
+<ux:attr key="UCIS:time_unit" type="str">ns</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/PLC2/GitLab-CI/Sanity-Check</ux:attr>
+<ux:attr key="UCIS:seed" type="str">1</ux:attr>
+<ux:attr key="UCIS:cmd" type="str"></ux:attr>
+<ux:attr key="UCIS:args" type="str">asim -acdb scenario2</ux:attr>
+<ux:attr key="UCIS:username" type="str">root</ux:attr>
+<ux:attr key="UCIS:associated" type="int">0</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-fyunidjg-project-1237-concurrent-1</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Simulator</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2021.10</ux:attr>
+</ux:hnode>
+</ux:hnode>
+</ux:hnode>
+</ux:hnode>
+<ux:scope name="work.board" type="DU_MODULE" weight="1" lang="VLOG" flags="00000007">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="9" token="1"/>
+<ux:attr key="UCIS:unit_sf_order" type="str">1;1;15;Verilog/board.v;35;/builds/PLC2/GitLab-CI/Sanity-Check;</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+</ux:scope>
+<ux:scope name="UUT" type="INSTANCE" weight="1" lang="VLOG" flags="00000007" du="work.board">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="9" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">88</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="37" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">88</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="38" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="41" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="42" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="43" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="44" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="45" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="46" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="47" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="48" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="50" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">11</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="54" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">11</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="55" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">11</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="56" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="57" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="58" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="59" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="60" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="61" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">6</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="62" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="63" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="64" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="65" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="67" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="71" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="72" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="73" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="74" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="75" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="76" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="77" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="78" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="80" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="84" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="85" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="86" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="87" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="88" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="89" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="90" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="91" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="92" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="93" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="94" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="95" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="97" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">16</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="101" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">16</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="102" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">16</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="103" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="104" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">14</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="105" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="106" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="107" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="108" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="109" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="110" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="111" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="112" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="113" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="114" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="115" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="116" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="117" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="118" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="120" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="124" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="125" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="126" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="127" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="128" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="129" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="130" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="131" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="132" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="133" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="134" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="135" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="137" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="141" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="142" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="143" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="144" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">6</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="145" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="146" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="147" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="148" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="150" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="154" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="155" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="156" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="157" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="158" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="159" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="160" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="161" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="162" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="163" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="164" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="165" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="167" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="171" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="172" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="173" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="174" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="175" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="176" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="177" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="178" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="180" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">88</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="191" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="192" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">84</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="194" token="1"/>
+</ux:bin>
+<ux:scope name="branch#38#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="38" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BTYPE#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">88</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="39" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">11</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="52" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="69" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="82" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">16</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="99" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="122" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="139" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="152" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="169" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#43#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="43" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">12</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="44" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="43" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#45#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="45" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">10</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="46" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="45" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#47#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="47" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">9</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="48" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="50" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#56#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="56" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">11</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="57" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="56" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#58#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="58" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">9</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="59" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="58" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#60#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="60" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">7</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="61" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">6</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="60" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#62#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="62" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">6</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="63" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="62" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#64#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="64" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">5</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="65" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="67" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#73#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="73" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">7</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="74" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="73" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#75#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="75" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="76" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="75" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#77#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="77" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">3</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="78" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="80" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#86#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="86" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">10</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="87" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="86" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#88#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="88" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">8</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="89" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="88" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#90#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="90" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">7</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="91" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="90" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#92#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="92" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="93" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="92" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#94#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="94" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">3</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="95" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="97" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#103#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="103" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">16</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="104" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">14</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="103" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#105#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="105" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">14</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="106" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="105" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#107#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="107" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">12</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="108" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="107" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#109#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="109" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">10</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="110" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="109" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#111#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="111" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">9</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="112" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="111" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#113#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="113" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">8</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="114" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="113" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#115#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="115" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">7</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="116" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="115" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#117#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="117" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">5</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="118" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="120" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#126#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="126" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">10</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="127" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="126" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#128#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="128" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">7</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="129" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="128" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#130#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="130" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">5</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="131" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="130" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#132#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="132" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="133" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="132" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#134#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="134" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">3</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="135" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="137" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#143#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="143" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">7</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="144" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">6</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="143" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#145#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="145" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">6</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="146" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="145" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#147#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="147" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="148" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="150" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#156#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="156" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">10</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="157" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="156" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#158#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="158" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">8</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="159" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="158" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#160#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="160" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">7</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="161" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="160" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#162#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="162" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">5</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="163" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="162" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#164#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="164" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="165" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="167" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#173#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="173" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">5</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="174" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="173" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#175#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="175" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">3</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="176" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="175" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#177#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="177" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">2</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="178" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="180" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="branch#191#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="191" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">88</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="192" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">84</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="194" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="@ALWAYS#position_NextState@" type="PROCESS" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="35" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">88</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="37" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">88</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="38" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="41" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="42" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="43" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="44" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="45" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="46" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="47" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="48" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="50" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">11</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="54" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">11</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="55" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">11</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="56" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="57" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="58" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="59" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="60" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="61" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">6</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="62" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="63" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="64" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="65" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="67" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="71" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="72" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="73" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="74" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="75" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="76" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="77" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="78" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="80" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="84" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="85" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="86" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="87" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="88" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="89" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="90" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="91" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="92" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="93" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="94" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="95" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="97" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">16</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="101" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">16</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="102" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">16</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="103" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="104" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">14</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="105" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="106" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">12</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="107" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="108" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="109" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="110" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">9</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="111" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="112" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="113" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="114" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="115" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="116" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="117" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="118" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="120" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="124" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="125" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="126" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="127" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="128" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="129" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="130" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="131" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="132" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="133" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="134" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="135" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="137" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="141" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="142" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="143" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="144" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">6</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="145" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="146" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="147" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="148" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="150" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="154" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="155" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">10</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="156" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="157" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">8</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="158" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="159" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">7</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="160" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="161" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="162" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="163" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="164" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="165" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="167" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="171" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="172" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">5</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="173" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="174" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">3</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="175" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="176" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">2</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="177" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="178" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="180" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="@ALWAYS#position_CurrentState@" type="PROCESS" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="189" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">88</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="191" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">4</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="192" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">84</ux:count>
+<ux:src file="Verilog/board.v" workdir="/builds/PLC2/GitLab-CI/Sanity-Check" line="194" token="1"/>
+</ux:bin>
+</ux:scope>
+</ux:scope>
+</ux:ucdb>

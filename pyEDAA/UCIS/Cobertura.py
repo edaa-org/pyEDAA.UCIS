@@ -30,7 +30,7 @@
 # ==================================================================================================================== #
 #
 """Data model of the Cobertura format."""
-from datetime import time
+from time import time
 from typing import Dict, Set
 
 from lxml import etree

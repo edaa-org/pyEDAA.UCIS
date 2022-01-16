@@ -1,8 +1,11 @@
 from argparse import RawDescriptionHelpFormatter
+from pathlib import Path
 from textwrap import dedent, fill
 from typing   import Callable, Any
 
 from pyAttributes.ArgParseAttributes import ArgParseMixin, CommonSwitchArgumentAttribute, DefaultAttribute, CommandAttribute, ArgumentAttribute
+
+from pyEDAA.UCIS.UCDB import Parser
 
 
 class ProgramBase():
@@ -34,8 +37,8 @@ class Program(ProgramBase, ArgParseMixin):
 		)
 
 #	@CommonSwitchArgumentAttribute("-q", "--quiet",   dest="quiet",   help="Reduce messages to a minimum.")
-	@CommonSwitchArgumentAttribute("-v", "--verbose", dest="verbose", help="Print out detailed messages.")
-	@CommonSwitchArgumentAttribute("-d", "--debug",   dest="debug",   help="Enable debug mode.")
+#	@CommonSwitchArgumentAttribute("-v", "--verbose", dest="verbose", help="Print out detailed messages.")
+#	@CommonSwitchArgumentAttribute("-d", "--debug",   dest="debug",   help="Enable debug mode.")
 	def Run(self) -> None:
 		ArgParseMixin.Run(self)
 
@@ -56,12 +59,32 @@ class Program(ProgramBase, ArgParseMixin):
 	def HandleExport(self, args) -> None:
 		self._PrintHeadline()
 
+		print(f"Exporting code coverage information from UCDB file to Cobertura format ...")
+
+		ucdbPath = Path(args.ucdb)
+		if not ucdbPath.exists():
+			raise FileNotFoundError(f"UCDB databse file '{ucdbPath}' not found.")
+
+		coberturaPath = Path(args.cobertura)
+
+		print(f"  IN  -> UCIS (XML):      {ucdbPath}")
+		print(f"  OUT <- Cobertura (XML): {coberturaPath}")
+
+		parser = Parser(ucdbPath)
+		model = parser.get_cobertura_model()
+
+		with coberturaPath.open('w') as file:
+			file.write(model.get_xml().decode("utf-8"))
+
+		print()
+
+		coverage = model.lines_covered / model.lines_valid * 100
 		print(dedent(f"""\
-			HandleExport ...
-			  UCDB:      {args.ucdb}
-			  Cobertura: {args.cobertura}
+			[DONE] Export and conversion complete.
+			  Statement coverage: {coverage} %
 			""")
 		)
+
 
 	def _PrintHelp(self, command: str=None):
 		if (command is None):
@@ -77,7 +100,12 @@ class Program(ProgramBase, ArgParseMixin):
 
 def main():
 	program = Program()
-	program.Run()
+	try:
+		program.Run()
+	except FileNotFoundError as ex:
+		print()
+		print(f"[ERROR] {ex}")
+		exit(1)
 
 
 if __name__ == "__main__":
