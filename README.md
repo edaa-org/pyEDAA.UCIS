@@ -49,7 +49,6 @@ python ucdb2cobertura.py -i ucdb.xml -o cobertura.xml
 - [accellera.org/downloads/standards/ucis](https://www.accellera.org/downloads/standards/ucis)
 - [fvutils/pyucis](https://github.com/fvutils/pyucis)
   - [fvutils/pyucis-viewer](https://github.com/fvutils/pyucis-viewer)
-- [Open Source Verification Bundle (OSVB): Open Source Verification Report (OSVR)](https://umarcor.github.io/osvb/apis/logging.html#unified-coverage-database-ucdb)
 - [UCIS licensing [umarcor/umarcor#3]](https://github.com/umarcor/umarcor/issues/3)
 
 
