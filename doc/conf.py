@@ -157,8 +157,41 @@ latex_documents = [
 # Extensions
 # ==============================================================================
 extensions = [
+# Standard Sphinx extensions
+	"sphinx.ext.autodoc",
 	'sphinx.ext.extlinks',
 	'sphinx.ext.intersphinx',
+	'sphinx.ext.inheritance_diagram',
+	'sphinx.ext.todo',
+	'sphinx.ext.graphviz',
+	'sphinx.ext.mathjax',
+	'sphinx.ext.ifconfig',
+	'sphinx.ext.viewcode',
+#	'sphinx.ext.duration',
+
+# SphinxContrib extensions
+# 'sphinxcontrib.actdiag',
+	'sphinxcontrib.mermaid',
+# 'sphinxcontrib.seqdiag',
+# 'sphinxcontrib.textstyle',
+# 'sphinxcontrib.spelling',
+# 'changelog',
+
+# BuildTheDocs extensions
+#	'btd.sphinx.autoprogram',
+#	'btd.sphinx.graphviz',
+#	'btd.sphinx.inheritance_diagram',
+
+# Other extensions
+#	'DocumentMember',
+	'sphinx_fontawesome',
+	'sphinx_autodoc_typehints',
+
+# local extensions (patched)
+	'autoapi.sphinx',
+
+# local extensions
+#	'DocumentMember'
 ]
 
 
@@ -171,10 +204,41 @@ intersphinx_mapping = {
 
 
 # ==============================================================================
+# Sphinx.Ext.AutoDoc
+# ==============================================================================
+# see: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration
+autodoc_member_order = "bysource"       # alphabetical, groupwise, bysource
+
+
+# ==============================================================================
 # Sphinx.Ext.ExtLinks
 # ==============================================================================
 extlinks = {
-	'ghissue': ('https://GitHub.com/edaa-org/pyEDAA.UCIS/issues/%s', 'issue #'),
-	'ghpull':  ('https://GitHub.com/edaa-org/pyEDAA.UCIS/pull/%s', 'pull request #'),
-	'ghsrc':   ('https://GitHub.com/edaa-org/pyEDAA.UCIS/blob/main/%s', ''),
+	"ghissue": ('https://GitHub.com/edaa-org/pyEDAA.UCIS/issues/%s', 'issue #'),
+	"ghpull":  ('https://GitHub.com/edaa-org/pyEDAA.UCIS/pull/%s', 'pull request #'),
+	"ghsrc":   ('https://GitHub.com/edaa-org/pyEDAA.UCIS/blob/main/%s?ts=2', None),
+}
+
+
+# ==============================================================================
+# Sphinx.Ext.Graphviz
+# ==============================================================================
+graphviz_output_format = "svg"
+
+
+
+# ==============================================================================
+# Sphinx.Ext.ToDo
+# ==============================================================================
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = True
+todo_link_only = True
+
+
+
+# ==============================================================================
+# AutoAPI.Sphinx
+# ==============================================================================
+autoapi_modules = {
+  'pyEDAA.UCIS':  {'output': "pyEDAA.UCIS", "override": True}
 }

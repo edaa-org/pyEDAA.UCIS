@@ -32,7 +32,7 @@
 """
 Tools to extract data from UCIS datafiles.
 
-.. topic:: Usage
+.. rubric:: Usage
 
 .. code-block::
 
