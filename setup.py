@@ -47,6 +47,6 @@ DescribePythonPackageHostedOnGitHub(
 		"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
 	],
 	consoleScripts={
-		"ucdb2cobertura": "pyEDAA.UCIS.CLI.UCIS:main"
+		"ucdb2cobertura": "pyEDAA.UCIS.CLI:main"
 	}
 )
