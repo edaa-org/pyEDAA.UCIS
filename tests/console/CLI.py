@@ -141,6 +141,6 @@ class Export(TestCase):
 		print(stdout)
 		eprint(stderr)
 
-		self.assertEqual(1, completion.returncode)
+		self.assertEqual(3, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
 		self.assertEqual("", stderr)

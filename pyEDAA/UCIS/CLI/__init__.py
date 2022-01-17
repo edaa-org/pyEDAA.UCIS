@@ -129,13 +129,16 @@ class Program(ProgramBase, ArgParseMixin):
 		"""Handle program calls with command ``export``."""
 		self._PrintHeadline()
 
+		returnCode = 0
 		if args.ucdb is None:
 			print(f"Option '--ucdb <UCDBFile' is missing.")
-			exit(3)
-
+			returnCode = 3
 		if args.cobertura is None:
 			print(f"Option '--cobertura <CoberturaFile' is missing.")
-			exit(3)
+			returnCode = 3
+
+		if returnCode != 0:
+			exit(returnCode)
 
 		print(f"Exporting code coverage information from UCDB file to Cobertura format ...")
 
