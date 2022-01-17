@@ -33,10 +33,12 @@
 from pathlib import Path
 
 from lxml import etree
+from pyTooling.Decorators import export
 
 from pyEDAA.UCIS.Cobertura import Coverage
 
 
+@export
 class Parser:
 	def __init__(self, ucdbFile: Path):
 		with ucdbFile.open("r") as filename:

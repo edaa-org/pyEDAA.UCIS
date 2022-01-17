@@ -34,8 +34,10 @@ from time import time
 from typing import Dict, Set
 
 from lxml import etree
+from pyTooling.Decorators import export
 
 
+@export
 class Class:
 	source_file: str
 	lines: Dict[int, int]
@@ -76,6 +78,7 @@ class Class:
 		return class_node
 
 
+@export
 class Package:
 	name: str
 	classes: Dict[str, Class]
@@ -115,6 +118,7 @@ class Package:
 		return package_node
 
 
+@export
 class Coverage:
 	sources: Set
 	packages: Dict[str, Package]

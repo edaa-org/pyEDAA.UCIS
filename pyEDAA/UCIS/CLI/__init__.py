@@ -53,10 +53,12 @@ from pathlib import Path
 from textwrap import dedent, fill
 
 from pyAttributes.ArgParseAttributes import ArgParseMixin, DefaultAttribute, CommandAttribute, ArgumentAttribute
+from pyTooling.Decorators import export
 
 from pyEDAA.UCIS.UCDB import Parser
 
 
+@export
 class ProgramBase():
 	programTitle = "UCDB service program"
 
@@ -69,6 +71,7 @@ class ProgramBase():
 		print("{line}".format(line="=" * 120))
 
 
+@export
 class Program(ProgramBase, ArgParseMixin):
 	def __init__(self) -> None:
 		super().__init__()
@@ -147,6 +150,7 @@ class Program(ProgramBase, ArgParseMixin):
 				print(f"Command {command} is unknown.")
 
 
+@export
 def main():
 	program = Program()
 	try:
