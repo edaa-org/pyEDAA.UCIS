@@ -80,18 +80,36 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
-		print("=" * 20)
-		print(stdout)
-		print("-" * 20)
-		print(stderr)
-		print("=" * 20)
+		# print()
+		# print("=" * 20)
+		# print(stdout)
+		# print("-" * 20)
+		# print(stderr)
+		# print("=" * 20)
 
 		self.assertEqual(2, completion.returncode)
-		self.assertIn("UCDB Service Program", stdout)
+		self.assertIn("invalid choice: 'expand'", stdout)
 
 	def test_HelpCommandUnknownCommand(self):
 		completion = subprocess.run([PROGRAM_NAME, "help", "expand"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		# print()
+		# print("=" * 20)
+		# print(stdout)
+		# print("-" * 20)
+		# print(stderr)
+		# print("=" * 20)
+
+		self.assertEqual(2, completion.returncode)
+		self.assertIn("Command expand is unknown", stdout)
+
+
+class Version(TestCase):
+	def test_VersionCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "version"], capture_output=True)
 
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
@@ -103,16 +121,6 @@ class Help(TestCase):
 		print(stderr)
 		print("=" * 20)
 
-		self.assertEqual(2, completion.returncode)
-		self.assertIn("UCDB Service Program", stdout)
-
-
-class Version(TestCase):
-	def test_VersionCommand(self):
-		completion = subprocess.run([PROGRAM_NAME, "version"], capture_output=True)
-
-		stdout = completion.stdout.decode("utf-8")
-
 		self.assertEqual(0, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
 
@@ -122,6 +130,14 @@ class Export(TestCase):
 		completion = subprocess.run([PROGRAM_NAME, "export"], capture_output=True)
 
 		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
 
-		self.assertEqual(2, completion.returncode)
+		print()
+		print("=" * 20)
+		print(stdout)
+		print("-" * 20)
+		print(stderr)
+		print("=" * 20)
+
+		self.assertEqual(1, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
