@@ -14,7 +14,6 @@ ROOT = Path(__file__).resolve().parent
 sys_path.insert(0, abspath('.'))
 sys_path.insert(0, abspath('..'))
 sys_path.insert(0, abspath('../pyEDAA/UCIS'))
-#sys_path.insert(0, abspath('_extensions'))
 
 
 # ==============================================================================
@@ -167,33 +166,13 @@ extensions = [
 	'sphinx.ext.mathjax',
 	'sphinx.ext.ifconfig',
 	'sphinx.ext.viewcode',
-#	'sphinx.ext.duration',
-
 # SphinxContrib extensions
-# 'sphinxcontrib.actdiag',
 	'sphinxcontrib.autoprogram',
 	'sphinxcontrib.mermaid',
-# 'sphinxcontrib.seqdiag',
-# 'sphinxcontrib.textstyle',
-# 'sphinxcontrib.spelling',
-	'autoapi.sphinx',
-# 'changelog',
-
-# BuildTheDocs extensions
-#	'btd.sphinx.autoprogram',
-#	'btd.sphinx.graphviz',
-#	'btd.sphinx.inheritance_diagram',
-
 # Other extensions
-#	'DocumentMember',
+	'autoapi.sphinx',
 	'sphinx_fontawesome',
 	'sphinx_autodoc_typehints',
-
-# local extensions (patched)
-#	'autoapi.sphinx',
-
-# local extensions
-#	'DocumentMember'
 ]
 
 

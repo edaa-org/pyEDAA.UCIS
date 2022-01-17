@@ -15,17 +15,19 @@
 
 .. only:: html
 
-   |  |SHIELD:svg:UCIS-github| |SHIELD:svg:UCIS-ghp-doc| |SHIELD:svg:UCIS-gitter|
-   |  |SHIELD:svg:UCIS-gha-test| |SHIELD:svg:UCIS-codacy-quality|
+   |  |SHIELD:svg:UCIS-github| |SHIELD:svg:UCIS-src-license| |SHIELD:svg:UCIS-ghp-doc| |SHIELD:svg:UCIS-doc-license| |SHIELD:svg:UCIS-gitter|
+   |  |SHIELD:svg:UCIS-pypi-tag| |SHIELD:svg:UCIS-pypi-status| |SHIELD:svg:UCIS-pypi-python|
+   |  |SHIELD:svg:UCIS-gha-test| |SHIELD:svg:UCIS-lib-status| |SHIELD:svg:UCIS-codacy-quality| |SHIELD:svg:UCIS-codacy-coverage| |SHIELD:svg:UCIS-codecov-coverage|
 
-.. Disabled shields: |SHIELD:svg:UCIS-src-license| |SHIELD:svg:UCIS-doc-license| |SHIELD:svg:UCIS-pypi-tag| |SHIELD:svg:UCIS-pypi-status| |SHIELD:svg:UCIS-pypi-python| |SHIELD:svg:UCIS-lib-status| |SHIELD:svg:UCIS-codacy-coverage| |SHIELD:svg:UCIS-codecov-coverage| |SHIELD:svg:UCIS-lib-dep| |SHIELD:svg:UCIS-req-status| |SHIELD:svg:UCIS-lib-rank|
+.. Disabled shields: |SHIELD:svg:UCIS-lib-dep| |SHIELD:svg:UCIS-req-status| |SHIELD:svg:UCIS-lib-rank|
 
 .. only:: latex
 
-   |SHIELD:png:UCIS-github| |SHIELD:png:UCIS-ghp-doc| |SHIELD:png:UCIS-gitter|
-   |SHIELD:png:UCIS-gha-test| |SHIELD:png:UCIS-codacy-quality|
+   |SHIELD:png:UCIS-github| |SHIELD:png:UCIS-src-license| |SHIELD:png:UCIS-ghp-doc| |SHIELD:png:UCIS-doc-license| |SHIELD:png:UCIS-gitter|
+   |SHIELD:png:UCIS-pypi-tag| |SHIELD:png:UCIS-pypi-status| |SHIELD:png:UCIS-pypi-python|
+   |SHIELD:png:UCIS-gha-test| |SHIELD:png:UCIS-lib-status| |SHIELD:png:UCIS-codacy-quality| |SHIELD:png:UCIS-codacy-coverage| |SHIELD:png:UCIS-codecov-coverage|
 
-.. Disabled shields: |SHIELD:png:UCIS-src-license| |SHIELD:png:UCIS-doc-license| |SHIELD:png:UCIS-pypi-tag| |SHIELD:png:UCIS-pypi-status| |SHIELD:png:UCIS-pypi-python| |SHIELD:png:UCIS-lib-status| |SHIELD:png:UCIS-codacy-coverage| |SHIELD:png:UCIS-codecov-coverage| |SHIELD:png:UCIS-lib-dep| |SHIELD:png:UCIS-req-status| |SHIELD:png:UCIS-lib-rank|
+.. Disabled shields: |SHIELD:png:UCIS-lib-dep| |SHIELD:png:UCIS-req-status| |SHIELD:png:UCIS-lib-rank|
 
 The pyEDAA.UCIS Documentation
 #############################
@@ -127,8 +129,8 @@ License
    :caption: Appendix
    :hidden:
 
-   Coverage Report ➚ <https://edaa-org.GitHub.io/pyEDAA.UCIS/coverage/>
-   Static Type Check Report ➚ <https://edaa-org.GitHub.io/pyEDAA.UCIS/typing/>
+   Coverage Report ➚ <coverage/index>
+   Static Type Check Report ➚ <typing/index>
    License
    Doc-License
    Glossary
