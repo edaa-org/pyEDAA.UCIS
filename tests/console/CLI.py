@@ -40,19 +40,56 @@ if __name__ == "__main__": # pragma: no cover
 	exit(1)
 
 
-class Help(TestCase):
-	PROGRAM_NAME = "pyedaa-ucis"
+PROGRAM_NAME = "pyedaa-ucis"
 
+
+class Help(TestCase):
 	def test_Installation(self):
-		prog = shutil.which(self.PROGRAM_NAME)
+		prog = shutil.which(PROGRAM_NAME)
 
 		self.assertIsNotNone(prog)
-		self.assertTrue(prog.endswith(self.PROGRAM_NAME))
+		self.assertTrue(prog.endswith(PROGRAM_NAME))
 
 	def test_NoOptions(self):
-		completion = subprocess.run(["pyedaa-ucis"], capture_output=True)
+		completion = subprocess.run([PROGRAM_NAME], capture_output=True)
 
 		stdout = completion.stdout.decode("utf-8")
 
 		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+	def test_HelpCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "help"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+	def test_HelpForExport(self):
+		completion = subprocess.run([PROGRAM_NAME, "help", "export"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+
+class Version(TestCase):
+	def test_VersionCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "version"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+
+class Export(TestCase):
+	def test_ExportCommandNoFilenames(self):
+		completion = subprocess.run([PROGRAM_NAME, "expand"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+
+		self.assertEqual(1, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
