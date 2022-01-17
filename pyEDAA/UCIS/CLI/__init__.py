@@ -60,14 +60,14 @@ from pyEDAA.UCIS.UCDB import Parser
 
 @export
 class ProgramBase():
-	programTitle = "UCDB service program"
+	programTitle = "UCDB Service Program"
 
 	def __init__(self) -> None:
 		pass
 
 	def _PrintHeadline(self) -> None:
 		print("{line}".format(line="=" * 120))
-		print("{headline: ^80s}".format(headline=self.programTitle))
+		print("{headline: ^120s}".format(headline=self.programTitle))
 		print("{line}".format(line="=" * 120))
 
 
@@ -81,9 +81,12 @@ class Program(ProgramBase, ArgParseMixin):
 			self,
 			prog="pyedaa-ucis",
 		  description=dedent('''\
-				Query and transform data to/from UCIS to any format.
+				'pyEDAA.UCIS Service Program' to query and transform data to/from UCIS to any other format.
 				'''),
-		  epilog=fill("Query and transform data to/from UCIS to any format."),
+		  epilog=dedent("""\
+		    Currently the following output formats are supported:
+		     * Cobertura (statement coverage - Java oriented format)
+		  """),
 		  formatter_class=RawDescriptionHelpFormatter,
 		  add_help=False
 		)
@@ -99,15 +102,15 @@ class Program(ProgramBase, ArgParseMixin):
 		self._PrintHeadline()
 		self._PrintHelp()
 
-	@CommandAttribute("help", help="Display help page(s) for the given command name.")
+	@CommandAttribute("help", help="Display help page(s) for the given command name.", description="Display help page(s) for the given command name.")
 	@ArgumentAttribute(metavar="Command", dest="Command", type=str, nargs="?", help="Print help page(s) for a command.")
 	def HandleHelp(self, args) -> None:
 		self._PrintHeadline()
 		self._PrintHelp(args.Command)
 
-	@CommandAttribute("export", help="Export data from UCDB.")
-	@ArgumentAttribute(metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
-	@ArgumentAttribute(metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
+	@CommandAttribute("export", help="Export data from UCDB.", description="Export data from UCDB.")
+	@ArgumentAttribute("--ucdb",      metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
+	@ArgumentAttribute("--cobertura", metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
 	def HandleExport(self, args) -> None:
 		self._PrintHeadline()
 
@@ -136,7 +139,6 @@ class Program(ProgramBase, ArgParseMixin):
 			  Statement coverage: {coverage} %
 			""")
 		)
-
 
 	def _PrintHelp(self, command: str=None):
 		if (command is None):

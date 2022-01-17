@@ -29,7 +29,15 @@
 # SPDX-License-Identifier: Apache-2.0                                                                                  #
 # ==================================================================================================================== #
 #
-"""Data model of the Cobertura format."""
+"""
+Data model of the Cobertura format.
+
+.. mermaid::
+
+   flowchart LR
+     Coverage --> Package --> Class --> Statement
+
+"""
 from time import time
 from typing import Dict, Set
 
@@ -39,6 +47,8 @@ from pyTooling.Decorators import export
 
 @export
 class Class:
+	"""Represents a code element in the Cobertura coverage data model (Java-focused)."""
+
 	source_file: str
 	lines: Dict[int, int]
 	lines_valid: int
@@ -80,6 +90,8 @@ class Class:
 
 @export
 class Package:
+	"""Represents a grouping element in the Cobertura coverage data model (Java-focused)."""
+
 	name: str
 	classes: Dict[str, Class]
 	lines_valid: int
@@ -120,6 +132,8 @@ class Package:
 
 @export
 class Coverage:
+	"""Represents the root element in the Cobertura coverage data model (Java-focused)."""
+
 	sources: Set
 	packages: Dict[str, Package]
 	lines_valid: int
