@@ -74,6 +74,38 @@ class Help(TestCase):
 		self.assertEqual(0, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
 
+	def test_UnknownCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "expand"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print()
+		print("=" * 20)
+		print(stdout)
+		print("-" * 20)
+		print(stderr)
+		print("=" * 20)
+
+		self.assertEqual(2, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+	def test_HelpCommandUnknownCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "help", "expand"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print()
+		print("=" * 20)
+		print(stdout)
+		print("-" * 20)
+		print(stderr)
+		print("=" * 20)
+
+		self.assertEqual(2, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
 
 class Version(TestCase):
 	def test_VersionCommand(self):
@@ -87,9 +119,9 @@ class Version(TestCase):
 
 class Export(TestCase):
 	def test_ExportCommandNoFilenames(self):
-		completion = subprocess.run([PROGRAM_NAME, "expand"], capture_output=True)
+		completion = subprocess.run([PROGRAM_NAME, "export"], capture_output=True)
 
 		stdout = completion.stdout.decode("utf-8")
 
-		self.assertEqual(1, completion.returncode)
+		self.assertEqual(2, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
