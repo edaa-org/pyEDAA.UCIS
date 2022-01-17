@@ -31,6 +31,7 @@
 """Testcase for pyEDAA.UCIS service program."""
 import shutil
 import subprocess
+from sys          import stderr as sys_stderr
 from unittest     import TestCase
 
 
@@ -42,18 +43,29 @@ if __name__ == "__main__": # pragma: no cover
 
 PROGRAM_NAME = "pyedaa-ucis"
 
+def eprint(*args, **kwargs):
+	print(*args, file=sys_stderr, **kwargs)
 
-class Help(TestCase):
-	def test_Installation(self):
+
+class Installation(TestCase):
+	def test_Which(self):
 		prog = shutil.which(PROGRAM_NAME)
 
 		self.assertIsNotNone(prog)
 		self.assertTrue(prog.endswith(PROGRAM_NAME))
 
+
+class Help(TestCase):
 	def test_NoOptions(self):
 		completion = subprocess.run([PROGRAM_NAME], capture_output=True)
 
 		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print()
+		print(stdout)
+		eprint()
+		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
@@ -62,6 +74,12 @@ class Help(TestCase):
 		completion = subprocess.run([PROGRAM_NAME, "help"], capture_output=True)
 
 		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print()
+		print(stdout)
+		eprint()
+		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
@@ -70,6 +88,12 @@ class Help(TestCase):
 		completion = subprocess.run([PROGRAM_NAME, "help", "export"], capture_output=True)
 
 		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print()
+		print(stdout)
+		eprint()
+		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
@@ -81,11 +105,9 @@ class Help(TestCase):
 		stderr = completion.stderr.decode("utf-8")
 
 		print()
-		print("=" * 20)
 		print(stdout)
-		print("-" * 20)
-		print(stderr)
-		print("=" * 20)
+		eprint()
+		eprint(stderr)
 
 		self.assertEqual(2, completion.returncode)
 		self.assertIn("invalid choice: 'expand'", stderr)
@@ -97,11 +119,9 @@ class Help(TestCase):
 		stderr = completion.stderr.decode("utf-8")
 
 		print()
-		print("=" * 20)
 		print(stdout)
-		print("-" * 20)
-		print(stderr)
-		print("=" * 20)
+		eprint()
+		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
 		self.assertIn("Command expand is unknown", stdout)
@@ -115,11 +135,9 @@ class Version(TestCase):
 		stderr = completion.stderr.decode("utf-8")
 
 		print()
-		print("=" * 20)
 		print(stdout)
-		print("-" * 20)
-		print(stderr)
-		print("=" * 20)
+		eprint()
+		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
@@ -133,11 +151,9 @@ class Export(TestCase):
 		stderr = completion.stderr.decode("utf-8")
 
 		print()
-		print("=" * 20)
 		print(stdout)
-		print("-" * 20)
-		print(stderr)
-		print("=" * 20)
+		eprint()
+		eprint(stderr)
 
 		self.assertEqual(1, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
