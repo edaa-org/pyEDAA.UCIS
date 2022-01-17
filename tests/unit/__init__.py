@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2022 Patrick Lehmann - Bötzingen, Germany                                                             #
+# Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -28,9 +28,4 @@
 # SPDX-License-Identifier: Apache-2.0                                                                                  #
 # ==================================================================================================================== #
 #
-"""
-Helper classes for unit tests.
-
-:copyright: Copyright 2007-2022 Patrick Lehmann - Bötzingen, Germany
-:license: Apache License, Version 2.0
-"""
+"""Helper classes for unit tests."""
