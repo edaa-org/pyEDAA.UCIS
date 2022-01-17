@@ -116,6 +116,7 @@ License
    :caption: References
    :hidden:
 
+   CommandLineInterface
    pyEDAA.UCIS/index
 
 .. raw:: latex

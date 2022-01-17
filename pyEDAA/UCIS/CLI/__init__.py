@@ -103,8 +103,8 @@ class Program(ProgramBase, ArgParseMixin):
 		self._PrintHelp(args.Command)
 
 	@CommandAttribute("export", help="Export data from UCDB.")
-	@ArgumentAttribute(metavar='<UCDB File>',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
-	@ArgumentAttribute(metavar='<Cobertura File>', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
+	@ArgumentAttribute(metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
+	@ArgumentAttribute(metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
 	def HandleExport(self, args) -> None:
 		self._PrintHeadline()
 
