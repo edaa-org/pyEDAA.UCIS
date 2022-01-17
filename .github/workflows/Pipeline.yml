@@ -44,11 +44,6 @@ jobs:
       report: 'htmlmypy'
       artifact: ${{ fromJson(needs.Params.outputs.params).artifacts.typing }}
 
-  PublishTestResults:
-    uses: pyTooling/Actions/.github/workflows/PublishTestResults.yml@r0
-    needs:
-      - UnitTesting
-
   Package:
     uses: pyTooling/Actions/.github/workflows/Package.yml@r0
     needs:
@@ -111,12 +106,14 @@ jobs:
       - name: 🔧 Install package
         run: python -m pip install pyEDAA.UCIS*.whl
 
-#      - name: ☑ Run console tests
-#        if: matrix.system == 'windows'
-#        run: |
-#          $PYTEST_ARGS = if ("${{ inputs.artifact }}".length -gt 0) { "--junitxml=TestReport.xml" } else { "" }
-#          python -m pytest -rA ${{ inputs.unittest_directory }} $PYTEST_ARGS --color=yes
-#
+      - name: ☑ Run console tests
+        if: matrix.system == 'windows'
+        run: |
+          # $PYTEST_ARGS = if ("${{ inputs.artifact }}".length -gt 0) { "--junitxml=TestReport.xml" } else { "" }
+          # python -m pytest -rA ${{ inputs.unittest_directory }} $PYTEST_ARGS --color=yes
+          $PYTEST_ARGS = "--junitxml=TestReport.xml"
+          python -m pytest -rA tests/console $PYTEST_ARGS --color=yes
+
       - name: ☑ Run console tests
         if: matrix.system != 'windows'
         run: |
@@ -125,14 +122,20 @@ jobs:
           PYTEST_ARGS='--junitxml=TestReport.xml'
           python -m pytest -rA tests/console $PYTEST_ARGS --color=yes
 
-#      - name: 📤 Upload 'TestReport.xml' artifact
-#        if: inputs.artifact != ''
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: ${{ inputs.artifact }}-${{ matrix.system }}-${{ matrix.python }}
-#          path: TestReport.xml
-#          if-no-files-found: error
-#          retention-days: 1
+      - name: 📤 Upload 'TestReport.xml' artifact
+        if: inputs.artifact != ''
+        uses: actions/upload-artifact@v2
+        with:
+          name: ConsoleTestReport-${{ matrix.system }}-${{ matrix.python }}
+          path: TestReport.xml
+          if-no-files-found: error
+          retention-days: 1
+
+  PublishTestResults:
+    uses: pyTooling/Actions/.github/workflows/PublishTestResults.yml@r0
+    needs:
+      - UnitTesting
+      - Install
 
   Release:
     uses: pyTooling/Actions/.github/workflows/Release.yml@r0
@@ -142,6 +145,7 @@ jobs:
       - Coverage
       - StaticTypeCheck
       - Package
+      - Install
 
   PublishOnPyPI:
     uses: pyTooling/Actions/.github/workflows/PublishOnPyPI.yml@r0
@@ -190,6 +194,7 @@ jobs:
       - Params
       - UnitTesting
       - Coverage
+      - Install
       - StaticTypeCheck
       - BuildTheDocs
       - PublishToGitHubPages
