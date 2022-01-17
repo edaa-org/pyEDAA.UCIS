@@ -39,7 +39,7 @@ packageInformationFile = Path(f"{packageDirectory}/__init__.py")
 
 DescribePythonPackageHostedOnGitHub(
 	packageName=packageName,
-	description="Tools to extract data from UCIS datafiles.",
+	description="Tools to extract data from UCDB files.",
 	gitHubNamespace=gitHubNamespace,
 	sourceFileWithVersion=packageInformationFile,
 	developmentStatus="alpha",

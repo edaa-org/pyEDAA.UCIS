@@ -49,7 +49,9 @@ Unified Coverage Interoperability Standard (UCIS).
 Main Goals
 **********
 
-*tbd*
+* Parse UCDB files and provide a UCDB data model.
+* Export and convert code coverage information from UCDB to Cobertura format.
+* Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).
 
 
 .. _usecase:
@@ -57,7 +59,8 @@ Main Goals
 Use Cases
 *********
 
-*tbd*
+* Collect and merge code coverage with Active-HDL / Riviera-PRO and convert via UCDB format to Cobertura files, so
+  code coverage can be published to e.g. GitLab, Codacy or CodeCov.
 
 
 .. _contributors:

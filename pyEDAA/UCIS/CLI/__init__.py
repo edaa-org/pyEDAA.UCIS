@@ -104,12 +104,14 @@ class Program(ProgramBase, ArgParseMixin):
 
 	@DefaultAttribute()
 	def HandleDefault(self, _) -> None:
+		"""Handle program calls without any command."""
 		self._PrintHeadline()
 		self._PrintHelp()
 
 	@CommandAttribute("help", help="Display help page(s) for the given command name.", description="Display help page(s) for the given command name.")
 	@ArgumentAttribute(metavar="Command", dest="Command", type=str, nargs="?", help="Print help page(s) for a command.")
 	def HandleHelp(self, args) -> None:
+		"""Handle program calls with command ``help``."""
 		self._PrintHeadline()
 		self._PrintHelp(args.Command)
 
@@ -117,6 +119,7 @@ class Program(ProgramBase, ArgParseMixin):
 	@ArgumentAttribute("--ucdb",      metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
 	@ArgumentAttribute("--cobertura", metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
 	def HandleExport(self, args) -> None:
+		"""Handle program calls with command ``export``."""
 		self._PrintHeadline()
 
 		print(f"Exporting code coverage information from UCDB file to Cobertura format ...")
