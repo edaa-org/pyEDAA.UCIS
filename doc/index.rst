@@ -108,7 +108,7 @@ License
    :caption: Main Documentation
    :hidden:
 
-   UCDB2Cobertura
+   CodeCoverage
 
 .. raw:: latex
 

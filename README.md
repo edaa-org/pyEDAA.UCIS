@@ -36,7 +36,7 @@ Unified Coverage Interoperability Standard (UCIS)
 acdb2xml -i aggregate.acdb -o ucdb.xml
 
 # Convert UCDB file into Cobertura format
-python ucdb2cobertura.py -i ucdb.xml -o cobertura.xml
+pyedaa-ucis export --ucdb ucdb.xml --cobertura cobertura.xml
 ```
 
 
