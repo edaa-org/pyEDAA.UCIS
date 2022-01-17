@@ -31,26 +31,26 @@
 # ==================================================================================================================== #
 #
 """
-Tools to extract data from UCIS datafiles.
+Tools to extract data from UCDB files.
 
 .. rubric:: Usage
 
-First export/convert the Aldec Coverage Database (ACDB) into UCIS format (Universal Coverage Database - UCDB). The
+First export/convert the Aldec Coverage Database (ACDB) into UCDB (Universal Coverage Database) format. The
 helper program ``acdb2xml`` (part of Active-HDL or Riviera-PRO installation) can be used.
 
 .. code-block::
 
    acdb2xml -i aggregate.acdb -o ucdb.xml
 
-At next use this layer's service program to convert from UCIS to Cobertura format.
+At next use this layer's service program to convert from UCDB to Cobertura format.
 
 .. code-block::
 
    pyedaa-ucis export --ucdb ucdb.xml --cobertura cobertura.xml
 """
 from argparse import RawDescriptionHelpFormatter
-from pathlib import Path
-from textwrap import dedent, fill
+from pathlib  import Path
+from textwrap import dedent
 
 from pyAttributes.ArgParseAttributes import ArgParseMixin, DefaultAttribute, CommandAttribute, ArgumentAttribute
 from pyTooling.Decorators import export
@@ -60,12 +60,15 @@ from pyEDAA.UCIS.UCDB import Parser
 
 @export
 class ProgramBase():
+	"""Base-class for all program classes."""
+
 	programTitle = "UCDB Service Program"
 
 	def __init__(self) -> None:
 		pass
 
 	def _PrintHeadline(self) -> None:
+		"""Print the programs headline."""
 		print("{line}".format(line="=" * 120))
 		print("{headline: ^120s}".format(headline=self.programTitle))
 		print("{line}".format(line="=" * 120))
@@ -73,6 +76,8 @@ class ProgramBase():
 
 @export
 class Program(ProgramBase, ArgParseMixin):
+	"""Program class to implement the command line interface (CLI) using commands and options."""
+
 	def __init__(self) -> None:
 		super().__init__()
 
@@ -141,6 +146,7 @@ class Program(ProgramBase, ArgParseMixin):
 		)
 
 	def _PrintHelp(self, command: str=None):
+		"""Helper function to print the command line parsers help page(s)."""
 		if (command is None):
 			self.MainParser.print_help()
 		elif (command == "help"):
@@ -154,6 +160,16 @@ class Program(ProgramBase, ArgParseMixin):
 
 @export
 def main():
+	"""
+	Entrypoint to start program execution.
+
+	This function should be called either from:
+	 * ``if __name__ == "__main__":`` or
+	 * ``console_scripts`` entry point configured via ``setuptools`` in ``setup.py``.
+
+	This function creates an instance of :class:`Program` in a ``try ... except`` environment. Any exception caught is
+	formatted and printed before the program returns with a non-zero exit code.
+	"""
 	program = Program()
 	try:
 		program.Run()
