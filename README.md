@@ -28,6 +28,16 @@ Unified Coverage Interoperability Standard (UCIS)
   <a title="edaa-org.github.io/pyEDAA.UCIS" href="https://edaa-org.github.io/pyEDAA.UCIS"><img height="275px" src="doc/_static/work-in-progress.png"/></a>
 </p>
 
+## Main Goals
+
+* Parse UCDB files and provide a UCDB data model.
+* Export and convert data from UCDB to Cobertura format.
+* Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).
+
+## Use Cases
+ 
+* Collect and merge code coverage with Active-HDL / Riviera-PRO and convert via UCDB format to Cobertura files, so code coverage can be published to e.g. GitLab, Codacy or CodeCov.
+
 
 ## Usage
 
