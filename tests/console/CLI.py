@@ -80,15 +80,15 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		# print()
-		# print("=" * 20)
-		# print(stdout)
-		# print("-" * 20)
-		# print(stderr)
-		# print("=" * 20)
+		print()
+		print("=" * 20)
+		print(stdout)
+		print("-" * 20)
+		print(stderr)
+		print("=" * 20)
 
 		self.assertEqual(2, completion.returncode)
-		self.assertIn("invalid choice: 'expand'", stdout)
+		self.assertIn("invalid choice: 'expand'", stderr)
 
 	def test_HelpCommandUnknownCommand(self):
 		completion = subprocess.run([PROGRAM_NAME, "help", "expand"], capture_output=True)
@@ -96,14 +96,14 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		# print()
-		# print("=" * 20)
-		# print(stdout)
-		# print("-" * 20)
-		# print(stderr)
-		# print("=" * 20)
+		print()
+		print("=" * 20)
+		print(stdout)
+		print("-" * 20)
+		print(stderr)
+		print("=" * 20)
 
-		self.assertEqual(2, completion.returncode)
+		self.assertEqual(0, completion.returncode)
 		self.assertIn("Command expand is unknown", stdout)
 
 
