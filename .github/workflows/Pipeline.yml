@@ -103,7 +103,7 @@ jobs:
       - name: ⚙️ Install wheel
         if: matrix.system != 'msys2'
         run: |
-          python -m pip install -U wheel
+          python -m pip install -U wheel pytest
 
       - name: 🔧 Install package
         run: python -m pip install pyEDAA.UCIS*.whl

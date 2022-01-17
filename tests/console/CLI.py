@@ -30,7 +30,6 @@
 #
 """Testcase for pyEDAA.UCIS service program."""
 import shutil
-from pathlib      import Path
 from unittest     import TestCase
 
 
