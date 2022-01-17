@@ -30,6 +30,7 @@
 #
 """Testcase for pyEDAA.UCIS service program."""
 import shutil
+import subprocess
 from unittest     import TestCase
 
 
@@ -40,14 +41,18 @@ if __name__ == "__main__": # pragma: no cover
 
 
 class Help(TestCase):
-	def test_Installation(self):
-		prog = shutil.which("pyedaa-ucis")
+	PROGRAM_NAME = "pyedaa-ucis"
 
-		print(prog)
+	def test_Installation(self):
+		prog = shutil.which(self.PROGRAM_NAME)
+
 		self.assertIsNotNone(prog)
+		self.assertTrue(prog.endswith(self.PROGRAM_NAME))
 
 	def test_NoOptions(self):
-		pass
+		completion = subprocess.run(["pyedaa-ucis"], capture_output=True)
 
+		stdout = completion.stdout.decode("utf-8")
 
-
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
