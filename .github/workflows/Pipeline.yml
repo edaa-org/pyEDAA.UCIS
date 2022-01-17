@@ -122,6 +122,7 @@ jobs:
         run: |
           # [ 'x${{ inputs.artifact }}' != 'x' ] && PYTEST_ARGS='--junitxml=TestReport.xml' || unset PYTEST_ARGS
           # python -m pytest -rA ${{ inputs.unittest_directory }} $PYTEST_ARGS --color=yes
+          which pyedaa-ucis
           PYTEST_ARGS='--junitxml=TestReport.xml'
           python -m pytest -rA tests/console $PYTEST_ARGS --color=yes
 

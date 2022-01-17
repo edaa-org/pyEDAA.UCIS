@@ -28,7 +28,7 @@
 # SPDX-License-Identifier: Apache-2.0                                                                                  #
 # ==================================================================================================================== #
 #
-"""Package installer for 'Tools to extract data from UCIS datafiles'."""
+"""Package installer for 'Tools to extract and convert data from UCDB files'."""
 from pathlib             import Path
 from pyTooling.Packaging import DescribePythonPackageHostedOnGitHub
 
@@ -39,7 +39,7 @@ packageInformationFile = Path(f"{packageDirectory}/__init__.py")
 
 DescribePythonPackageHostedOnGitHub(
 	packageName=packageName,
-	description="Tools to extract data from UCDB files.",
+	description="Tools to extract and convert data from UCDB files.",
 	gitHubNamespace=gitHubNamespace,
 	sourceFileWithVersion=packageInformationFile,
 	developmentStatus="alpha",
@@ -47,6 +47,6 @@ DescribePythonPackageHostedOnGitHub(
 		"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
 	],
 	consoleScripts={
-		"ucdb2cobertura": "pyEDAA.UCIS.CLI:main"
+		"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
 	}
 )
