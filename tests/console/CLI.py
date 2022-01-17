@@ -62,9 +62,7 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
 		print(stdout)
-		eprint()
 		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
@@ -76,9 +74,7 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
 		print(stdout)
-		eprint()
 		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
@@ -90,9 +86,7 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
 		print(stdout)
-		eprint()
 		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
@@ -104,9 +98,7 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
 		print(stdout)
-		eprint()
 		eprint(stderr)
 
 		self.assertEqual(2, completion.returncode)
@@ -118,9 +110,7 @@ class Help(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
 		print(stdout)
-		eprint()
 		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
@@ -134,9 +124,7 @@ class Version(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
 		print(stdout)
-		eprint()
 		eprint(stderr)
 
 		self.assertEqual(0, completion.returncode)
@@ -150,10 +138,9 @@ class Export(TestCase):
 		stdout = completion.stdout.decode("utf-8")
 		stderr = completion.stderr.decode("utf-8")
 
-		print()
 		print(stdout)
-		eprint()
 		eprint(stderr)
 
 		self.assertEqual(1, completion.returncode)
 		self.assertIn("UCDB Service Program", stdout)
+		self.assertEqual("", stderr)
