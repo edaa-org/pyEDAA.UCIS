@@ -46,7 +46,7 @@ At next use this layer's service program to convert from UCIS to Cobertura forma
 
 .. code-block::
 
-   python ucdb2cobertura.py -i ucdb.xml -o cobertura.xml
+   pyedaa-ucis --ucdb ucdb.xml --cobertura cobertura.xml
 """
 from argparse import RawDescriptionHelpFormatter
 from pathlib import Path
