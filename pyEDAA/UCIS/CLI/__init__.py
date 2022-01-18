@@ -55,6 +55,7 @@ from textwrap import dedent
 from pyAttributes.ArgParseAttributes import ArgParseMixin, DefaultAttribute, CommandAttribute, ArgumentAttribute
 from pyTooling.Decorators import export
 
+from pyEDAA.UCIS      import __version__, __copyright__, __license__
 from pyEDAA.UCIS.UCDB import Parser
 
 
@@ -115,12 +116,29 @@ class Program(ProgramBase, ArgParseMixin):
 		self._PrintHeadline()
 		self._PrintHelp(args.Command)
 
+	@CommandAttribute("version", help="Display version information.", description="Display version information.")
+	def HandleVersion(self, _) -> None:
+		"""Handle program calls with command ``version``."""
+		self._PrintHeadline()
+		self._PrintVersion()
+
 	@CommandAttribute("export", help="Export data from UCDB.", description="Export data from UCDB.")
 	@ArgumentAttribute("--ucdb",      metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
 	@ArgumentAttribute("--cobertura", metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
 	def HandleExport(self, args) -> None:
 		"""Handle program calls with command ``export``."""
 		self._PrintHeadline()
+
+		returnCode = 0
+		if args.ucdb is None:
+			print(f"Option '--ucdb <UCDBFile' is missing.")
+			returnCode = 3
+		if args.cobertura is None:
+			print(f"Option '--cobertura <CoberturaFile' is missing.")
+			returnCode = 3
+
+		if returnCode != 0:
+			exit(returnCode)
 
 		print(f"Exporting code coverage information from UCDB file to Cobertura format ...")
 
@@ -145,6 +163,15 @@ class Program(ProgramBase, ArgParseMixin):
 		print(dedent(f"""\
 			[DONE] Export and conversion complete.
 			  Statement coverage: {coverage} %
+			""")
+		)
+
+	def _PrintVersion(self):
+		"""Helper function to print the version information."""
+		print(dedent(f"""\
+			Copyright: {__copyright__}
+			License:   {__license__}
+			Version:   v{__version__}
 			""")
 		)
 
