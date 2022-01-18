@@ -28,10 +28,119 @@
 # SPDX-License-Identifier: Apache-2.0                                                                                  #
 # ==================================================================================================================== #
 #
-"""The Unified Coverage Interoperability Standard (UCIS) layer of EDA² offers a data model for reading UCDB files."""
-__author__ =    "Patrick Lehmann"
-__email__ =     "Paebbels@gmail.com"
-__copyright__ = "2021-2022, Electronic Design Automation Abstraction (EDA2)"
-__license__ =   "Apache License, Version 2.0"
-__version__ =   "0.1.0"
-__keywords__ =  ["UCIS", "UCDB", "coverage", "Cobertura", "xml"]
+"""Testcase for pyEDAA.UCIS service program."""
+import shutil
+import subprocess
+from sys          import stderr as sys_stderr
+from unittest     import TestCase
+
+
+if __name__ == "__main__": # pragma: no cover
+	print("ERROR: you called a testcase declaration file as an executable module.")
+	print("Use: 'python -m unitest <testcase module>'")
+	exit(1)
+
+
+PROGRAM_NAME = "pyedaa-ucis"
+
+def eprint(*args, **kwargs):
+	print(*args, file=sys_stderr, **kwargs)
+
+
+class Installation(TestCase):
+	def test_Which(self):
+		prog = shutil.which(PROGRAM_NAME)
+
+		self.assertIsNotNone(prog)
+		self.assertIn(PROGRAM_NAME, prog)
+
+
+class Help(TestCase):
+	def test_NoOptions(self):
+		completion = subprocess.run([PROGRAM_NAME], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print(stdout)
+		eprint(stderr)
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+	def test_HelpCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "help"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print(stdout)
+		eprint(stderr)
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+	def test_HelpForExport(self):
+		completion = subprocess.run([PROGRAM_NAME, "help", "export"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print(stdout)
+		eprint(stderr)
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+	def test_UnknownCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "expand"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print(stdout)
+		eprint(stderr)
+
+		self.assertEqual(2, completion.returncode)
+		self.assertIn("invalid choice: 'expand'", stderr)
+
+	def test_HelpCommandUnknownCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "help", "expand"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print(stdout)
+		eprint(stderr)
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("Command expand is unknown", stdout)
+
+
+class Version(TestCase):
+	def test_VersionCommand(self):
+		completion = subprocess.run([PROGRAM_NAME, "version"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print(stdout)
+		eprint(stderr)
+
+		self.assertEqual(0, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+
+
+class Export(TestCase):
+	def test_ExportCommandNoFilenames(self):
+		completion = subprocess.run([PROGRAM_NAME, "export"], capture_output=True)
+
+		stdout = completion.stdout.decode("utf-8")
+		stderr = completion.stderr.decode("utf-8")
+
+		print(stdout)
+		eprint(stderr)
+
+		self.assertEqual(3, completion.returncode)
+		self.assertIn("UCDB Service Program", stdout)
+		self.assertEqual("", stderr)
