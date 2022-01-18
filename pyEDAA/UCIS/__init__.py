@@ -31,7 +31,7 @@
 """The Unified Coverage Interoperability Standard (UCIS) layer of EDA² offers a data model for reading UCDB files."""
 __author__ =    "Patrick Lehmann"
 __email__ =     "Paebbels@gmail.com"
-__copyright__ = "2021-2022, Electronic Design Automation Abstraction (EDA²)"
+__copyright__ = "2021-2022, Electronic Design Automation Abstraction (EDA2)"
 __license__ =   "Apache License, Version 2.0"
 __version__ =   "0.1.0"
 __keywords__ =  ["UCIS", "UCDB", "coverage", "Cobertura", "xml"]
