@@ -46,9 +46,16 @@ class ExportAndConvert(TestCase):
 		ucdbPath = Path("tests/data/ucdb.xml")
 		coberturaPath = Path("tests/data/cobertura.xml")
 
-		parser = Parser(ucdbPath)
-		model = parser.get_cobertura_model()
+		parser = Parser(ucdbPath, False)
+		model = parser.getCoberturaModel()
 
-		coberturaContent = model.get_xml()
+		coberturaContent = model.getXml()
+
+		self.assertIsNotNone(coberturaContent)
+
+		parser = Parser(ucdbPath, True)
+		model = parser.getCoberturaModel()
+
+		coberturaContent = model.getXml()
 
 		self.assertIsNotNone(coberturaContent)
