@@ -1,0 +1,13 @@
+-r ../requirements.txt
+
+pyTooling>=1.9.4
+
+# Enforce latest version on ReadTheDocs
+sphinx>=4.3.0
+
+# Sphinx Extenstions
+autoapi>=2.0.1
+sphinxcontrib.autoprogram>=0.1.7
+sphinxcontrib-mermaid>=0.7.1
+sphinx_fontawesome>=0.0.6
+sphinx_autodoc_typehints>=1.14.1

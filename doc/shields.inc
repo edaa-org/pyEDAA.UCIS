@@ -74,21 +74,21 @@
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml
 
 .. # Codacy - quality
-.. |SHIELD:svg:UCIS-codacy-quality| image:: https://img.shields.io/codacy/grade/39d312bf98244961975559f141c3e000?longCache=true&style=flat-square&logo=codacy
+.. |SHIELD:svg:UCIS-codacy-quality| image:: https://img.shields.io/codacy/grade/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&style=flat-square&logo=codacy
    :alt: Codacy - Quality
    :height: 22
    :target: https://www.codacy.com/gh/edaa-org/pyEDAA.UCIS
-.. |SHIELD:png:UCIS-codacy-quality| image:: https://raster.shields.io/codacy/grade/39d312bf98244961975559f141c3e000?longCache=true&style=flat-square&logo=codacy
+.. |SHIELD:png:UCIS-codacy-quality| image:: https://raster.shields.io/codacy/grade/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&style=flat-square&logo=codacy
    :alt: Codacy - Quality
    :height: 22
    :target: https://www.codacy.com/gh/edaa-org/pyEDAA.UCIS
 
 .. # Codacy - coverage
-.. |SHIELD:svg:UCIS-codacy-coverage| image:: https://img.shields.io/codacy/coverage/39d312bf98244961975559f141c3e000?longCache=true&style=flat-square&logo=codacy
+.. |SHIELD:svg:UCIS-codacy-coverage| image:: https://img.shields.io/codacy/coverage/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&style=flat-square&logo=codacy
    :alt: Codacy - Line Coverage
    :height: 22
    :target: https://www.codacy.com/gh/edaa-org/pyEDAA.UCIS
-.. |SHIELD:png:UCIS-codacy-coverage| image:: https://raster.shields.io/codacy/coverage/39d312bf98244961975559f141c3e000?longCache=true&style=flat-square&logo=codacy
+.. |SHIELD:png:UCIS-codacy-coverage| image:: https://raster.shields.io/codacy/coverage/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&style=flat-square&logo=codacy
    :alt: Codacy - Line Coverage
    :height: 22
    :target: https://www.codacy.com/gh/edaa-org/pyEDAA.UCIS
