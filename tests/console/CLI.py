@@ -52,7 +52,7 @@ class Installation(TestCase):
 		prog = shutil.which(PROGRAM_NAME)
 
 		self.assertIsNotNone(prog)
-		self.assertTrue(prog.endswith(PROGRAM_NAME))
+		self.assertIn(PROGRAM_NAME, prog)
 
 
 class Help(TestCase):
