@@ -104,7 +104,7 @@ jobs:
           python -m pip install -U wheel pytest
 
       - name: 🔧 Install package
-        run: python -m pip install pyEDAA.UCIS*.whl
+        run: python -m pip install pyEDAA.UCIS-0.1.0-py3-none-any.whl
 
       - name: ☑ Run console tests
         if: matrix.system == 'windows'
