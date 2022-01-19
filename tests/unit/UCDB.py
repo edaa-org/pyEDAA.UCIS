@@ -59,3 +59,70 @@ class ExportAndConvert(TestCase):
 		coberturaContent = model.getXml()
 
 		self.assertIsNotNone(coberturaContent)
+
+
+class CoverageValues(TestCase):
+	def _parseUCDB(self, ucdbPath, mergeInstances):
+		parser = Parser(ucdbPath, mergeInstances)
+		model = parser.getCoberturaModel()
+		model.getXml()
+
+		return parser, model
+
+	def test_multipleInstances(self):
+		(parser, model) = self._parseUCDB(
+			Path("tests/data/ucdb000_multiple_instances.xml"),
+			False,
+		)
+
+		self.assertEqual(parser.statementsCount, 15)
+		self.assertEqual(parser.statementsCovered, 14)
+		self.assertEqual(model.linesValid, 7)
+		self.assertEqual(model.linesCovered, 6)
+
+		(parser, model) = self._parseUCDB(
+			Path("tests/data/ucdb000_multiple_instances.xml"),
+			True,
+		)
+
+	def test_allExcluded(self):
+		(parser, model) = self._parseUCDB(
+			Path("tests/data/ucdb001_all_excluded.xml"),
+			False,
+		)
+
+		self.assertEqual(parser.statementsCount, 0)
+		self.assertEqual(parser.statementsCovered, 0)
+		self.assertEqual(model.linesValid, 0)
+		self.assertEqual(model.linesCovered, 0)
+
+		(parser, model) = self._parseUCDB(
+			Path("tests/data/ucdb001_all_excluded.xml"),
+			True,
+		)
+
+		self.assertEqual(parser.statementsCount, 0)
+		self.assertEqual(parser.statementsCovered, 0)
+		self.assertEqual(model.linesValid, 0)
+		self.assertEqual(model.linesCovered, 0)
+
+	def test_partiallyExcluded(self):
+		(parser, model) = self._parseUCDB(
+			Path("tests/data/ucdb002_partially_excluded.xml"),
+			False,
+		)
+
+		self.assertEqual(parser.statementsCount, 5)
+		self.assertEqual(parser.statementsCovered, 4)
+		self.assertEqual(model.linesValid, 5)
+		self.assertEqual(model.linesCovered, 4)
+
+		(parser, model) = self._parseUCDB(
+			Path("tests/data/ucdb002_partially_excluded.xml"),
+			True,
+		)
+
+		self.assertEqual(parser.statementsCount, 5)
+		self.assertEqual(parser.statementsCovered, 4)
+		self.assertEqual(model.linesValid, 5)
+		self.assertEqual(model.linesCovered, 4)
