@@ -46,6 +46,30 @@ from pyTooling.Decorators import export
 
 
 @export
+class CoberturaException(Exception):
+	"""Base class for other Cobertura exceptions"""
+	pass
+
+
+@export
+class DuplicatedLineNumber(CoberturaException):
+	"""Raised when statement with specified line number already exists in Cobertura class"""
+	pass
+
+
+@export
+class DuplicatedClassName(CoberturaException):
+	"""Raised when class with specified name already exists in Cobertura package"""
+	pass
+
+
+@export
+class DuplicatedPackageName(CoberturaException):
+	"""Raised when package with specified name already exists in Cobertura coverage"""
+	pass
+
+
+@export
 class Class:
 	"""Represents a code element in the Cobertura coverage data model (Java-focused)."""
 
@@ -63,7 +87,8 @@ class Class:
 		self.linesCovered = 0
 
 	def addStatement(self, line: int, hits: int) -> None:
-		assert line not in self.lines.keys(), "Duplicated line number"
+		if line in self.lines.keys():
+			raise DuplicatedLineNumber(f"Duplicated line number: {line}")
 
 		self.lines[line] = hits
 		self.linesValid += 1
@@ -115,7 +140,9 @@ class Package:
 		self.linesCovered = 0
 
 	def addClass(self, coberturaClass: Class):
-		assert coberturaClass.name not in self.classes, "Duplicated class name"
+		if coberturaClass.name in self.classes:
+			raise DuplicatedClassName(f"Duplicated class name: {coberturaClass.name}")
+
 		self.classes[coberturaClass.name] = coberturaClass
 
 	def refreshStatistics(self) -> None:
@@ -167,7 +194,9 @@ class Coverage:
 		self.sources.add(source)
 
 	def addPackage(self, package: Package) -> None:
-		assert package.name not in self.packages, "Duplicated package name"
+		if package.name in self.packages:
+			raise DuplicatedPackageName(f"Duplicated package name{package.name}")
+
 		self.packages[package.name] = package
 
 	def addStatement(self, source: str, file: str, line: int, count: int) -> None:

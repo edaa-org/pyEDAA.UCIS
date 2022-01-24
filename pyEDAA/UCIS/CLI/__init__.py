@@ -58,6 +58,7 @@ from pyTooling.Decorators import export
 
 from pyEDAA.UCIS      import __version__, __copyright__, __license__
 from pyEDAA.UCIS.UCDB import Parser
+from pyEDAA.UCIS.Cobertura import CoberturaException
 
 
 @export
@@ -218,6 +219,10 @@ def main():
 	except FileNotFoundError as ex:
 		print()
 		print(f"[ERROR] {ex}")
+		exit(1)
+	except CoberturaException as ex:
+		print()
+		print(f"[INTERNAL ERROR] {ex}")
 		exit(1)
 
 
