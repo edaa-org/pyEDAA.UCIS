@@ -79,9 +79,11 @@ class Class:
 		classNode.attrib["branch-rate"] = "0"
 
 		try:
-			classNode.attrib["line-rate"] = str(self.linesCovered / self.linesValid)
+			rate = self.linesCovered / self.linesValid
 		except ZeroDivisionError:
-			classNode.attrib["line-rate"] = "1"
+			rate = 1.0
+
+		classNode.attrib["line-rate"] = f"{rate:.16g}"
 
 		classNode.append(etree.Element("methods"))
 		linesNode = etree.SubElement(classNode, "lines")
@@ -132,11 +134,11 @@ class Package:
 		packageNode.attrib["branch-rate"] = "0"
 
 		try:
-			packageNode.attrib["line-rate"] = str(
-				self.linesCovered / self.linesValid
-			)
+			rate = self.linesCovered / self.linesValid
 		except ZeroDivisionError:
-			packageNode.attrib["line-rate"] = "1"
+			rate = 1.0
+
+		packageNode.attrib["line-rate"] = f"{rate:.16g}"
 
 		packageNode.append(classesNode)
 
@@ -220,11 +222,11 @@ class Coverage:
 		coverageNode.attrib["lines-covered"] = str(self.linesCovered)
 
 		try:
-			coverageNode.attrib["line-rate"] = str(
-				self.linesCovered / self.linesValid
-			)
+			rate = self.linesCovered / self.linesValid
 		except ZeroDivisionError:
-			coverageNode.attrib["line-rate"] = "1"
+			rate = 1.0
+
+		coverageNode.attrib["line-rate"] = f"{rate:.16g}"
 
 		return etree.tostring(
 			coverageNode, pretty_print=True, encoding="utf-8", xml_declaration=True
