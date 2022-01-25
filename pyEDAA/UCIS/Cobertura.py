@@ -48,25 +48,21 @@ from pyTooling.Decorators import export
 @export
 class CoberturaException(Exception):
 	"""Base class for other Cobertura exceptions"""
-	pass
 
 
 @export
 class DuplicatedLineNumber(CoberturaException):
 	"""Raised when statement with specified line number already exists in Cobertura class"""
-	pass
 
 
 @export
 class DuplicatedClassName(CoberturaException):
 	"""Raised when class with specified name already exists in Cobertura package"""
-	pass
 
 
 @export
 class DuplicatedPackageName(CoberturaException):
 	"""Raised when package with specified name already exists in Cobertura coverage"""
-	pass
 
 
 @export
