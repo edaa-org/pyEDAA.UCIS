@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ux:ucdb version="Riviera-PRO 2022.04" xmlns:ux="www.aldec.com">
+<ux:attr key="path_separator" type="str">/</ux:attr>
+<ux:attr key="hier_mode" type="int">1</ux:attr>
+<ux:hnode logical_name="cov005" physical_name="cov005.acdb" type="1">
+<ux:attr key="UCIS:test_status" type="int">0</ux:attr>
+<ux:attr key="UCIS:compulsory" type="int">0</ux:attr>
+<ux:attr key="UCIS:sim_time" type="double">6</ux:attr>
+<ux:attr key="UCIS:cpu_time" type="double">0.00034000000000000002</ux:attr>
+<ux:attr key="UCIS:cost" type="double">0</ux:attr>
+<ux:attr key="UCIS:date" type="str">2022-01-09 02:08</ux:attr>
+<ux:attr key="UCIS:time_unit" type="str">ps</ux:attr>
+<ux:attr key="UCIS:run_cwd" type="str">/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project</ux:attr>
+<ux:attr key="UCIS:seed" type="str">1</ux:attr>
+<ux:attr key="UCIS:cmd" type="str"></ux:attr>
+<ux:attr key="UCIS:args" type="str">asim -acdb top</ux:attr>
+<ux:attr key="UCIS:username" type="str">root</ux:attr>
+<ux:attr key="UCIS:associated" type="int">1</ux:attr>
+<ux:attr key="UCIS:host_name" type="str">runner-zym9fbd--project-94-concurrent-0</ux:attr>
+<ux:attr key="UCIS:host_os" type="str">Linux64</ux:attr>
+<ux:attr key="UCIS:tool_category" type="str">UCIS:Simulator</ux:attr>
+<ux:attr key="UCIS:tool" type="str">Riviera-PRO</ux:attr>
+<ux:attr key="UCIS:tool_version" type="str">2022.04</ux:attr>
+</ux:hnode>
+<ux:scope name="work.top" type="DU_MODULE" weight="1" lang="VLOG" flags="00000001">
+<ux:src file="test000.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="1" token="1"/>
+<ux:attr key="UCIS:unit_sf_order" type="str">1;1;10;test000.sv;63;/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project;</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+</ux:scope>
+<ux:scope name="work.DUT" type="DU_MODULE" weight="1" lang="VLOG" flags="20000001">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="34" token="1"/>
+<ux:attr key="UCIS:unit_sf_order" type="str">1;1;6;dut.sv;63;/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project;</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+</ux:scope>
+<ux:scope name="work.M" type="DU_MODULE" weight="1" lang="VLOG" flags="20000006">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="18" token="1"/>
+<ux:attr key="UCIS:unit_sf_order" type="str">1;1;6;dut.sv;63;/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project;</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="25" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:scope name="branch#26#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BTYPE#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="@ALWAYS#23_0@" type="PROCESS" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="23" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="25" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+</ux:scope>
+</ux:scope>
+<ux:scope name="work.UnitScopePackage_1" type="DU_PACKAGE" weight="1" lang="SV" flags="20000001">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="0" token="1"/>
+<ux:attr key="UCIS:unit_sf_order" type="str">1;1;6;dut.sv;63;/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project;</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+</ux:scope>
+<ux:scope name="work.$root($unit)" type="DU_PACKAGE" weight="1" lang="SV" flags="00000001">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="1" token="1"/>
+<ux:attr key="UCIS:unit_sf_order" type="str">1;1;6;dut.sv;63;/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project;</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:scope name="C" type="CLASS" weight="1" lang="SV" flags="20000007">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="1" token="1"/>
+<ux:attr key="UCIS:unit_sf_order" type="str">1;1;6;dut.sv;63;/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project;</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+</ux:scope>
+</ux:scope>
+<ux:scope name="top" type="INSTANCE" weight="1" lang="VLOG" flags="00000001" du="work.top">
+<ux:src file="test000.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="1" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:scope name="dut" type="INSTANCE" weight="1" lang="VLOG" flags="20000001" du="work.DUT">
+<ux:src file="test000.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="7" token="0"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:scope name="m1" type="INSTANCE" weight="1" lang="VLOG" flags="20000006" du="work.M">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="40" token="0"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="25" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:scope name="branch#26#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BTYPE#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="@ALWAYS#23_0@" type="PROCESS" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="23" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="25" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+</ux:scope>
+</ux:scope>
+<ux:scope name="m2" type="INSTANCE" weight="1" lang="VLOG" flags="20000006" du="work.M">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="41" token="0"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="25" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:scope name="branch#26#1#" type="BRANCH" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BTYPE#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">4</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="true_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="@ALWAYS#23_0@" type="PROCESS" weight="1" lang="VLOG" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="23" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="25" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="26" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="27" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">2</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="28" token="1"/>
+</ux:bin>
+</ux:scope>
+</ux:scope>
+</ux:scope>
+</ux:scope>
+<ux:scope name="\package UnitScopePackage_1\" type="PACKAGE" weight="1" lang="SV" flags="20000001" du="work.UnitScopePackage_1">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="0" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+</ux:scope>
+<ux:scope name="$unit.work" type="PACKAGE" weight="1" lang="SV" flags="00000001" du="work.$root($unit)">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="1" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:scope name="C" type="CLASS" weight="1" lang="SV" flags="20000007">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="1" token="1"/>
+<ux:attr key="template_name" type="str">work.C</ux:attr>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="6" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">0</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="7" token="1"/>
+</ux:bin>
+<ux:bin name="" type="STMTBIN" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="9" token="1"/>
+</ux:bin>
+<ux:scope name="branch#6#1#" type="BRANCH" weight="1" lang="SV" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="6" token="1"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">1</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:bin name="if_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">0</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="7" token="1"/>
+</ux:bin>
+<ux:bin name="else_branch" type="BRANCHBIN" flags="00000001">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:attr key="#BCOUNT#" type="int">0</ux:attr>
+<ux:attr key="#BHASELSE#" type="int">0</ux:attr>
+<ux:attr key="#BTYPE#" type="int">0</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="9" token="1"/>
+</ux:bin>
+</ux:scope>
+<ux:scope name="f" type="FUNCTION" weight="1" lang="SV" flags="00000000">
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="3" token="2"/>
+<ux:attr key="#GOAL#" type="int">100</ux:attr>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="6" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">0</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="7" token="1"/>
+</ux:bin>
+<ux:bin name="" type="1000000" flags="00000041">
+<ux:attr key="#GOAL#" type="int">1</ux:attr>
+<ux:attr key="#SINDEX#" type="int">1</ux:attr>
+<ux:count type="int">1</ux:count>
+<ux:src file="dut.sv" workdir="/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project" line="9" token="1"/>
+</ux:bin>
+</ux:scope>
+</ux:scope>
+</ux:scope>
+<ux:command type="4" flags="44873" data="3;1;6;dut.sv;63;/builds/gitlab/gliwice/ucdb2cobertura/tests/simple_test/project;0;0;" index="1"/>
+</ux:ucdb>

@@ -46,9 +46,94 @@ class ExportAndConvert(TestCase):
 		ucdbPath = Path("tests/data/ucdb.xml")
 		coberturaPath = Path("tests/data/cobertura.xml")
 
-		parser = Parser(ucdbPath)
-		model = parser.get_cobertura_model()
+		parser = Parser(ucdbPath, False)
+		model = parser.getCoberturaModel()
 
-		coberturaContent = model.get_xml()
+		coberturaContent = model.getXml()
 
 		self.assertIsNotNone(coberturaContent)
+
+		parser = Parser(ucdbPath, True)
+		model = parser.getCoberturaModel()
+
+		coberturaContent = model.getXml()
+
+		self.assertIsNotNone(coberturaContent)
+
+
+class CoverageValues(TestCase):
+	def _parseUCDB(self, ucdbPath, mergeInstances):
+		parser = Parser(ucdbPath, mergeInstances)
+		model = parser.getCoberturaModel()
+		model.getXml()
+
+		return parser, model
+
+	def test_multipleInstances(self):
+		ucdbPath = Path("tests/data/ucdb000_multiple_instances.xml")
+
+		(parser, model) = self._parseUCDB(
+			ucdbPath,
+			False,
+		)
+
+		self.assertEqual(15, parser.statementsCount)
+		self.assertEqual(14, parser.statementsCovered)
+		self.assertEqual(7, model.linesValid)
+		self.assertEqual(6, model.linesCovered)
+
+		(parser, model) = self._parseUCDB(
+			ucdbPath,
+			True,
+		)
+
+		self.assertEqual(9, parser.statementsCount)
+		self.assertEqual(8, parser.statementsCovered)
+		self.assertEqual(7, model.linesValid)
+		self.assertEqual(6, model.linesCovered)
+
+	def test_allExcluded(self):
+		ucdbPath = Path("tests/data/ucdb001_all_excluded.xml")
+
+		(parser, model) = self._parseUCDB(
+			ucdbPath,
+			False,
+		)
+
+		self.assertEqual(0, parser.statementsCount)
+		self.assertEqual(0, parser.statementsCovered)
+		self.assertEqual(0, model.linesValid)
+		self.assertEqual(0, model.linesCovered)
+
+		(parser, model) = self._parseUCDB(
+			ucdbPath,
+			True,
+		)
+
+		self.assertEqual(0, parser.statementsCount)
+		self.assertEqual(0, parser.statementsCovered)
+		self.assertEqual(0, model.linesValid)
+		self.assertEqual(0, model.linesCovered)
+
+	def test_partiallyExcluded(self):
+		ucdbPath = Path("tests/data/ucdb002_partially_excluded.xml")
+
+		(parser, model) = self._parseUCDB(
+			ucdbPath,
+			False,
+		)
+
+		self.assertEqual(5, parser.statementsCount)
+		self.assertEqual(4, parser.statementsCovered)
+		self.assertEqual(5, model.linesValid)
+		self.assertEqual(4, model.linesCovered)
+
+		(parser, model) = self._parseUCDB(
+			ucdbPath,
+			True,
+		)
+
+		self.assertEqual(5, parser.statementsCount)
+		self.assertEqual(4, parser.statementsCovered)
+		self.assertEqual(5, model.linesValid)
+		self.assertEqual(4, model.linesCovered)
