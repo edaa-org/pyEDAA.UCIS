@@ -141,7 +141,7 @@ class Package:
 
 	def addClass(self, coberturaClass: Class):
 		if coberturaClass.name in self.classes:
-			raise DuplicatedClassName(f"Duplicated class name: {coberturaClass.name}")
+			raise DuplicatedClassName(f"Duplicated class name: '{coberturaClass.name}'.")
 
 		self.classes[coberturaClass.name] = coberturaClass
 
@@ -195,7 +195,7 @@ class Coverage:
 
 	def addPackage(self, package: Package) -> None:
 		if package.name in self.packages:
-			raise DuplicatedPackageName(f"Duplicated package name{package.name}")
+			raise DuplicatedPackageName(f"Duplicated package name: '{package.name}'.")
 
 		self.packages[package.name] = package
 
