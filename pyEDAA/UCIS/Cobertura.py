@@ -92,7 +92,7 @@ class Class:
 		if hits:
 			self.linesCovered += 1
 
-	def getXmlNode(self) -> etree.Element:
+	def getXmlNode(self) -> etree._Element:
 		classNode = etree.Element("class")
 		classNode.attrib["name"] = self.sourceFile
 		classNode.attrib["filename"] = self.sourceFile
@@ -149,7 +149,7 @@ class Package:
 			self.linesCovered += coberturaClass.linesCovered
 			self.linesValid += coberturaClass.linesValid
 
-	def getXmlNode(self) -> etree.Element:
+	def getXmlNode(self) -> etree._Element:
 		classesNode = etree.Element("classes")
 		packageNode = etree.Element("package")
 		packageNode.attrib["name"] = self.name
@@ -194,20 +194,6 @@ class Coverage:
 			raise DuplicatedPackageName(f"Duplicated package name: '{package.name}'.")
 
 		self.packages[package.name] = package
-
-	def addStatement(self, source: str, file: str, line: int, count: int) -> None:
-		try:
-			self.packages[source].addStatement(file, file, line, count)
-		except KeyError:
-			self.packages[source] = Package(file)
-			self.packages.get(source).addStatement(file, file, line, count)
-
-		self.sources.add(source)
-
-		self.linesValid += 1
-
-		if count:
-			self.linesCovered += 1
 
 	def refreshStatistics(self) -> None:
 		self.linesValid = 0

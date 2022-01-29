@@ -34,7 +34,7 @@ from collections import namedtuple, defaultdict
 from itertools import groupby
 from operator import attrgetter
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Tuple, Dict, DefaultDict
 
 from lxml import etree
 from pyTooling.Decorators import export
@@ -58,16 +58,35 @@ StatementData = namedtuple(
 
 
 @export
+class UcdbParserException(Exception):
+	"""Base class for other UCDB Parser exceptions"""
+
+
+@export
+class InternalErrorOccurred(UcdbParserException):
+	"""Raised when internal error occurred"""
+
+
+@export
 class Parser:
+	_mergeInstances: bool
+	_tree: etree._ElementTree
+	_nsmap: Dict
+	_coverage: Coverage
+	statementsCount: int
+	statementsCovered: int
+
 	def __init__(self, ucdbFile: Path, mergeInstances: bool):
-		self.mergeInstances = mergeInstances
+		self._mergeInstances = mergeInstances
 
 		with ucdbFile.open("r") as filename:
-			self.tree = etree.parse(filename)
+			self._tree = etree.parse(filename)
 
-		self.nsmap = self.tree.getroot().nsmap
+		self._nsmap = {
+			k: v for (k, v) in self._tree.getroot().nsmap.items() if k is not None
+		}
 
-		self.coverage = Coverage()
+		self._coverage = Coverage()
 
 		self.statementsCount = 0
 		self.statementsCovered = 0
@@ -75,7 +94,7 @@ class Parser:
 	def getCoberturaModel(self) -> Coverage:
 		self._parseStatementCoverage()
 
-		return self.coverage
+		return self._coverage
 
 	def _groupByIndex(self, statements: List[StatementData]) -> List[StatementData]:
 		groupedStmts = []
@@ -97,26 +116,50 @@ class Parser:
 		return groupedStmts
 
 	def _parseStatementCoverage(self) -> None:
-		scopes = self.tree.xpath(
-			"/ux:ucdb/ux:scope[.//ux:bin[@type='STMTBIN']]", namespaces=self.nsmap
+		scopes = self._tree.xpath(
+			"/ux:ucdb/ux:scope[.//ux:bin[@type='STMTBIN']]", namespaces=self._nsmap
 		)
 
-		nodes = []
+		if not isinstance(scopes, list):
+			raise InternalErrorOccurred(f"Unexpected type: '{scopes.__class__.__name__}'.")
+
+		nodes: List[etree._Element] = []
 
 		for scopeNode in scopes:
-			if scopeNode.get("type").startswith("DU_"):
-				continue
-			nodes.extend(
-				scopeNode.xpath(".//ux:bin[@type='STMTBIN']", namespaces=self.nsmap)
-			)
+			if not isinstance(scopeNode, etree._Element):
+				raise InternalErrorOccurred(f"Unexpected type: '{scopeNode.__class__.__name__}'.")
 
-		statements = defaultdict(lambda: defaultdict(list))
+			typeName = scopeNode.get("type")
+
+			if typeName is None:
+				raise InternalErrorOccurred("Unexpected 'None' value.")
+
+			if typeName.startswith("DU_"):
+				continue
+
+			statementBins = scopeNode.xpath(".//ux:bin[@type='STMTBIN']", namespaces=self._nsmap)
+
+			if not isinstance(statementBins, list):
+				raise InternalErrorOccurred(f"Unexpected type: '{statementBins.__class__.__name__}'.")
+
+			for statementBin in statementBins:
+				if not isinstance(statementBin, etree._Element):
+					raise InternalErrorOccurred(f"Unexpected type: '{statementBin.__class__.__name__}'.")
+
+				nodes.append(statementBin)
+
+		statements: DefaultDict[str, DefaultDict[int, List]] = defaultdict(lambda: defaultdict(list))
 
 		for node in nodes:
 			workdir, stmtData = self._parseStatementNode(node)
-			self.coverage.addSource(workdir)
+			self._coverage.addSource(workdir)
 
-			if int(node.get("flags"), 16) & UCDB_EXCLUDED:
+			flags = node.get("flags")
+
+			if flags is None:
+				raise InternalErrorOccurred("Unexpected 'None' value.")
+
+			if int(flags, 16) & UCDB_EXCLUDED:
 				_ = statements[stmtData.file]
 				continue
 
@@ -126,10 +169,10 @@ class Parser:
 			package = Package(file)
 			coberturaClass = Class(file, file)
 			package.addClass(coberturaClass)
-			self.coverage.addPackage(package)
+			self._coverage.addPackage(package)
 
 			for line, lineStmts in lines.items():
-				if self.mergeInstances:
+				if self._mergeInstances:
 					lineStmts = self._groupByIndex(lineStmts)
 
 				self.statementsCount += len(lineStmts)
@@ -142,7 +185,7 @@ class Parser:
 				coberturaClass.addStatement(line, hit)
 
 	def _parseStatementNode(self, node) -> Tuple[str, StatementData]:
-		srcNode = node.find("./ux:src", namespaces=self.nsmap)
+		srcNode = node.find("./ux:src", namespaces=self._nsmap)
 		workdir = srcNode.get("workdir")
 
 		instancePath = ".".join(
@@ -150,10 +193,10 @@ class Parser:
 		)
 
 		stmtIndex = int(
-			node.find("./ux:attr[@key='#SINDEX#']", namespaces=self.nsmap).text
+			node.find("./ux:attr[@key='#SINDEX#']", namespaces=self._nsmap).text
 		)
 
-		count = int(node.find("./ux:count", namespaces=self.nsmap).text)
+		count = int(node.find("./ux:count", namespaces=self._nsmap).text)
 
 		stmtData = StatementData(
 			file=srcNode.get("file"),
