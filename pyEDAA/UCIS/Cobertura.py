@@ -46,46 +46,78 @@ from pyTooling.Decorators import export
 
 
 @export
+class CoberturaException(Exception):
+	"""Base class for other Cobertura exceptions"""
+
+
+@export
+class DuplicatedLineNumber(CoberturaException):
+	"""Raised when statement with specified line number already exists in Cobertura class"""
+
+
+@export
+class DuplicatedClassName(CoberturaException):
+	"""Raised when class with specified name already exists in Cobertura package"""
+
+
+@export
+class DuplicatedPackageName(CoberturaException):
+	"""Raised when package with specified name already exists in Cobertura coverage"""
+
+
+@export
 class Class:
 	"""Represents a code element in the Cobertura coverage data model (Java-focused)."""
 
-	source_file: str
+	name: str
+	sourceFile: str
 	lines: Dict[int, int]
-	lines_valid: int
-	lines_covered: int
+	linesValid: int
+	linesCovered: int
 
-	def __init__(self, source_file: str):
-		self.source_file = source_file
+	def __init__(self, name: str, sourceFile: str):
+		self.name = name
+		self.sourceFile = sourceFile
 		self.lines = {}
-		self.lines_valid = 0
-		self.lines_covered = 0
+		self.linesValid = 0
+		self.linesCovered = 0
 
-	def add_statement(self, line: int, count: int) -> None:
-		assert line not in self.lines.keys()
-		self.lines[line] = count
-		self.lines_valid += 1
-		if count:
-			self.lines_covered += 1
+	def addStatement(self, line: int, hits: int) -> None:
+		if line in self.lines.keys():
+			raise DuplicatedLineNumber(f"Duplicated line number: {line}")
 
-	def get_xml_node(self) -> etree.Element:
-		class_node = etree.Element("class")
-		class_node.attrib["name"] = self.source_file
-		class_node.attrib["filename"] = self.source_file
-		class_node.attrib["complexity"] = "0"
-		class_node.attrib["branch-rate"] = "0"
-		class_node.attrib["line-rate"] = str(self.lines_covered / self.lines_valid)
-		class_node.append(etree.Element("methods"))
-		lines_node = etree.SubElement(class_node, "lines")
+		self.lines[line] = hits
+		self.linesValid += 1
+
+		if hits:
+			self.linesCovered += 1
+
+	def getXmlNode(self) -> etree._Element:
+		classNode = etree.Element("class")
+		classNode.attrib["name"] = self.sourceFile
+		classNode.attrib["filename"] = self.sourceFile
+		classNode.attrib["complexity"] = "0"
+		classNode.attrib["branch-rate"] = "0"
+
+		try:
+			rate = self.linesCovered / self.linesValid
+		except ZeroDivisionError:
+			rate = 1.0
+
+		classNode.attrib["line-rate"] = f"{rate:.16g}"
+
+		classNode.append(etree.Element("methods"))
+		linesNode = etree.SubElement(classNode, "lines")
 
 		for line in self.lines:
 			etree.SubElement(
-				lines_node,
+				linesNode,
 				"line",
 				number=str(line),
 				hits=str(self.lines[line]),
 			)
 
-		return class_node
+		return classNode
 
 
 @export
@@ -94,40 +126,49 @@ class Package:
 
 	name: str
 	classes: Dict[str, Class]
-	lines_valid: int
-	lines_covered: int
+	linesValid: int
+	linesCovered: int
 
 	def __init__(self, name: str):
 		self.name = name
 		self.classes = {}
-		self.lines_valid = 0
-		self.lines_covered = 0
+		self.linesValid = 0
+		self.linesCovered = 0
 
-	def add_statement(self, class_name: str, source_file: str, line: int, count: int) -> None:
+	def addClass(self, coberturaClass: Class):
+		if coberturaClass.name in self.classes:
+			raise DuplicatedClassName(f"Duplicated class name: '{coberturaClass.name}'.")
+
+		self.classes[coberturaClass.name] = coberturaClass
+
+	def refreshStatistics(self) -> None:
+		self.linesValid = 0
+		self.linesCovered = 0
+
+		for coberturaClass in self.classes.values():
+			self.linesCovered += coberturaClass.linesCovered
+			self.linesValid += coberturaClass.linesValid
+
+	def getXmlNode(self) -> etree._Element:
+		classesNode = etree.Element("classes")
+		packageNode = etree.Element("package")
+		packageNode.attrib["name"] = self.name
+		packageNode.attrib["complexity"] = "0"
+		packageNode.attrib["branch-rate"] = "0"
+
 		try:
-			self.classes[class_name].add_statement(line, count)
-		except KeyError:
-			self.classes[class_name] = Class(source_file)
-			self.classes.get(class_name).add_statement(line, count)
+			rate = self.linesCovered / self.linesValid
+		except ZeroDivisionError:
+			rate = 1.0
 
-		self.lines_valid += 1
+		packageNode.attrib["line-rate"] = f"{rate:.16g}"
 
-		if count:
-			self.lines_covered += 1
+		packageNode.append(classesNode)
 
-	def get_xml_node(self) -> etree.Element:
-		classes_node = etree.Element("classes")
-		package_node = etree.Element("package")
-		package_node.append(classes_node)
-		package_node.attrib["name"] = self.name
-		package_node.attrib["complexity"] = "0"
-		package_node.attrib["branch-rate"] = "0"
-		package_node.attrib["line-rate"] = str(self.lines_covered / self.lines_valid)
+		for coberturaClass in self.classes.values():
+			classesNode.append(coberturaClass.getXmlNode())
 
-		for (class_name, class_data) in self.classes.items():
-			classes_node.append(class_data.get_xml_node())
-
-		return package_node
+		return packageNode
 
 
 @export
@@ -136,56 +177,68 @@ class Coverage:
 
 	sources: Set
 	packages: Dict[str, Package]
-	lines_valid: int
-	lines_covered: int
+	linesValid: int
+	linesCovered: int
 
 	def __init__(self):
 		self.sources = set()
 		self.packages = {}
-		self.lines_valid = 0
-		self.lines_covered = 0
+		self.linesValid = 0
+		self.linesCovered = 0
 
-	def add_statement(self, source: str, file: str, line: int, count: int) -> None:
-		try:
-			self.packages[source].add_statement(file, file, line, count)
-		except KeyError:
-			self.packages[source] = Package(file)
-			self.packages.get(source).add_statement(file, file, line, count)
-
+	def addSource(self, source: str) -> None:
 		self.sources.add(source)
 
-		self.lines_valid += 1
+	def addPackage(self, package: Package) -> None:
+		if package.name in self.packages:
+			raise DuplicatedPackageName(f"Duplicated package name: '{package.name}'.")
 
-		if count:
-			self.lines_covered += 1
+		self.packages[package.name] = package
 
-	def add_branch(self) -> None:
-		pass
+	def refreshStatistics(self) -> None:
+		self.linesValid = 0
+		self.linesCovered = 0
 
-	def get_xml(self) -> etree.Element:
-		coverage_node = etree.Element("coverage")
-		coverage_node.attrib["version"] = "5.5"
-		coverage_node.attrib["timestamp"] = str(int(time()))
-		coverage_node.attrib["branches-valid"] = "0"
-		coverage_node.attrib["branches-covered"] = "0"
-		coverage_node.attrib["branch-rate"] = "0"
-		coverage_node.attrib["complexity"] = "0"
-		coverage_node.attrib["lines-valid"] = str(self.lines_valid)
-		coverage_node.attrib["lines-covered"] = str(self.lines_covered)
-		coverage_node.attrib["line-rate"] = str(self.lines_covered / self.lines_valid)
+		for package in self.packages.values():
+			package.refreshStatistics()
+			self.linesCovered += package.linesCovered
+			self.linesValid += package.linesValid
 
-		sources_node = etree.Element("sources")
+	def getXml(self) -> bytes:
+		self.refreshStatistics()
+
+		coverageNode = etree.Element("coverage")
+		coverageNode.attrib["version"] = "5.5"
+		coverageNode.attrib["timestamp"] = str(int(time()))
+		coverageNode.attrib["branches-valid"] = "0"
+		coverageNode.attrib["branches-covered"] = "0"
+		coverageNode.attrib["branch-rate"] = "0"
+		coverageNode.attrib["complexity"] = "0"
+
+		sourcesNode = etree.Element("sources")
 
 		for source in self.sources:
-			etree.SubElement(sources_node, "source").text = source
+			etree.SubElement(sourcesNode, "source").text = source
 
-		coverage_node.append(sources_node)
+		coverageNode.append(sourcesNode)
 
-		packages_node = etree.Element("packages")
+		packagesNode = etree.Element("packages")
 
-		for package_name in self.packages:
-			packages_node.append(self.packages[package_name].get_xml_node())
+		for package in self.packages.values():
+			packagesNode.append(package.getXmlNode())
 
-		coverage_node.append(packages_node)
+		coverageNode.append(packagesNode)
 
-		return etree.tostring(coverage_node, pretty_print=True, encoding="utf-8", xml_declaration=True)
+		coverageNode.attrib["lines-valid"] = str(self.linesValid)
+		coverageNode.attrib["lines-covered"] = str(self.linesCovered)
+
+		try:
+			rate = self.linesCovered / self.linesValid
+		except ZeroDivisionError:
+			rate = 1.0
+
+		coverageNode.attrib["line-rate"] = f"{rate:.16g}"
+
+		return etree.tostring(
+			coverageNode, pretty_print=True, encoding="utf-8", xml_declaration=True
+		)

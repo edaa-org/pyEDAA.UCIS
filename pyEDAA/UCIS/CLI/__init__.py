@@ -52,11 +52,13 @@ from argparse import RawDescriptionHelpFormatter
 from pathlib  import Path
 from textwrap import dedent
 
-from pyAttributes.ArgParseAttributes import ArgParseMixin, DefaultAttribute, CommandAttribute, ArgumentAttribute
+from pyAttributes.ArgParseAttributes import ArgParseMixin, DefaultAttribute, CommandAttribute, ArgumentAttribute, SwitchArgumentAttribute
+
 from pyTooling.Decorators import export
 
 from pyEDAA.UCIS      import __version__, __copyright__, __license__
 from pyEDAA.UCIS.UCDB import Parser
+from pyEDAA.UCIS.Cobertura import CoberturaException
 
 
 @export
@@ -125,6 +127,7 @@ class Program(ProgramBase, ArgParseMixin):
 	@CommandAttribute("export", help="Export data from UCDB.", description="Export data from UCDB.")
 	@ArgumentAttribute("--ucdb",      metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
 	@ArgumentAttribute("--cobertura", metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
+	@SwitchArgumentAttribute("--merge-instances", dest="mergeInstances", help="Merge statement coverage data for all instances of the same design unit.")
 	def HandleExport(self, args) -> None:
 		"""Handle program calls with command ``export``."""
 		self._PrintHeadline()
@@ -151,18 +154,28 @@ class Program(ProgramBase, ArgParseMixin):
 		print(f"  IN  -> UCIS (XML):      {ucdbPath}")
 		print(f"  OUT <- Cobertura (XML): {coberturaPath}")
 
-		parser = Parser(ucdbPath)
-		model = parser.get_cobertura_model()
+		parser = Parser(ucdbPath, args.mergeInstances)
+		model = parser.getCoberturaModel()
 
 		with coberturaPath.open('w') as file:
-			file.write(model.get_xml().decode("utf-8"))
+			file.write(model.getXml().decode("utf-8"))
 
 		print()
 
-		coverage = model.lines_covered / model.lines_valid * 100
+		try:
+			lineCoverage = model.linesCovered / model.linesValid * 100
+		except ZeroDivisionError:
+			lineCoverage = 100
+
+		try:
+			statementCoverage = parser.statementsCovered / parser.statementsCount * 100
+		except ZeroDivisionError:
+			statementCoverage = 100
+
 		print(dedent(f"""\
 			[DONE] Export and conversion complete.
-			  Statement coverage: {coverage} %
+			  Line coverage: {lineCoverage} %
+			  Statement coverage: {statementCoverage} %
 			""")
 		)
 
@@ -206,6 +219,10 @@ def main():
 	except FileNotFoundError as ex:
 		print()
 		print(f"[ERROR] {ex}")
+		exit(1)
+	except CoberturaException as ex:
+		print()
+		print(f"[INTERNAL ERROR] {ex}")
 		exit(1)
 
 
