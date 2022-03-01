@@ -24,15 +24,13 @@
 
 Unified Coverage Interoperability Standard (UCIS)
 
-<p align="center">
-  <a title="edaa-org.github.io/pyEDAA.UCIS" href="https://edaa-org.github.io/pyEDAA.UCIS"><img height="275px" src="doc/_static/work-in-progress.png"/></a>
-</p>
 
 ## Main Goals
 
 * Parse UCDB files and provide a UCDB data model.
 * Export and convert data from UCDB to Cobertura format.
 * Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).
+
 
 ## Use Cases
  

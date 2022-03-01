@@ -59,7 +59,7 @@ StatementData = namedtuple(
 
 @export
 class UcdbParserException(Exception):
-	"""Base class for other UCDB Parser exceptions"""
+	"""Base-class for other UCDB Parser exceptions"""
 
 
 @export

@@ -42,7 +42,7 @@ DescribePythonPackageHostedOnGitHub(
 	description="Tools to extract and convert data from UCDB files.",
 	gitHubNamespace=gitHubNamespace,
 	sourceFileWithVersion=packageInformationFile,
-	developmentStatus="alpha",
+	developmentStatus="stable",
 	classifiers=[
 		"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
 	],
