@@ -47,7 +47,7 @@ from pyTooling.Decorators import export
 
 @export
 class CoberturaException(Exception):
-	"""Base class for other Cobertura exceptions"""
+	"""Base-class for other Cobertura exceptions"""
 
 
 @export

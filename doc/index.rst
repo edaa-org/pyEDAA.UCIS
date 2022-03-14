@@ -34,15 +34,6 @@ The pyEDAA.UCIS Documentation
 
 Unified Coverage Interoperability Standard (UCIS).
 
-.. image:: _static/work-in-progress.png
-   :height: 275 px
-   :align: center
-   :target: https://GitHub.com/edaa-org/pyEDAA.UCIS
-
-.. raw:: html
-
-    <br>
-
 
 .. _goals:
 
@@ -61,6 +52,51 @@ Use Cases
 
 * Collect and merge code coverage with Active-HDL / Riviera-PRO and convert via UCDB format to Cobertura files, so
   code coverage can be published to e.g. GitLab, Codacy or CodeCov.
+
+
+.. _news:
+
+News
+****
+
+.. only:: html
+
+   Jan. 2022 - Aldec Inc. Provided Updates
+   =======================================
+
+.. only:: latex
+
+   .. rubric:: Aldec Inc. Provided Updates
+
+* Aldec Inc. provided bugfixes and enhancements to the original code contribution.
+
+
+.. only:: html
+
+   Jan. 2022 - Release of Initial Code under EDA²
+   ==============================================
+
+.. only:: latex
+
+   .. rubric:: Release of Initial Code under EDA²
+
+* The initial script was released with EDA² branding.
+* Adjusted coding style.
+* Adjusted CLI interface to allow later extensions.
+* Added documentation and CI pipeline.
+
+
+.. only:: html
+
+   Oct. 2021 - Initial Script from Aldec Inc.
+   ==========================================
+
+.. only:: latex
+
+   .. rubric:: Initial Script from Aldec Inc.
+
+* Aldec Inc. provied the initial UCDB to Cobertura conversion script.
+* Aldec Inc. gave permission to release the script as open source under *Apache License, version 2.0*.
 
 
 .. _contributors:

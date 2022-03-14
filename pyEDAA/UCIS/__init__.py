@@ -33,5 +33,5 @@ __author__ =    "Patrick Lehmann"
 __email__ =     "Paebbels@gmail.com"
 __copyright__ = "2021-2022, Electronic Design Automation Abstraction (EDA²)"
 __license__ =   "Apache License, Version 2.0"
-__version__ =   "0.2.0"
+__version__ =   "0.3.0"
 __keywords__ =  ["UCIS", "UCDB", "coverage", "Cobertura", "xml"]
