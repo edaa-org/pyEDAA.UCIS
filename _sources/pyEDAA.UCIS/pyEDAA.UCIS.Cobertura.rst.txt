@@ -1,0 +1,84 @@
+.. # Template modified  by Patrick Lehmann
+     * removed automodule on top, because private members are activated for autodoc (no doubled documentation).
+     * Made sections like 'submodules' bold text, but no headlines to reduce number of ToC levels.
+
+=========================
+``pyEDAA.UCIS.Cobertura``
+=========================
+
+
+.. currentmodule:: pyEDAA.UCIS.Cobertura
+
+
+**Classes**
+
+- :py:class:`Class`:
+  Represents a code element in the Cobertura coverage data model (Java-focused).
+
+- :py:class:`Package`:
+  Represents a grouping element in the Cobertura coverage data model (Java-focused).
+
+- :py:class:`Coverage`:
+  Represents the root element in the Cobertura coverage data model (Java-focused).
+
+
+.. autoclass:: Class
+   :members:
+
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: Class
+      :parts: 1
+
+.. autoclass:: Package
+   :members:
+
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: Package
+      :parts: 1
+
+.. autoclass:: Coverage
+   :members:
+
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: Coverage
+      :parts: 1
+
+
+**Exceptions**
+
+- :py:exc:`CoberturaException`:
+  Base-class for other Cobertura exceptions
+
+- :py:exc:`DuplicatedLineNumber`:
+  Raised when statement with specified line number already exists in Cobertura class
+
+- :py:exc:`DuplicatedClassName`:
+  Raised when class with specified name already exists in Cobertura package
+
+- :py:exc:`DuplicatedPackageName`:
+  Raised when package with specified name already exists in Cobertura coverage
+
+
+.. autoexception:: CoberturaException
+
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: CoberturaException
+      :parts: 1
+
+.. autoexception:: DuplicatedLineNumber
+
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: DuplicatedLineNumber
+      :parts: 1
+
+.. autoexception:: DuplicatedClassName
+
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: DuplicatedClassName
+      :parts: 1
+
+.. autoexception:: DuplicatedPackageName
+
+   .. rubric:: Inheritance
+   .. inheritance-diagram:: DuplicatedPackageName
+      :parts: 1
