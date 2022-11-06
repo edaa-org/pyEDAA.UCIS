@@ -43,8 +43,8 @@ if __name__ == "__main__": # pragma: no cover
 
 class ExportAndConvert(TestCase):
 	def test_UCDB2Cobertura(self):
-		ucdbPath = Path("tests/data/ucdb.xml")
-		coberturaPath = Path("tests/data/cobertura.xml")
+		ucdbPath = Path("data/ucdb.xml")
+		coberturaPath = Path("data/cobertura.xml")
 
 		parser = Parser(ucdbPath, False)
 		model = parser.getCoberturaModel()
@@ -70,7 +70,7 @@ class CoverageValues(TestCase):
 		return parser, model
 
 	def test_multipleInstances(self):
-		ucdbPath = Path("tests/data/ucdb000_multiple_instances.xml")
+		ucdbPath = Path("data/ucdb000_multiple_instances.xml")
 
 		(parser, model) = self._parseUCDB(
 			ucdbPath,
@@ -93,7 +93,7 @@ class CoverageValues(TestCase):
 		self.assertEqual(6, model.linesCovered)
 
 	def test_allExcluded(self):
-		ucdbPath = Path("tests/data/ucdb001_all_excluded.xml")
+		ucdbPath = Path("data/ucdb001_all_excluded.xml")
 
 		(parser, model) = self._parseUCDB(
 			ucdbPath,
@@ -116,7 +116,7 @@ class CoverageValues(TestCase):
 		self.assertEqual(0, model.linesCovered)
 
 	def test_partiallyExcluded(self):
-		ucdbPath = Path("tests/data/ucdb002_partially_excluded.xml")
+		ucdbPath = Path("data/ucdb002_partially_excluded.xml")
 
 		(parser, model) = self._parseUCDB(
 			ucdbPath,
