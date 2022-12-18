@@ -1,3 +1,3 @@
-pyTooling>=2.5.0
+pyTooling>=2.7.0
 pyAttributes>=2.5.1
 lxml>=4.9

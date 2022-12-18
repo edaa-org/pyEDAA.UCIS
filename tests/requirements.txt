@@ -1,15 +1,15 @@
 -r ../requirements.txt
 
 # Coverage collection
-Coverage>=6.5
+Coverage>=7.0
 
 # Test Runner
-pytest>=7.1.3
+pytest>=7.2.0
 pytest-cov>=4.0.0
 
 # Static Type Checking
-mypy>=0.981
+mypy>=0.990
 lxml>=4.9
 
 # Stubs for typechecking (because lxml is used by the project itself)
-lxml-stubs>=0.3.1
+lxml-stubs>=0.4.0
