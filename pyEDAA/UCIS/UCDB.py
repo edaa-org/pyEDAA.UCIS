@@ -79,8 +79,8 @@ class Parser:
 	def __init__(self, ucdbFile: Path, mergeInstances: bool):
 		self._mergeInstances = mergeInstances
 
-		with ucdbFile.open("r") as filename:
-			self._tree = etree.parse(filename)
+		with ucdbFile.open("r") as fileHandle:
+			self._tree = etree.parse(fileHandle)
 
 		self._nsmap = {
 			k: v for (k, v) in self._tree.getroot().nsmap.items() if k is not None

@@ -65,7 +65,7 @@ from pyEDAA.UCIS.Cobertura import CoberturaException
 class ProgramBase():
 	"""Base-class for all program classes."""
 
-	programTitle = "UCDB Service Program"
+	programTitle: str
 
 	def __init__(self) -> None:
 		pass
@@ -80,6 +80,8 @@ class ProgramBase():
 @export
 class Program(ProgramBase, ArgParseMixin):
 	"""Program class to implement the command line interface (CLI) using commands and options."""
+
+	programTitle = "UCDB Service Program"
 
 	def __init__(self) -> None:
 		super().__init__()
