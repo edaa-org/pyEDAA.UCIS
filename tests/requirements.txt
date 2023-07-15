@@ -8,7 +8,7 @@ pytest>=7.2.0
 pytest-cov>=4.0.0
 
 # Static Type Checking
-mypy>=0.990
+mypy >= 1.2
 lxml>=4.9
 
 # Stubs for typechecking (because lxml is used by the project itself)

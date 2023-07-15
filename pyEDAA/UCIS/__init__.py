@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2023 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -31,7 +31,7 @@
 """The Unified Coverage Interoperability Standard (UCIS) layer of EDA² offers a data model for reading UCDB files."""
 __author__ =    "Patrick Lehmann"
 __email__ =     "Paebbels@gmail.com"
-__copyright__ = "2021-2022, Electronic Design Automation Abstraction (EDA²)"
+__copyright__ = "2021-2023, Electronic Design Automation Abstraction (EDA²)"
 __license__ =   "Apache License, Version 2.0"
 __version__ =   "0.3.0"
 __keywords__ =  ["UCIS", "UCDB", "coverage", "Cobertura", "xml"]
