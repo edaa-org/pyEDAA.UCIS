@@ -192,9 +192,9 @@ class Program(ProgramBase, ArgParseMixin):
 
 	def _PrintHelp(self, command: str=None):
 		"""Helper function to print the command line parsers help page(s)."""
-		if (command is None):
+		if command is None:
 			self.MainParser.print_help()
-		elif (command == "help"):
+		elif command == "help":
 			print("This is a recursion ...")
 		else:
 			try:
