@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The pyEDAA.UCIS Documentation &mdash; pyEDAA.UCIS 0.3.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/documentation_options.js?v=e259d695"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation/Updates" href="Installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> pyEDAA.UCIS
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference external" href="https://edaa-org.github.io/">Used as a layer of EDA² ➚</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation/Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dependency.html">Dependency</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CodeCoverage.html">Code Coverage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CommandLineInterface.html">Command Line Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyEDAA.UCIS/index.html">Python Class Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coverage/index.html">Coverage Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typing/index.html">Static Type Check Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="License.html">Apache License 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Doc-License.html">Creative Commons Attribution 4.0 International</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">pyEDAA.UCIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <style type="text/css">
+  span.bolditalic {font-weight: bold; font-style: italic; }
+  span.underline {text-decoration: underline; }
+  span.xlarge {font-size: x-large; }
+</style><a class="reference external image-reference" href="https://GitHub.com/edaa-org/pyEDAA.UCIS"><img alt="_images/logo.svg" class="align-center" height="90px" src="_images/logo.svg" /></a>
+<br><div class="line-block">
+<div class="line"><a class="reference external" href="https://GitHub.com/edaa-org/pyEDAA.UCIS"><img alt="Sourcecode on GitHub" src="https://img.shields.io/badge/pyEDAA-UCIS-29b6f6.svg?longCache=true&amp;style=flat-square&amp;logo=GitHub&amp;labelColor=0277bd" style="height: 22px;" /></a> <a class="reference external" href="License.html"><img alt="Code license" src="https://img.shields.io/pypi/l/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=Apache&amp;label=code" style="height: 22px;" /></a> <a class="reference external" href="https://edaa-org.github.io/pyEDAA.UCIS/"><img alt="Documentation - Read Now!" src="https://img.shields.io/website?longCache=true&amp;style=flat-square&amp;label=edaa-org.github.io%2FpyEDAA.UCIS&amp;logo=GitHub&amp;logoColor=fff&amp;up_color=blueviolet&amp;up_message=Read%20now%20%E2%9E%9A&amp;url=https%3A%2F%2Fedaa-org.github.io%2FpyEDAA.UCIS%2Findex.html" style="height: 22px;" /></a> <a class="reference external" href="Doc-License.html"><img alt="Documentation License" src="https://img.shields.io/badge/doc-CC--BY%204.0-green?longCache=true&amp;style=flat-square&amp;logo=CreativeCommons&amp;logoColor=fff" style="height: 22px;" /></a> <a class="reference external" href="https://gitter.im/hdl/community"><img alt="Documentation License" src="https://img.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&amp;style=flat-square&amp;logo=gitter&amp;logoColor=e8ecef" style="height: 22px;" /></a></div>
+<div class="line"><a class="reference external" href="https://pypi.org/project/pyEDAA.UCIS/"><img alt="PyPI - Tag" src="https://img.shields.io/pypi/v/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=PyPI&amp;logoColor=FBE072" style="height: 22px;" /></a> <a class="reference internal" href="https://img.shields.io/pypi/status/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=PyPI&amp;logoColor=FBE072"><img alt="PyPI - Status" src="https://img.shields.io/pypi/status/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=PyPI&amp;logoColor=FBE072" style="height: 22px;" /></a> <a class="reference internal" href="https://img.shields.io/pypi/pyversions/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=PyPI&amp;logoColor=FBE072"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=PyPI&amp;logoColor=FBE072" style="height: 22px;" /></a></div>
+<div class="line"><a class="reference external" href="https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml"><img alt="GitHub Workflow - Build and Test Status" src="https://img.shields.io/github/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline/main?longCache=true&amp;style=flat-square&amp;label=Build%20and%20Test&amp;logo=GitHub%20Actions&amp;logoColor=FFFFFF" style="height: 22px;" /></a> <a class="reference external" href="https://libraries.io/github/edaa-org/pyEDAA.UCIS"><img alt="Libraries.io status for latest release" src="https://img.shields.io/librariesio/release/pypi/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=Libraries.io&amp;logoColor=fff" style="height: 22px;" /></a> <a class="reference external" href="https://www.codacy.com/gh/edaa-org/pyEDAA.UCIS"><img alt="Codacy - Quality" src="https://img.shields.io/codacy/grade/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&amp;style=flat-square&amp;logo=codacy" style="height: 22px;" /></a> <a class="reference external" href="https://www.codacy.com/gh/edaa-org/pyEDAA.UCIS"><img alt="Codacy - Line Coverage" src="https://img.shields.io/codacy/coverage/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&amp;style=flat-square&amp;logo=codacy" style="height: 22px;" /></a> <a class="reference external" href="https://codecov.io/gh/edaa-org/pyEDAA.UCIS"><img alt="Codecov - Branch Coverage" src="https://img.shields.io/codecov/c/github/edaa-org/pyEDAA.UCIS?longCache=true&amp;style=flat-square&amp;logo=Codecov" style="height: 22px;" /></a></div>
+</div>
+<section id="the-pyedaa-ucis-documentation">
+<h1>The pyEDAA.UCIS Documentation<a class="headerlink" href="#the-pyedaa-ucis-documentation" title="Link to this heading">¶</a></h1>
+<p>Unified Coverage Interoperability Standard (UCIS).</p>
+<section id="main-goals">
+<span id="goals"></span><h2>Main Goals<a class="headerlink" href="#main-goals" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Parse UCDB files and provide a UCDB data model.</p></li>
+<li><p>Export and convert code coverage information from UCDB to Cobertura format.</p></li>
+<li><p>Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).</p></li>
+</ul>
+</section>
+<section id="use-cases">
+<span id="usecase"></span><h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Collect and merge code coverage with Active-HDL / Riviera-PRO and convert via UCDB format to Cobertura files, so
+code coverage can be published to e.g. GitLab, Codacy or CodeCov.</p></li>
+</ul>
+</section>
+<section id="news">
+<span id="id1"></span><h2>News<a class="headerlink" href="#news" title="Link to this heading">¶</a></h2>
+<section id="jan-2022-aldec-inc-provided-updates">
+<h3>Jan. 2022 - Aldec Inc. Provided Updates<a class="headerlink" href="#jan-2022-aldec-inc-provided-updates" title="Link to this heading">¶</a></h3>
+</section>
+<ul class="simple">
+<li><p>Aldec Inc. provided bugfixes and enhancements to the original code contribution.</p></li>
+</ul>
+<section id="jan-2022-release-of-initial-code-under-eda2">
+<h3>Jan. 2022 - Release of Initial Code under EDA²<a class="headerlink" href="#jan-2022-release-of-initial-code-under-eda2" title="Link to this heading">¶</a></h3>
+</section>
+<ul class="simple">
+<li><p>The initial script was released with EDA² branding.</p></li>
+<li><p>Adjusted coding style.</p></li>
+<li><p>Adjusted CLI interface to allow later extensions.</p></li>
+<li><p>Added documentation and CI pipeline.</p></li>
+</ul>
+<section id="oct-2021-initial-script-from-aldec-inc">
+<h3>Oct. 2021 - Initial Script from Aldec Inc.<a class="headerlink" href="#oct-2021-initial-script-from-aldec-inc" title="Link to this heading">¶</a></h3>
+</section>
+<ul class="simple">
+<li><p>Aldec Inc. provied the initial UCDB to Cobertura conversion script.</p></li>
+<li><p>Aldec Inc. gave permission to release the script as open source under <em>Apache License, version 2.0</em>.</p></li>
+</ul>
+</section>
+<section id="contributors">
+<span id="id2"></span><h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://GitHub.com/Paebbels">Patrick Lehmann</a> (Maintainer)</p></li>
+<li><p><a class="reference external" href="https://github.com/por3bski">Artur Porebski (Aldec Inc.)</a></p></li>
+<li><p><a class="reference external" href="https://github.com/mikep996">Michal Pacula (Aldec Inc.)</a></p></li>
+<li><p><a class="reference external" href="https://GitHub.com/umarcor/">Unai Martinez-Corral</a></p></li>
+<li><p><a class="reference external" href="https://GitHub.com/edaa-org/pyEDAA.UCIS/graphs/contributors">and more…</a></p></li>
+</ul>
+</section>
+<section id="license">
+<span id="id3"></span><h2>License<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
+<p>This Python package (source code) is licensed under <a class="reference external" href="Code-License.html">Apache License 2.0</a>. <br />
+The accompanying documentation is licensed under <a class="reference external" href="Doc-License.html">Creative Commons - Attribution 4.0 (CC-BY 4.0)</a>.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Installation.html" class="btn btn-neutral float-right" title="Installation/Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022, Electronic Design Automation Abstraction (EDA²).
+      <span class="lastupdated">Last updated on 22.03.2024.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

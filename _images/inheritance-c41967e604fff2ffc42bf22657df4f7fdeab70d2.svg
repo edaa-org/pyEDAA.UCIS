@@ -1,0 +1,14 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="0pt" height="864pt" viewBox="0.00 0.00 0.31 864.00">
+<ns0:g id="graph0" class="graph" transform="scale(0.004485 0.004485) rotate(0) translate(4 192638.31)">
+<ns0:title>inheritancea6e2bdb494</ns0:title>
+
+<ns0:g id="node1" class="node">
+<ns0:title>Parser</ns0:title>
+<ns0:g id="a_node1"><ns0:a ns1:href="../pyEDAA.UCIS/pyEDAA.UCIS.UCDB.html#pyEDAA.UCIS.UCDB.Parser" ns1:title="Parser" target="_top">
+<ns0:polygon fill="white" stroke="black" stroke-width="0.5" points="61,-192634.31 0,-192634.31 0,0 61,0 61,-192634.31" />
+<ns0:text text-anchor="middle" x="30.5" y="-192620.81" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="10.00">Parser</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+</ns0:g>
+</ns0:svg>

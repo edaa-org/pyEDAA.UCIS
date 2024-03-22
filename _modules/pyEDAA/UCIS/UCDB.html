@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyEDAA.UCIS.UCDB &mdash; pyEDAA.UCIS 0.3.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyEDAA.UCIS
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference external" href="https://edaa-org.github.io/">Used as a layer of EDA² ➚</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Installation.html">Installation/Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Dependency.html">Dependency</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CodeCoverage.html">Code Coverage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CommandLineInterface.html">Command Line Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pyEDAA.UCIS/index.html">Python Class Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../coverage/index.html">Coverage Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../typing/index.html">Static Type Check Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../License.html">Apache License 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Doc-License.html">Creative Commons Attribution 4.0 International</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyEDAA.UCIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+            <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>pyEDAA.UCIS.UCDB</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for pyEDAA.UCIS.UCDB</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ==================================================================================================================== #</span>
+<span class="c1">#               _____ ____    _        _     _   _  ____ ___ ____                                                      #</span>
+<span class="c1">#   _ __  _   _| ____|  _ \  / \      / \   | | | |/ ___|_ _/ ___|                                                     #</span>
+<span class="c1">#  | &#39;_ \| | | |  _| | | | |/ _ \    / _ \  | | | | |    | |\___ \                                                     #</span>
+<span class="c1">#  | |_) | |_| | |___| |_| / ___ \  / ___ \ | |_| | |___ | | ___) |                                                    #</span>
+<span class="c1">#  | .__/ \__, |_____|____/_/   \_\/_/   \_(_)___/ \____|___|____/                                                     #</span>
+<span class="c1">#  |_|    |___/                                                                                                        #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1"># Authors:                                                                                                             #</span>
+<span class="c1">#   Artur Porebski (Aldec Inc.)                                                                                        #</span>
+<span class="c1">#   Michal Pacula  (Aldec Inc.)                                                                                        #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># License:                                                                                                             #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1"># Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);                                                      #</span>
+<span class="c1"># you may not use this file except in compliance with the License.                                                     #</span>
+<span class="c1"># You may obtain a copy of the License at                                                                              #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1">#          http://www.apache.org/licenses/LICENSE-2.0                                                                  #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software                                                  #</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,                                                    #</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                             #</span>
+<span class="c1"># See the License for the specific language governing permissions and                                                  #</span>
+<span class="c1"># limitations under the License.                                                                                       #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0                                                                                  #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1">#</span>
+<span class="sd">&quot;&quot;&quot;Data model of the UCDB format.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span><span class="p">,</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">groupby</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">attrgetter</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">DefaultDict</span>
+
+<span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">pyTooling.Decorators</span> <span class="kn">import</span> <span class="n">export</span>
+
+<span class="kn">from</span> <span class="nn">pyEDAA.UCIS.Cobertura</span> <span class="kn">import</span> <span class="n">Class</span><span class="p">,</span> <span class="n">Coverage</span><span class="p">,</span> <span class="n">Package</span>
+
+
+<span class="n">UCDB_EXCLUDE_PRAGMA</span> <span class="o">=</span> <span class="mh">0x00000020</span>
+<span class="n">UCDB_EXCLUDE_FILE</span> <span class="o">=</span> <span class="mh">0x00000040</span>
+<span class="n">UCDB_EXCLUDE_INST</span> <span class="o">=</span> <span class="mh">0x00000080</span>
+<span class="n">UCDB_EXCLUDE_AUTO</span> <span class="o">=</span> <span class="mh">0x00000100</span>
+
+<span class="n">UCDB_EXCLUDED</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="n">UCDB_EXCLUDE_FILE</span> <span class="o">|</span> <span class="n">UCDB_EXCLUDE_PRAGMA</span> <span class="o">|</span> <span class="n">UCDB_EXCLUDE_INST</span> <span class="o">|</span> <span class="n">UCDB_EXCLUDE_AUTO</span>
+<span class="p">)</span>
+
+<span class="n">StatementData</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span>
+	<span class="s2">&quot;StatementData&quot;</span><span class="p">,</span>
+	<span class="p">[</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="s2">&quot;instance&quot;</span><span class="p">,</span> <span class="s2">&quot;hits&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="UcdbParserException">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.UCDB.html#pyEDAA.UCIS.UCDB.UcdbParserException">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">UcdbParserException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Base-class for other UCDB Parser exceptions&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="InternalErrorOccurred">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.UCDB.html#pyEDAA.UCIS.UCDB.InternalErrorOccurred">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">InternalErrorOccurred</span><span class="p">(</span><span class="n">UcdbParserException</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Raised when internal error occurred&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="Parser">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.UCDB.html#pyEDAA.UCIS.UCDB.Parser">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">Parser</span><span class="p">:</span>
+	<span class="n">_mergeInstances</span><span class="p">:</span> <span class="nb">bool</span>
+	<span class="n">_tree</span><span class="p">:</span> <span class="n">etree</span><span class="o">.</span><span class="n">_ElementTree</span>
+	<span class="n">_nsmap</span><span class="p">:</span> <span class="n">Dict</span>
+	<span class="n">_coverage</span><span class="p">:</span> <span class="n">Coverage</span>
+	<span class="n">statementsCount</span><span class="p">:</span> <span class="nb">int</span>
+	<span class="n">statementsCovered</span><span class="p">:</span> <span class="nb">int</span>
+
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ucdbFile</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">mergeInstances</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_mergeInstances</span> <span class="o">=</span> <span class="n">mergeInstances</span>
+
+		<span class="k">with</span> <span class="n">ucdbFile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">filename</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">_tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">_nsmap</span> <span class="o">=</span> <span class="p">{</span>
+			<span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span><span class="o">.</span><span class="n">nsmap</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+		<span class="p">}</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">_coverage</span> <span class="o">=</span> <span class="n">Coverage</span><span class="p">()</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">statementsCount</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">statementsCovered</span> <span class="o">=</span> <span class="mi">0</span>
+
+	<span class="k">def</span> <span class="nf">getCoberturaModel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Coverage</span><span class="p">:</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_parseStatementCoverage</span><span class="p">()</span>
+
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_coverage</span>
+
+	<span class="k">def</span> <span class="nf">_groupByIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">statements</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">StatementData</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">StatementData</span><span class="p">]:</span>
+		<span class="n">groupedStmts</span> <span class="o">=</span> <span class="p">[]</span>
+
+		<span class="n">sortedStmts</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">statements</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">))</span>
+		<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">stmts</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="n">sortedStmts</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)):</span>
+			<span class="n">hit</span> <span class="o">=</span> <span class="nb">any</span><span class="p">((</span><span class="n">stmt</span><span class="o">.</span><span class="n">hits</span> <span class="k">for</span> <span class="n">stmt</span> <span class="ow">in</span> <span class="n">stmts</span><span class="p">))</span>
+
+			<span class="n">groupedStmts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+				<span class="n">StatementData</span><span class="p">(</span>
+					<span class="n">file</span><span class="o">=</span><span class="n">statements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">file</span><span class="p">,</span>
+					<span class="n">line</span><span class="o">=</span><span class="n">statements</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">line</span><span class="p">,</span>
+					<span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span>
+					<span class="n">instance</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+					<span class="n">hits</span><span class="o">=</span><span class="n">hit</span><span class="p">,</span>
+				<span class="p">)</span>
+			<span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">groupedStmts</span>
+
+	<span class="k">def</span> <span class="nf">_parseStatementCoverage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="n">scopes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
+			<span class="s2">&quot;/ux:ucdb/ux:scope[.//ux:bin[@type=&#39;STMTBIN&#39;]]&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_nsmap</span>
+		<span class="p">)</span>
+
+		<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scopes</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+			<span class="k">raise</span> <span class="n">InternalErrorOccurred</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected type: &#39;</span><span class="si">{</span><span class="n">scopes</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+		<span class="n">nodes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">etree</span><span class="o">.</span><span class="n">_Element</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+		<span class="k">for</span> <span class="n">scopeNode</span> <span class="ow">in</span> <span class="n">scopes</span><span class="p">:</span>
+			<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scopeNode</span><span class="p">,</span> <span class="n">etree</span><span class="o">.</span><span class="n">_Element</span><span class="p">):</span>
+				<span class="k">raise</span> <span class="n">InternalErrorOccurred</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected type: &#39;</span><span class="si">{</span><span class="n">scopeNode</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+			<span class="n">typeName</span> <span class="o">=</span> <span class="n">scopeNode</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span>
+
+			<span class="k">if</span> <span class="n">typeName</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+				<span class="k">raise</span> <span class="n">InternalErrorOccurred</span><span class="p">(</span><span class="s2">&quot;Unexpected &#39;None&#39; value.&quot;</span><span class="p">)</span>
+
+			<span class="k">if</span> <span class="n">typeName</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;DU_&quot;</span><span class="p">):</span>
+				<span class="k">continue</span>
+
+			<span class="n">statementBins</span> <span class="o">=</span> <span class="n">scopeNode</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;.//ux:bin[@type=&#39;STMTBIN&#39;]&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_nsmap</span><span class="p">)</span>
+
+			<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">statementBins</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+				<span class="k">raise</span> <span class="n">InternalErrorOccurred</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected type: &#39;</span><span class="si">{</span><span class="n">statementBins</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+			<span class="k">for</span> <span class="n">statementBin</span> <span class="ow">in</span> <span class="n">statementBins</span><span class="p">:</span>
+				<span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">statementBin</span><span class="p">,</span> <span class="n">etree</span><span class="o">.</span><span class="n">_Element</span><span class="p">):</span>
+					<span class="k">raise</span> <span class="n">InternalErrorOccurred</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected type: &#39;</span><span class="si">{</span><span class="n">statementBin</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+				<span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">statementBin</span><span class="p">)</span>
+
+		<span class="n">statements</span><span class="p">:</span> <span class="n">DefaultDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DefaultDict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+
+		<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+			<span class="n">workdir</span><span class="p">,</span> <span class="n">stmtData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parseStatementNode</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">_coverage</span><span class="o">.</span><span class="n">addSource</span><span class="p">(</span><span class="n">workdir</span><span class="p">)</span>
+
+			<span class="n">flags</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;flags&quot;</span><span class="p">)</span>
+
+			<span class="k">if</span> <span class="n">flags</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+				<span class="k">raise</span> <span class="n">InternalErrorOccurred</span><span class="p">(</span><span class="s2">&quot;Unexpected &#39;None&#39; value.&quot;</span><span class="p">)</span>
+
+			<span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">flags</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">UCDB_EXCLUDED</span><span class="p">:</span>
+				<span class="n">_</span> <span class="o">=</span> <span class="n">statements</span><span class="p">[</span><span class="n">stmtData</span><span class="o">.</span><span class="n">file</span><span class="p">]</span>
+				<span class="k">continue</span>
+
+			<span class="n">statements</span><span class="p">[</span><span class="n">stmtData</span><span class="o">.</span><span class="n">file</span><span class="p">][</span><span class="n">stmtData</span><span class="o">.</span><span class="n">line</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stmtData</span><span class="p">)</span>
+
+		<span class="k">for</span> <span class="n">file</span><span class="p">,</span> <span class="n">lines</span> <span class="ow">in</span> <span class="n">statements</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+			<span class="n">package</span> <span class="o">=</span> <span class="n">Package</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+			<span class="n">coberturaClass</span> <span class="o">=</span> <span class="n">Class</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+			<span class="n">package</span><span class="o">.</span><span class="n">addClass</span><span class="p">(</span><span class="n">coberturaClass</span><span class="p">)</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">_coverage</span><span class="o">.</span><span class="n">addPackage</span><span class="p">(</span><span class="n">package</span><span class="p">)</span>
+
+			<span class="k">for</span> <span class="n">line</span><span class="p">,</span> <span class="n">lineStmts</span> <span class="ow">in</span> <span class="n">lines</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+				<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mergeInstances</span><span class="p">:</span>
+					<span class="n">lineStmts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_groupByIndex</span><span class="p">(</span><span class="n">lineStmts</span><span class="p">)</span>
+
+				<span class="bp">self</span><span class="o">.</span><span class="n">statementsCount</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lineStmts</span><span class="p">)</span>
+
+				<span class="n">covered</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">attrgetter</span><span class="p">(</span><span class="s2">&quot;hits&quot;</span><span class="p">),</span> <span class="n">lineStmts</span><span class="p">)))</span>
+				<span class="n">hit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">covered</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">lineStmts</span><span class="p">))</span>
+
+				<span class="bp">self</span><span class="o">.</span><span class="n">statementsCovered</span> <span class="o">+=</span> <span class="n">covered</span>
+
+				<span class="n">coberturaClass</span><span class="o">.</span><span class="n">addStatement</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">hit</span><span class="p">)</span>
+
+	<span class="k">def</span> <span class="nf">_parseStatementNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">StatementData</span><span class="p">]:</span>
+		<span class="n">srcNode</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;./ux:src&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_nsmap</span><span class="p">)</span>
+		<span class="n">workdir</span> <span class="o">=</span> <span class="n">srcNode</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;workdir&quot;</span><span class="p">)</span>
+
+		<span class="n">instancePath</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+			<span class="p">(</span><span class="n">scope</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">scope</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">iterancestors</span><span class="p">(</span><span class="s2">&quot;{*}scope&quot;</span><span class="p">))</span>
+		<span class="p">)</span>
+
+		<span class="n">stmtIndex</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
+			<span class="n">node</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;./ux:attr[@key=&#39;#SINDEX#&#39;]&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_nsmap</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+		<span class="p">)</span>
+
+		<span class="n">count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;./ux:count&quot;</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_nsmap</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+		<span class="n">stmtData</span> <span class="o">=</span> <span class="n">StatementData</span><span class="p">(</span>
+			<span class="n">file</span><span class="o">=</span><span class="n">srcNode</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">),</span>
+			<span class="n">line</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">srcNode</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;line&quot;</span><span class="p">)),</span>
+			<span class="n">index</span><span class="o">=</span><span class="n">stmtIndex</span><span class="p">,</span>
+			<span class="n">instance</span><span class="o">=</span><span class="n">instancePath</span><span class="p">,</span>
+			<span class="n">hits</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+		<span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">workdir</span><span class="p">,</span> <span class="n">stmtData</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022, Electronic Design Automation Abstraction (EDA²).
+      <span class="lastupdated">Last updated on 22.03.2024.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

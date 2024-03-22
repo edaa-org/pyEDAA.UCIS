@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyEDAA.UCIS.CLI &mdash; pyEDAA.UCIS 0.3.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyEDAA.UCIS
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference external" href="https://edaa-org.github.io/">Used as a layer of EDA² ➚</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Installation.html">Installation/Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Dependency.html">Dependency</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CodeCoverage.html">Code Coverage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CommandLineInterface.html">Command Line Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pyEDAA.UCIS/index.html">Python Class Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../coverage/index.html">Coverage Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../typing/index.html">Static Type Check Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../License.html">Apache License 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Doc-License.html">Creative Commons Attribution 4.0 International</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyEDAA.UCIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+            <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>pyEDAA.UCIS.CLI</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for pyEDAA.UCIS.CLI</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ==================================================================================================================== #</span>
+<span class="c1">#               _____ ____    _        _     _   _  ____ ___ ____                                                      #</span>
+<span class="c1">#   _ __  _   _| ____|  _ \  / \      / \   | | | |/ ___|_ _/ ___|                                                     #</span>
+<span class="c1">#  | &#39;_ \| | | |  _| | | | |/ _ \    / _ \  | | | | |    | |\___ \                                                     #</span>
+<span class="c1">#  | |_) | |_| | |___| |_| / ___ \  / ___ \ | |_| | |___ | | ___) |                                                    #</span>
+<span class="c1">#  | .__/ \__, |_____|____/_/   \_\/_/   \_(_)___/ \____|___|____/                                                     #</span>
+<span class="c1">#  |_|    |___/                                                                                                        #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1"># Authors:                                                                                                             #</span>
+<span class="c1">#   Patrick Lehmann                                                                                                    #</span>
+<span class="c1">#   Artur Porebski (Aldec Inc.)                                                                                        #</span>
+<span class="c1">#   Michal Pacula  (Aldec Inc.)                                                                                        #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># License:                                                                                                             #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1"># Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);                                                      #</span>
+<span class="c1"># you may not use this file except in compliance with the License.                                                     #</span>
+<span class="c1"># You may obtain a copy of the License at                                                                              #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1">#          http://www.apache.org/licenses/LICENSE-2.0                                                                  #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software                                                  #</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,                                                    #</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                             #</span>
+<span class="c1"># See the License for the specific language governing permissions and                                                  #</span>
+<span class="c1"># limitations under the License.                                                                                       #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0                                                                                  #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1">#</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tools to extract data from UCDB files.</span>
+
+<span class="sd">.. rubric:: Usage</span>
+
+<span class="sd">First export/convert the Aldec Coverage Database (ACDB) into UCDB (Universal Coverage Database) format. The</span>
+<span class="sd">helper program ``acdb2xml`` (part of Active-HDL or Riviera-PRO installation) can be used.</span>
+
+<span class="sd">.. code-block::</span>
+
+<span class="sd">   acdb2xml -i aggregate.acdb -o ucdb.xml</span>
+
+<span class="sd">At next use this layer&#39;s service program to convert from UCDB to Cobertura format.</span>
+
+<span class="sd">.. code-block::</span>
+
+<span class="sd">   pyedaa-ucis export --ucdb ucdb.xml --cobertura cobertura.xml</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">RawDescriptionHelpFormatter</span>
+<span class="kn">from</span> <span class="nn">pathlib</span>  <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">textwrap</span> <span class="kn">import</span> <span class="n">dedent</span>
+
+<span class="kn">from</span> <span class="nn">pyAttributes.ArgParseAttributes</span> <span class="kn">import</span> <span class="n">ArgParseMixin</span><span class="p">,</span> <span class="n">DefaultAttribute</span><span class="p">,</span> <span class="n">CommandAttribute</span><span class="p">,</span> <span class="n">ArgumentAttribute</span><span class="p">,</span> <span class="n">SwitchArgumentAttribute</span>
+
+<span class="kn">from</span> <span class="nn">pyTooling.Decorators</span> <span class="kn">import</span> <span class="n">export</span>
+
+<span class="kn">from</span> <span class="nn">pyEDAA.UCIS</span>      <span class="kn">import</span> <span class="n">__version__</span><span class="p">,</span> <span class="n">__copyright__</span><span class="p">,</span> <span class="n">__license__</span>
+<span class="kn">from</span> <span class="nn">pyEDAA.UCIS.UCDB</span> <span class="kn">import</span> <span class="n">Parser</span>
+<span class="kn">from</span> <span class="nn">pyEDAA.UCIS.Cobertura</span> <span class="kn">import</span> <span class="n">CoberturaException</span>
+
+
+<div class="viewcode-block" id="ProgramBase">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.CLI.html#pyEDAA.UCIS.CLI.ProgramBase">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">ProgramBase</span><span class="p">():</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Base-class for all program classes.&quot;&quot;&quot;</span>
+
+	<span class="n">programTitle</span> <span class="o">=</span> <span class="s2">&quot;UCDB Service Program&quot;</span>
+
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="k">pass</span>
+
+	<span class="k">def</span> <span class="nf">_PrintHeadline</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Print the programs headline.&quot;&quot;&quot;</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{line}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">line</span><span class="o">=</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">120</span><span class="p">))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{headline: ^120s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">headline</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">programTitle</span><span class="p">))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{line}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">line</span><span class="o">=</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">120</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="Program">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.CLI.html#pyEDAA.UCIS.CLI.Program">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">Program</span><span class="p">(</span><span class="n">ProgramBase</span><span class="p">,</span> <span class="n">ArgParseMixin</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Program class to implement the command line interface (CLI) using commands and options.&quot;&quot;&quot;</span>
+
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+		<span class="c1"># Call the constructor of the ArgParseMixin</span>
+		<span class="n">ArgParseMixin</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+			<span class="bp">self</span><span class="p">,</span>
+			<span class="n">prog</span><span class="o">=</span><span class="s2">&quot;pyedaa-ucis&quot;</span><span class="p">,</span>
+		  <span class="n">description</span><span class="o">=</span><span class="n">dedent</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span><span class="se">\</span>
+<span class="s1">				&#39;pyEDAA.UCIS Service Program&#39; to query and transform data to/from UCIS to any other format.</span>
+<span class="s1">				&#39;&#39;&#39;</span><span class="p">),</span>
+		  <span class="n">epilog</span><span class="o">=</span><span class="n">dedent</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">		    Currently the following output formats are supported:</span>
+<span class="s2">		     * Cobertura (statement coverage - Java oriented format)</span>
+<span class="s2">		  &quot;&quot;&quot;</span><span class="p">),</span>
+		  <span class="n">formatter_class</span><span class="o">=</span><span class="n">RawDescriptionHelpFormatter</span><span class="p">,</span>
+		  <span class="n">add_help</span><span class="o">=</span><span class="kc">False</span>
+		<span class="p">)</span>
+
+<span class="c1">#	@CommonSwitchArgumentAttribute(&quot;-q&quot;, &quot;--quiet&quot;,   dest=&quot;quiet&quot;,   help=&quot;Reduce messages to a minimum.&quot;)</span>
+<span class="c1">#	@CommonSwitchArgumentAttribute(&quot;-v&quot;, &quot;--verbose&quot;, dest=&quot;verbose&quot;, help=&quot;Print out detailed messages.&quot;)</span>
+<span class="c1">#	@CommonSwitchArgumentAttribute(&quot;-d&quot;, &quot;--debug&quot;,   dest=&quot;debug&quot;,   help=&quot;Enable debug mode.&quot;)</span>
+	<span class="k">def</span> <span class="nf">Run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="n">ArgParseMixin</span><span class="o">.</span><span class="n">Run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Program.HandleDefault">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.CLI.html#pyEDAA.UCIS.CLI.Program.HandleDefault">[docs]</a>
+	<span class="nd">@DefaultAttribute</span><span class="p">()</span>
+	<span class="k">def</span> <span class="nf">HandleDefault</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Handle program calls without any command.&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_PrintHeadline</span><span class="p">()</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_PrintHelp</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Program.HandleHelp">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.CLI.html#pyEDAA.UCIS.CLI.Program.HandleHelp">[docs]</a>
+	<span class="nd">@CommandAttribute</span><span class="p">(</span><span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Display help page(s) for the given command name.&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Display help page(s) for the given command name.&quot;</span><span class="p">)</span>
+	<span class="nd">@ArgumentAttribute</span><span class="p">(</span><span class="n">metavar</span><span class="o">=</span><span class="s2">&quot;Command&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;Command&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Print help page(s) for a command.&quot;</span><span class="p">)</span>
+	<span class="k">def</span> <span class="nf">HandleHelp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Handle program calls with command ``help``.&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_PrintHeadline</span><span class="p">()</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_PrintHelp</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">Command</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Program.HandleVersion">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.CLI.html#pyEDAA.UCIS.CLI.Program.HandleVersion">[docs]</a>
+	<span class="nd">@CommandAttribute</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Display version information.&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Display version information.&quot;</span><span class="p">)</span>
+	<span class="k">def</span> <span class="nf">HandleVersion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Handle program calls with command ``version``.&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_PrintHeadline</span><span class="p">()</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_PrintVersion</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Program.HandleExport">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.CLI.html#pyEDAA.UCIS.CLI.Program.HandleExport">[docs]</a>
+	<span class="nd">@CommandAttribute</span><span class="p">(</span><span class="s2">&quot;export&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Export data from UCDB.&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Export data from UCDB.&quot;</span><span class="p">)</span>
+	<span class="nd">@ArgumentAttribute</span><span class="p">(</span><span class="s2">&quot;--ucdb&quot;</span><span class="p">,</span>      <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;UCDBFile&#39;</span><span class="p">,</span>      <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;ucdb&quot;</span><span class="p">,</span>      <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;UCDB file in UCIS format (XML).&quot;</span><span class="p">)</span>
+	<span class="nd">@ArgumentAttribute</span><span class="p">(</span><span class="s2">&quot;--cobertura&quot;</span><span class="p">,</span> <span class="n">metavar</span><span class="o">=</span><span class="s1">&#39;CoberturaFile&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;cobertura&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Cobertura code coverage file (XML).&quot;</span><span class="p">)</span>
+	<span class="nd">@SwitchArgumentAttribute</span><span class="p">(</span><span class="s2">&quot;--merge-instances&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;mergeInstances&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Merge statement coverage data for all instances of the same design unit.&quot;</span><span class="p">)</span>
+	<span class="k">def</span> <span class="nf">HandleExport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Handle program calls with command ``export``.&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">_PrintHeadline</span><span class="p">()</span>
+
+		<span class="n">returnCode</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">ucdb</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+			<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Option &#39;--ucdb &lt;UCDBFile&#39; is missing.&quot;</span><span class="p">)</span>
+			<span class="n">returnCode</span> <span class="o">=</span> <span class="mi">3</span>
+		<span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">cobertura</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+			<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Option &#39;--cobertura &lt;CoberturaFile&#39; is missing.&quot;</span><span class="p">)</span>
+			<span class="n">returnCode</span> <span class="o">=</span> <span class="mi">3</span>
+
+		<span class="k">if</span> <span class="n">returnCode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+			<span class="n">exit</span><span class="p">(</span><span class="n">returnCode</span><span class="p">)</span>
+
+		<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exporting code coverage information from UCDB file to Cobertura format ...&quot;</span><span class="p">)</span>
+
+		<span class="n">ucdbPath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">ucdb</span><span class="p">)</span>
+		<span class="k">if</span> <span class="ow">not</span> <span class="n">ucdbPath</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+			<span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;UCDB databse file &#39;</span><span class="si">{</span><span class="n">ucdbPath</span><span class="si">}</span><span class="s2">&#39; not found.&quot;</span><span class="p">)</span>
+
+		<span class="n">coberturaPath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">cobertura</span><span class="p">)</span>
+
+		<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  IN  -&gt; UCIS (XML):      </span><span class="si">{</span><span class="n">ucdbPath</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+		<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  OUT &lt;- Cobertura (XML): </span><span class="si">{</span><span class="n">coberturaPath</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+		<span class="n">parser</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">ucdbPath</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">mergeInstances</span><span class="p">)</span>
+		<span class="n">model</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">getCoberturaModel</span><span class="p">()</span>
+
+		<span class="k">with</span> <span class="n">coberturaPath</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+			<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">getXml</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+		<span class="nb">print</span><span class="p">()</span>
+
+		<span class="k">try</span><span class="p">:</span>
+			<span class="n">lineCoverage</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">/</span> <span class="n">model</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">*</span> <span class="mi">100</span>
+		<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+			<span class="n">lineCoverage</span> <span class="o">=</span> <span class="mi">100</span>
+
+		<span class="k">try</span><span class="p">:</span>
+			<span class="n">statementCoverage</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">statementsCovered</span> <span class="o">/</span> <span class="n">parser</span><span class="o">.</span><span class="n">statementsCount</span> <span class="o">*</span> <span class="mi">100</span>
+		<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+			<span class="n">statementCoverage</span> <span class="o">=</span> <span class="mi">100</span>
+
+		<span class="nb">print</span><span class="p">(</span><span class="n">dedent</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">			[DONE] Export and conversion complete.</span>
+<span class="s2">			  Line coverage: </span><span class="si">{</span><span class="n">lineCoverage</span><span class="si">}</span><span class="s2"> %</span>
+<span class="s2">			  Statement coverage: </span><span class="si">{</span><span class="n">statementCoverage</span><span class="si">}</span><span class="s2"> %</span>
+<span class="s2">			&quot;&quot;&quot;</span><span class="p">)</span>
+		<span class="p">)</span></div>
+
+
+	<span class="k">def</span> <span class="nf">_PrintVersion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Helper function to print the version information.&quot;&quot;&quot;</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">dedent</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">			Copyright: </span><span class="si">{</span><span class="n">__copyright__</span><span class="si">}</span>
+<span class="s2">			License:   </span><span class="si">{</span><span class="n">__license__</span><span class="si">}</span>
+<span class="s2">			Version:   v</span><span class="si">{</span><span class="n">__version__</span><span class="si">}</span>
+<span class="s2">			&quot;&quot;&quot;</span><span class="p">)</span>
+		<span class="p">)</span>
+
+	<span class="k">def</span> <span class="nf">_PrintHelp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">		</span><span class="sd">&quot;&quot;&quot;Helper function to print the command line parsers help page(s).&quot;&quot;&quot;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">command</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">MainParser</span><span class="o">.</span><span class="n">print_help</span><span class="p">()</span>
+		<span class="k">elif</span> <span class="p">(</span><span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;help&quot;</span><span class="p">):</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is a recursion ...&quot;</span><span class="p">)</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">try</span><span class="p">:</span>
+				<span class="bp">self</span><span class="o">.</span><span class="n">SubParsers</span><span class="p">[</span><span class="n">command</span><span class="p">]</span><span class="o">.</span><span class="n">print_help</span><span class="p">()</span>
+			<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+				<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Command </span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> is unknown.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.CLI.html#pyEDAA.UCIS.CLI.main">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Entrypoint to start program execution.</span>
+
+<span class="sd">	This function should be called either from:</span>
+<span class="sd">	 * ``if __name__ == &quot;__main__&quot;:`` or</span>
+<span class="sd">	 * ``console_scripts`` entry point configured via ``setuptools`` in ``setup.py``.</span>
+
+<span class="sd">	This function creates an instance of :class:`Program` in a ``try ... except`` environment. Any exception caught is</span>
+<span class="sd">	formatted and printed before the program returns with a non-zero exit code.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">program</span> <span class="o">=</span> <span class="n">Program</span><span class="p">()</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="n">program</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+	<span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">()</span>
+		<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERROR] </span><span class="si">{</span><span class="n">ex</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+		<span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+	<span class="k">except</span> <span class="n">CoberturaException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">()</span>
+		<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[INTERNAL ERROR] </span><span class="si">{</span><span class="n">ex</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+		<span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+	<span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022, Electronic Design Automation Abstraction (EDA²).
+      <span class="lastupdated">Last updated on 22.03.2024.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyEDAA.UCIS.Cobertura &mdash; pyEDAA.UCIS 0.3.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/documentation_options.js?v=e259d695"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> pyEDAA.UCIS
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference external" href="https://edaa-org.github.io/">Used as a layer of EDA² ➚</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Installation.html">Installation/Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Dependency.html">Dependency</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CodeCoverage.html">Code Coverage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CommandLineInterface.html">Command Line Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pyEDAA.UCIS/index.html">Python Class Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../coverage/index.html">Coverage Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../typing/index.html">Static Type Check Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../License.html">Apache License 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Doc-License.html">Creative Commons Attribution 4.0 International</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyEDAA.UCIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+            <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>pyEDAA.UCIS.Cobertura</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for pyEDAA.UCIS.Cobertura</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ==================================================================================================================== #</span>
+<span class="c1">#               _____ ____    _        _     _   _  ____ ___ ____                                                      #</span>
+<span class="c1">#   _ __  _   _| ____|  _ \  / \      / \   | | | |/ ___|_ _/ ___|                                                     #</span>
+<span class="c1">#  | &#39;_ \| | | |  _| | | | |/ _ \    / _ \  | | | | |    | |\___ \                                                     #</span>
+<span class="c1">#  | |_) | |_| | |___| |_| / ___ \  / ___ \ | |_| | |___ | | ___) |                                                    #</span>
+<span class="c1">#  | .__/ \__, |_____|____/_/   \_\/_/   \_(_)___/ \____|___|____/                                                     #</span>
+<span class="c1">#  |_|    |___/                                                                                                        #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1"># Authors:                                                                                                             #</span>
+<span class="c1">#   Artur Porebski (Aldec Inc.)                                                                                        #</span>
+<span class="c1">#   Michal Pacula  (Aldec Inc.)                                                                                        #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># License:                                                                                                             #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1"># Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);                                                      #</span>
+<span class="c1"># you may not use this file except in compliance with the License.                                                     #</span>
+<span class="c1"># You may obtain a copy of the License at                                                                              #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1">#          http://www.apache.org/licenses/LICENSE-2.0                                                                  #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software                                                  #</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,                                                    #</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                             #</span>
+<span class="c1"># See the License for the specific language governing permissions and                                                  #</span>
+<span class="c1"># limitations under the License.                                                                                       #</span>
+<span class="c1">#                                                                                                                      #</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0                                                                                  #</span>
+<span class="c1"># ==================================================================================================================== #</span>
+<span class="c1">#</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Data model of the Cobertura format.</span>
+
+<span class="sd">.. mermaid::</span>
+
+<span class="sd">   flowchart LR</span>
+<span class="sd">     Coverage --&gt; Package --&gt; Class --&gt; Statement</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Set</span>
+
+<span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">pyTooling.Decorators</span> <span class="kn">import</span> <span class="n">export</span>
+
+
+<div class="viewcode-block" id="CoberturaException">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.CoberturaException">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">CoberturaException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Base-class for other Cobertura exceptions&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="DuplicatedLineNumber">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.DuplicatedLineNumber">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">DuplicatedLineNumber</span><span class="p">(</span><span class="n">CoberturaException</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Raised when statement with specified line number already exists in Cobertura class&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="DuplicatedClassName">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.DuplicatedClassName">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">DuplicatedClassName</span><span class="p">(</span><span class="n">CoberturaException</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Raised when class with specified name already exists in Cobertura package&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="DuplicatedPackageName">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.DuplicatedPackageName">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">DuplicatedPackageName</span><span class="p">(</span><span class="n">CoberturaException</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Raised when package with specified name already exists in Cobertura coverage&quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="Class">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.Class">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">Class</span><span class="p">:</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Represents a code element in the Cobertura coverage data model (Java-focused).&quot;&quot;&quot;</span>
+
+	<span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+	<span class="n">sourceFile</span><span class="p">:</span> <span class="nb">str</span>
+	<span class="n">lines</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
+	<span class="n">linesValid</span><span class="p">:</span> <span class="nb">int</span>
+	<span class="n">linesCovered</span><span class="p">:</span> <span class="nb">int</span>
+
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sourceFile</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">sourceFile</span> <span class="o">=</span> <span class="n">sourceFile</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">=</span> <span class="mi">0</span>
+
+	<span class="k">def</span> <span class="nf">addStatement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">hits</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+			<span class="k">raise</span> <span class="n">DuplicatedLineNumber</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Duplicated line number: </span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">lines</span><span class="p">[</span><span class="n">line</span><span class="p">]</span> <span class="o">=</span> <span class="n">hits</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">+=</span> <span class="mi">1</span>
+
+		<span class="k">if</span> <span class="n">hits</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">+=</span> <span class="mi">1</span>
+
+	<span class="k">def</span> <span class="nf">getXmlNode</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">etree</span><span class="o">.</span><span class="n">_Element</span><span class="p">:</span>
+		<span class="n">classNode</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
+		<span class="n">classNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sourceFile</span>
+		<span class="n">classNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sourceFile</span>
+		<span class="n">classNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;complexity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+		<span class="n">classNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;branch-rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+
+		<span class="k">try</span><span class="p">:</span>
+			<span class="n">rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span>
+		<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+			<span class="n">rate</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+		<span class="n">classNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;line-rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">rate</span><span class="si">:</span><span class="s2">.16g</span><span class="si">}</span><span class="s2">&quot;</span>
+
+		<span class="n">classNode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;methods&quot;</span><span class="p">))</span>
+		<span class="n">linesNode</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">classNode</span><span class="p">,</span> <span class="s2">&quot;lines&quot;</span><span class="p">)</span>
+
+		<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lines</span><span class="p">:</span>
+			<span class="n">etree</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span>
+				<span class="n">linesNode</span><span class="p">,</span>
+				<span class="s2">&quot;line&quot;</span><span class="p">,</span>
+				<span class="n">number</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">line</span><span class="p">),</span>
+				<span class="n">hits</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lines</span><span class="p">[</span><span class="n">line</span><span class="p">]),</span>
+			<span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">classNode</span></div>
+
+
+
+<div class="viewcode-block" id="Package">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.Package">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">Package</span><span class="p">:</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Represents a grouping element in the Cobertura coverage data model (Java-focused).&quot;&quot;&quot;</span>
+
+	<span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+	<span class="n">classes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Class</span><span class="p">]</span>
+	<span class="n">linesValid</span><span class="p">:</span> <span class="nb">int</span>
+	<span class="n">linesCovered</span><span class="p">:</span> <span class="nb">int</span>
+
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">classes</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">=</span> <span class="mi">0</span>
+
+	<span class="k">def</span> <span class="nf">addClass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coberturaClass</span><span class="p">:</span> <span class="n">Class</span><span class="p">):</span>
+		<span class="k">if</span> <span class="n">coberturaClass</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="n">DuplicatedClassName</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Duplicated class name: &#39;</span><span class="si">{</span><span class="n">coberturaClass</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">[</span><span class="n">coberturaClass</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">coberturaClass</span>
+
+	<span class="k">def</span> <span class="nf">refreshStatistics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="k">for</span> <span class="n">coberturaClass</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">+=</span> <span class="n">coberturaClass</span><span class="o">.</span><span class="n">linesCovered</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">+=</span> <span class="n">coberturaClass</span><span class="o">.</span><span class="n">linesValid</span>
+
+	<span class="k">def</span> <span class="nf">getXmlNode</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">etree</span><span class="o">.</span><span class="n">_Element</span><span class="p">:</span>
+		<span class="n">classesNode</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;classes&quot;</span><span class="p">)</span>
+		<span class="n">packageNode</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;package&quot;</span><span class="p">)</span>
+		<span class="n">packageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+		<span class="n">packageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;complexity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+		<span class="n">packageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;branch-rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+
+		<span class="k">try</span><span class="p">:</span>
+			<span class="n">rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span>
+		<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+			<span class="n">rate</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+		<span class="n">packageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;line-rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">rate</span><span class="si">:</span><span class="s2">.16g</span><span class="si">}</span><span class="s2">&quot;</span>
+
+		<span class="n">packageNode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">classesNode</span><span class="p">)</span>
+
+		<span class="k">for</span> <span class="n">coberturaClass</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+			<span class="n">classesNode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coberturaClass</span><span class="o">.</span><span class="n">getXmlNode</span><span class="p">())</span>
+
+		<span class="k">return</span> <span class="n">packageNode</span></div>
+
+
+
+<div class="viewcode-block" id="Coverage">
+<a class="viewcode-back" href="../../../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.Coverage">[docs]</a>
+<span class="nd">@export</span>
+<span class="k">class</span> <span class="nc">Coverage</span><span class="p">:</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Represents the root element in the Cobertura coverage data model (Java-focused).&quot;&quot;&quot;</span>
+
+	<span class="n">sources</span><span class="p">:</span> <span class="n">Set</span>
+	<span class="n">packages</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Package</span><span class="p">]</span>
+	<span class="n">linesValid</span><span class="p">:</span> <span class="nb">int</span>
+	<span class="n">linesCovered</span><span class="p">:</span> <span class="nb">int</span>
+
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">sources</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">packages</span> <span class="o">=</span> <span class="p">{}</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">=</span> <span class="mi">0</span>
+
+	<span class="k">def</span> <span class="nf">addSource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">sources</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+
+	<span class="k">def</span> <span class="nf">addPackage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">package</span><span class="p">:</span> <span class="n">Package</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="k">if</span> <span class="n">package</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">:</span>
+			<span class="k">raise</span> <span class="n">DuplicatedPackageName</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Duplicated package name: &#39;</span><span class="si">{</span><span class="n">package</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">[</span><span class="n">package</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">package</span>
+
+	<span class="k">def</span> <span class="nf">refreshStatistics</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="k">for</span> <span class="n">package</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+			<span class="n">package</span><span class="o">.</span><span class="n">refreshStatistics</span><span class="p">()</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">+=</span> <span class="n">package</span><span class="o">.</span><span class="n">linesCovered</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span> <span class="o">+=</span> <span class="n">package</span><span class="o">.</span><span class="n">linesValid</span>
+
+	<span class="k">def</span> <span class="nf">getXml</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">refreshStatistics</span><span class="p">()</span>
+
+		<span class="n">coverageNode</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;coverage&quot;</span><span class="p">)</span>
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;5.5&quot;</span>
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">()))</span>
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;branches-valid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;branches-covered&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;branch-rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;complexity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+
+		<span class="n">sourcesNode</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;sources&quot;</span><span class="p">)</span>
+
+		<span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">sources</span><span class="p">:</span>
+			<span class="n">etree</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">sourcesNode</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">source</span>
+
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sourcesNode</span><span class="p">)</span>
+
+		<span class="n">packagesNode</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s2">&quot;packages&quot;</span><span class="p">)</span>
+
+		<span class="k">for</span> <span class="n">package</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+			<span class="n">packagesNode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">getXmlNode</span><span class="p">())</span>
+
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">packagesNode</span><span class="p">)</span>
+
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;lines-valid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span><span class="p">)</span>
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;lines-covered&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span><span class="p">)</span>
+
+		<span class="k">try</span><span class="p">:</span>
+			<span class="n">rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linesCovered</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">linesValid</span>
+		<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+			<span class="n">rate</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+		<span class="n">coverageNode</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;line-rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">rate</span><span class="si">:</span><span class="s2">.16g</span><span class="si">}</span><span class="s2">&quot;</span>
+
+		<span class="k">return</span> <span class="n">etree</span><span class="o">.</span><span class="n">tostring</span><span class="p">(</span>
+			<span class="n">coverageNode</span><span class="p">,</span> <span class="n">pretty_print</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">xml_declaration</span><span class="o">=</span><span class="kc">True</span>
+		<span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022, Electronic Design Automation Abstraction (EDA²).
+      <span class="lastupdated">Last updated on 22.03.2024.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

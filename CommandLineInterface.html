@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Line Interfaces &mdash; pyEDAA.UCIS 0.3.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/documentation_options.js?v=e259d695"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python Class Reference" href="pyEDAA.UCIS/index.html" />
+    <link rel="prev" title="Code Coverage" href="CodeCoverage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pyEDAA.UCIS
+          </a>
+              <div class="version">
+                0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference external" href="https://edaa-org.github.io/">Used as a layer of EDA² ➚</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation/Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dependency.html">Dependency</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CodeCoverage.html">Code Coverage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyedaa-ucis">pyedaa-ucis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyedaa-ucis-export">pyedaa-ucis export</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyedaa-ucis-help">pyedaa-ucis help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyedaa-ucis-version">pyedaa-ucis version</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyEDAA.UCIS/index.html">Python Class Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coverage/index.html">Coverage Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typing/index.html">Static Type Check Report ➚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="License.html">Apache License 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Doc-License.html">Creative Commons Attribution 4.0 International</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyEDAA.UCIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+            <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Command Line Interfaces</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edaa-org/pyEDAA.UCIS/blob/main/doc/CommandLineInterface.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <style type="text/css">
+  span.bolditalic {font-weight: bold; font-style: italic; }
+  span.underline {text-decoration: underline; }
+  span.xlarge {font-size: x-large; }
+</style><section id="command-line-interfaces">
+<h1>Command Line Interfaces<a class="headerlink" href="#command-line-interfaces" title="Link to this heading">¶</a></h1>
+<section id="pyedaa-ucis">
+<span id="references-cli"></span><h2>pyedaa-ucis<a class="headerlink" href="#pyedaa-ucis" title="Link to this heading">¶</a></h2>
+<p>‘pyEDAA.UCIS Service Program’ to query and transform data to/from UCIS to any other format.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: pyedaa-ucis {help,version,export} ...</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Currently the following output formats are supported:</dt><dd><ul class="simple">
+<li><p>Cobertura (statement coverage - Java oriented format)</p></li>
+</ul>
+</dd>
+</dl>
+<section id="pyedaa-ucis-export">
+<h3>pyedaa-ucis export<a class="headerlink" href="#pyedaa-ucis-export" title="Link to this heading">¶</a></h3>
+<p>Export data from UCDB.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: pyedaa-ucis export [-h] [--ucdb UCDBFile] [--cobertura CoberturaFile]</span>
+<span class="go">                          [--merge-instances]</span>
+</pre></div>
+</div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pyedaa-ucis-export-h">
+<span id="cmdoption-pyedaa-ucis-export-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pyedaa-ucis-export-h" title="Link to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pyedaa-ucis-export-ucdb">
+<span class="sig-name descname"><span class="pre">--ucdb</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;ucdbfile&gt;</span></span><a class="headerlink" href="#cmdoption-pyedaa-ucis-export-ucdb" title="Link to this definition">¶</a></dt>
+<dd><p>UCDB file in UCIS format (XML).</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pyedaa-ucis-export-cobertura">
+<span class="sig-name descname"><span class="pre">--cobertura</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;coberturafile&gt;</span></span><a class="headerlink" href="#cmdoption-pyedaa-ucis-export-cobertura" title="Link to this definition">¶</a></dt>
+<dd><p>Cobertura code coverage file (XML).</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pyedaa-ucis-export-merge-instances">
+<span class="sig-name descname"><span class="pre">--merge-instances</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pyedaa-ucis-export-merge-instances" title="Link to this definition">¶</a></dt>
+<dd><p>Merge statement coverage data for all instances of the same design unit.</p>
+</dd></dl>
+
+</section>
+<section id="pyedaa-ucis-help">
+<h3>pyedaa-ucis help<a class="headerlink" href="#pyedaa-ucis-help" title="Link to this heading">¶</a></h3>
+<p>Display help page(s) for the given command name.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: pyedaa-ucis help [-h] [Command]</span>
+</pre></div>
+</div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pyedaa-ucis-help-arg-command">
+<span class="sig-name descname"><span class="pre">command</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pyedaa-ucis-help-arg-command" title="Link to this definition">¶</a></dt>
+<dd><p>Print help page(s) for a command.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pyedaa-ucis-help-h">
+<span id="cmdoption-pyedaa-ucis-help-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pyedaa-ucis-help-h" title="Link to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+</section>
+<section id="pyedaa-ucis-version">
+<h3>pyedaa-ucis version<a class="headerlink" href="#pyedaa-ucis-version" title="Link to this heading">¶</a></h3>
+<p>Display version information.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: pyedaa-ucis version [-h]</span>
+</pre></div>
+</div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pyedaa-ucis-version-h">
+<span id="cmdoption-pyedaa-ucis-version-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pyedaa-ucis-version-h" title="Link to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="CodeCoverage.html" class="btn btn-neutral float-left" title="Code Coverage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pyEDAA.UCIS/index.html" class="btn btn-neutral float-right" title="Python Class Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022, Electronic Design Automation Abstraction (EDA²).
+      <span class="lastupdated">Last updated on 22.03.2024.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

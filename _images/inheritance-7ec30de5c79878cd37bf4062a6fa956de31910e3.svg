@@ -1,0 +1,29 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://www.w3.org/1999/xlink" width="0pt" height="864pt" viewBox="0.00 0.00 0.33 864.00">
+<ns0:g id="graph0" class="graph" transform="scale(0.000934856 0.000934856) rotate(0) translate(4 924202.9)">
+<ns0:title>inheritancecfa8cbecdd</ns0:title>
+
+<ns0:g id="node1" class="node">
+<ns0:title>CoberturaException</ns0:title>
+<ns0:g id="a_node1"><ns0:a ns1:href="../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.CoberturaException" ns1:title="Base-class for other Cobertura exceptions" target="_top">
+<ns0:polygon fill="white" stroke="black" stroke-width="0.5" points="151,-462108.7 0,-462108.7 0,-462090.2 151,-462090.2 151,-462108.7" />
+<ns0:text text-anchor="middle" x="75.5" y="-462095.2" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="10.00">CoberturaException</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="node2" class="node">
+<ns0:title>DuplicatedClassName</ns0:title>
+<ns0:g id="a_node2"><ns0:a ns1:href="../pyEDAA.UCIS/pyEDAA.UCIS.Cobertura.html#pyEDAA.UCIS.Cobertura.DuplicatedClassName" ns1:title="Raised when class with specified name already exists in Cobertura package" target="_top">
+<ns0:polygon fill="white" stroke="black" stroke-width="0.5" points="345.5,-924198.9 187,-924198.9 187,0 345.5,0 345.5,-924198.9" />
+<ns0:text text-anchor="middle" x="266.25" y="-924185.4" font-family="Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans" font-size="10.00">DuplicatedClassName</ns0:text>
+</ns0:a>
+</ns0:g>
+</ns0:g>
+
+<ns0:g id="edge1" class="edge">
+<ns0:title>CoberturaException-&gt;DuplicatedClassName</ns0:title>
+<ns0:path fill="none" stroke="black" stroke-width="0.5" d="M151.37,-462099.45C161.09,-462099.45 171.1,-462099.45 180.97,-462099.45" />
+<ns0:polygon fill="black" stroke="black" stroke-width="0.5" points="181.75,-462101.2 186.75,-462099.45 181.75,-462097.7 181.75,-462101.2" />
+</ns0:g>
+</ns0:g>
+</ns0:svg>
