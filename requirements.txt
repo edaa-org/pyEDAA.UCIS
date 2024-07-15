@@ -1,3 +1,4 @@
 pyTooling>=1.9.5
 pyAttributes>=2.5.1
 lxml>=4.8
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
