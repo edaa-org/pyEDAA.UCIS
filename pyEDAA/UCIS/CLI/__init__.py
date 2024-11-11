@@ -13,7 +13,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2023 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2024 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -62,7 +62,7 @@ from pyEDAA.UCIS.Cobertura import CoberturaException
 
 
 @export
-class ProgramBase():
+class ProgramBase:
 	"""Base-class for all program classes."""
 
 	programTitle: str
@@ -181,7 +181,7 @@ class Program(ProgramBase, ArgParseMixin):
 			""")
 		)
 
-	def _PrintVersion(self):
+	def _PrintVersion(self) -> None:
 		"""Helper function to print the version information."""
 		print(dedent(f"""\
 			Copyright: {__copyright__}
@@ -190,7 +190,7 @@ class Program(ProgramBase, ArgParseMixin):
 			""")
 		)
 
-	def _PrintHelp(self, command: str=None):
+	def _PrintHelp(self, command: Nullable[str] = None) -> None:
 		"""Helper function to print the command line parsers help page(s)."""
 		if command is None:
 			self.MainParser.print_help()

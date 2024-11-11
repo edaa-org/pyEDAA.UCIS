@@ -60,7 +60,7 @@ pygments_style = 'stata-dark'
 # ==============================================================================
 prologPath = Path("prolog.inc")
 try:
-	with prologPath.open("r") as fileHandle:
+	with prologPath.open("r", encoding="utf-8") as fileHandle:
 		rst_prolog = fileHandle.read()
 except Exception as ex:
 	print(f"[ERROR:] While reading '{prologPath}'.")
@@ -195,8 +195,8 @@ autodoc_member_order = "bysource"       # alphabetical, groupwise, bysource
 # Sphinx.Ext.ExtLinks
 # ==============================================================================
 extlinks = {
-	"ghissue": ('https://GitHub.com/edaa-org/pyEDAA.UCIS/issues/%s', 'issue #'),
-	"ghpull":  ('https://GitHub.com/edaa-org/pyEDAA.UCIS/pull/%s', 'pull request #'),
+	"ghissue": ('https://GitHub.com/edaa-org/pyEDAA.UCIS/issues/%s', 'issue #%s'),
+	"ghpull":  ('https://GitHub.com/edaa-org/pyEDAA.UCIS/pull/%s', 'pull request #%s'),
 	"ghsrc":   ('https://GitHub.com/edaa-org/pyEDAA.UCIS/blob/main/%s?ts=2', None),
 }
 

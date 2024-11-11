@@ -27,7 +27,7 @@ Unified Coverage Interoperability Standard (UCIS)
 
 ## Main Goals
 
-* Parse UCDB files and provide a UCDB data model.
+* Convert UCDB files and provide a UCDB data model.
 * Export and convert data from UCDB to Cobertura format.
 * Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).
 

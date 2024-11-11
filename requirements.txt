@@ -1,3 +1,2 @@
-pyTooling >= 5.0.0
-pyAttributes>=2.5.1
-lxml>=4.9
+pyTooling ~= 8.0
+lxml ~= 5.3

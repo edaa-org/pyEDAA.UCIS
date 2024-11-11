@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2023 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2024 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -42,9 +42,9 @@ if __name__ == "__main__": # pragma: no cover
 
 
 class ExportAndConvert(TestCase):
-	def test_UCDB2Cobertura(self):
-		ucdbPath = Path("data/ucdb.xml")
-		coberturaPath = Path("data/cobertura.xml")
+	def test_UCDB2Cobertura(self) -> None:
+		ucdbPath = Path("tests/data/ucdb.xml")
+		coberturaPath = Path("tests/data/cobertura.xml")
 
 		parser = Parser(ucdbPath, False)
 		model = parser.getCoberturaModel()
@@ -62,15 +62,15 @@ class ExportAndConvert(TestCase):
 
 
 class CoverageValues(TestCase):
-	def _parseUCDB(self, ucdbPath, mergeInstances):
+	def _parseUCDB(self, ucdbPath, mergeInstances) -> Tuple[Parser, Coverage]:
 		parser = Parser(ucdbPath, mergeInstances)
 		model = parser.getCoberturaModel()
 		model.getXml()
 
 		return parser, model
 
-	def test_multipleInstances(self):
-		ucdbPath = Path("data/ucdb000_multiple_instances.xml")
+	def test_multipleInstances(self) -> None:
+		ucdbPath = Path("tests/data/ucdb000_multiple_instances.xml")
 
 		(parser, model) = self._parseUCDB(
 			ucdbPath,
@@ -92,8 +92,8 @@ class CoverageValues(TestCase):
 		self.assertEqual(7, model.linesValid)
 		self.assertEqual(6, model.linesCovered)
 
-	def test_allExcluded(self):
-		ucdbPath = Path("data/ucdb001_all_excluded.xml")
+	def test_allExcluded(self) -> None:
+		ucdbPath = Path("tests/data/ucdb001_all_excluded.xml")
 
 		(parser, model) = self._parseUCDB(
 			ucdbPath,
@@ -115,8 +115,8 @@ class CoverageValues(TestCase):
 		self.assertEqual(0, model.linesValid)
 		self.assertEqual(0, model.linesCovered)
 
-	def test_partiallyExcluded(self):
-		ucdbPath = Path("data/ucdb002_partially_excluded.xml")
+	def test_partiallyExcluded(self) -> None:
+		ucdbPath = Path("tests/data/ucdb002_partially_excluded.xml")
 
 		(parser, model) = self._parseUCDB(
 			ucdbPath,

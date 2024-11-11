@@ -40,7 +40,7 @@ Unified Coverage Interoperability Standard (UCIS).
 Main Goals
 **********
 
-* Parse UCDB files and provide a UCDB data model.
+* Convert UCDB files and provide a UCDB data model.
 * Export and convert code coverage information from UCDB to Cobertura format.
 * Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).
 
@@ -99,7 +99,7 @@ News
 * Aldec Inc. gave permission to release the script as open source under *Apache License, version 2.0*.
 
 
-.. _contributors:
+.. _CONTRIBUTORS:
 
 Contributors
 ************
@@ -111,7 +111,7 @@ Contributors
 * `and more... <https://GitHub.com/edaa-org/pyEDAA.UCIS/graphs/contributors>`__
 
 
-.. _license:
+.. _LICENSE:
 
 License
 *******
