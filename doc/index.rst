@@ -104,10 +104,10 @@ News
 Contributors
 ************
 
-* `Patrick Lehmann <https://GitHub.com/Paebbels>`__ (Maintainer)
+* :gh:`Patrick Lehmann <Paebbels>` (Maintainer)
 * `Artur Porebski (Aldec Inc.) <https://github.com/por3bski>`__
 * `Michal Pacula (Aldec Inc.) <https://github.com/mikep996>`__
-* `Unai Martinez-Corral <https://GitHub.com/umarcor/>`__
+* :gh:`Unai Martinez-Corral <umarcor>`
 * `and more... <https://GitHub.com/edaa-org/pyEDAA.UCIS/graphs/contributors>`__
 
 
@@ -151,14 +151,19 @@ License
 
 .. raw:: latex
 
-   \part{References}
+   \part{References and Reports}
 
 .. toctree::
-   :caption: References
+   :caption: References and Reports
    :hidden:
 
-   CommandLineInterface
-   pyEDAA.UCIS/index
+   Python Class Reference <pyEDAA.UCIS/pyEDAA.UCIS>
+   unittests/index
+   coverage/index
+   Doc. Coverage Report <DocCoverage>
+   Static Type Check Report ➚ <typing/index>
+
+.. Coverage Report ➚ <coverage/index>
 
 .. raw:: latex
 
@@ -168,12 +173,9 @@ License
    :caption: Appendix
    :hidden:
 
-   Coverage Report ➚ <coverage/index>
-   Static Type Check Report ➚ <typing/index>
    License
    Doc-License
    Glossary
    genindex
-
-.. #
-   py-modindex
+   Python Module Index <modindex>
+   TODO

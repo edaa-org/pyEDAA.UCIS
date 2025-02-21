@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2024 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2025 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -29,24 +29,29 @@
 # ==================================================================================================================== #
 #
 """Package installer for 'Tools to extract and convert data from UCDB files'."""
+from setuptools          import setup
+
 from pathlib             import Path
-from pyTooling.Packaging import DescribePythonPackageHostedOnGitHub
+from pyTooling.Packaging import DescribePythonPackageHostedOnGitHub, DEFAULT_CLASSIFIERS
 
 gitHubNamespace =        "pyEDAA"
 packageName =            "pyEDAA.UCIS"
 packageDirectory =       packageName.replace(".", "/")
 packageInformationFile = Path(f"{packageDirectory}/__init__.py")
 
-DescribePythonPackageHostedOnGitHub(
+setup(**DescribePythonPackageHostedOnGitHub(
 	packageName=packageName,
 	description="Tools to extract and convert data from UCDB files.",
 	gitHubNamespace=gitHubNamespace,
 	sourceFileWithVersion=packageInformationFile,
 	developmentStatus="stable",
-	classifiers=[
+	classifiers=list(DEFAULT_CLASSIFIERS) + [
 		"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
 	],
+	dataFiles={
+		packageName: ["py.typed"]
+	},
 	consoleScripts={
 		"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
 	}
-)
+))

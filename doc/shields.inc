@@ -64,11 +64,11 @@
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS/network/dependents
 
 .. # GHA test and coverage
-.. |SHIELD:svg:UCIS-gha-test| image:: https://img.shields.io/github/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline/main?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
+.. |SHIELD:svg:UCIS-gha-test| image:: https://img.shields.io/github/actions/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline.yml?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
    :alt: GitHub Workflow - Build and Test Status
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml
-.. |SHIELD:png:UCIS-gha-test| image:: https://raster.shields.io/github/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline/main?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
+.. |SHIELD:png:UCIS-gha-test| image:: https://raster.shields.io/github/actions/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline.yml?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
    :alt: GitHub Workflow - Build and Test Status
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml

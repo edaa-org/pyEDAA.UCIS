@@ -10,7 +10,7 @@
 [![PyPI](https://img.shields.io/pypi/v/pyEDAA.UCIS?longCache=true&style=flat-square&logo=PyPI&logoColor=FBE072)](https://pypi.org/project/pyEDAA.UCIS/)
 ![PyPI - Status](https://img.shields.io/pypi/status/pyEDAA.UCIS?longCache=true&style=flat-square&logo=PyPI&logoColor=FBE072)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyEDAA.UCIS?longCache=true&style=flat-square&logo=PyPI&logoColor=FBE072)  
-[![GitHub Workflow - Build and Test Status](https://img.shields.io/github/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline/main?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF)](https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml)
+[![GitHub Workflow - Build and Test Status](https://img.shields.io/github/actions/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline.yml?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF)](https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml)
 [![Libraries.io status for latest release](https://img.shields.io/librariesio/release/pypi/pyEDAA.UCIS?longCache=true&style=flat-square&logo=Libraries.io&logoColor=fff)](https://libraries.io/github/edaa-org/pyEDAA.UCIS)
 [![Codacy - Quality](https://img.shields.io/codacy/grade/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&style=flat-square&logo=Codacy)](https://app.codacy.com/gh/edaa-org/pyEDAA.UCIS)
 [![Codacy - Coverage](https://img.shields.io/codacy/coverage/63bd2bd65585447a9f6d7ad4e7d82a35?longCache=true&style=flat-square&logo=Codacy)](https://app.codacy.com/gh/edaa-org/pyEDAA.UCIS)
