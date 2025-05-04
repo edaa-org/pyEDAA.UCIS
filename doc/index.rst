@@ -35,7 +35,7 @@ The pyEDAA.UCIS Documentation
 Unified Coverage Interoperability Standard (UCIS).
 
 
-.. _goals:
+.. _GOALS:
 
 Main Goals
 **********
@@ -45,7 +45,7 @@ Main Goals
 * Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).
 
 
-.. _usecase:
+.. _USECASES:
 
 Use Cases
 *********
@@ -54,7 +54,7 @@ Use Cases
   code coverage can be published to e.g. GitLab, Codacy or CodeCov.
 
 
-.. _news:
+.. _NEWS:
 
 News
 ****
@@ -160,6 +160,7 @@ License
    Python Class Reference <pyEDAA.UCIS/pyEDAA.UCIS>
    unittests/index
    coverage/index
+   CodeCoverage
    Doc. Coverage Report <DocCoverage>
    Static Type Check Report ➚ <typing/index>
 

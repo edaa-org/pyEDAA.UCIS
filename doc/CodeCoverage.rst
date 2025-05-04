@@ -1,18 +1,25 @@
-Code Coverage
-#############
+.. _CODECOV:
 
-Statement Coverage
-******************
+Code Coverage Report
+####################
 
-.. code-block:: Bash
+.. grid:: 2
 
-   # Convert ACDB file into UCDB file (XML format)
-   acdb2xml -i aggregate.acdb -o ucdb.xml
+   .. grid-item::
+      :columns: 8
 
-   # Convert UCDB file into Cobertura format
-   pyedaa-ucis export --ucdb ucdb.xml --cobertura cobertura.xml
+      .. report:code-coverage::
+         :reportid: src
 
-Branch Coverage
-***************
+   .. grid-item::
+      :columns: 4
 
-.. note:: Branch coverage isn't supported yet.
+      .. report:code-coverage-legend::
+         :reportid: src
+         :style: vertical-table
+
+----------
+
+Code coverage report generated with `pytest <https://github.com/pytest-dev/pytest>`__,
+`Coverage.py <https://github.com/nedbat/coveragepy/tree/master>`__ and visualized by
+`sphinx-reports <https://github.com/pyTooling/sphinx-reports>`__.
