@@ -15,7 +15,7 @@
 
 .. only:: html
 
-   |  |SHIELD:svg:UCIS-github| |SHIELD:svg:UCIS-src-license| |SHIELD:svg:UCIS-ghp-doc| |SHIELD:svg:UCIS-doc-license| |SHIELD:svg:UCIS-gitter|
+   |  |SHIELD:svg:UCIS-github| |SHIELD:svg:UCIS-src-license| |SHIELD:svg:UCIS-ghp-doc| |SHIELD:svg:UCIS-doc-license|
    |  |SHIELD:svg:UCIS-pypi-tag| |SHIELD:svg:UCIS-pypi-status| |SHIELD:svg:UCIS-pypi-python|
    |  |SHIELD:svg:UCIS-gha-test| |SHIELD:svg:UCIS-lib-status| |SHIELD:svg:UCIS-codacy-quality| |SHIELD:svg:UCIS-codacy-coverage| |SHIELD:svg:UCIS-codecov-coverage|
 
@@ -23,7 +23,7 @@
 
 .. only:: latex
 
-   |SHIELD:png:UCIS-github| |SHIELD:png:UCIS-src-license| |SHIELD:png:UCIS-ghp-doc| |SHIELD:png:UCIS-doc-license| |SHIELD:png:UCIS-gitter|
+   |SHIELD:png:UCIS-github| |SHIELD:png:UCIS-src-license| |SHIELD:png:UCIS-ghp-doc| |SHIELD:png:UCIS-doc-license|
    |SHIELD:png:UCIS-pypi-tag| |SHIELD:png:UCIS-pypi-status| |SHIELD:png:UCIS-pypi-python|
    |SHIELD:png:UCIS-gha-test| |SHIELD:png:UCIS-lib-status| |SHIELD:png:UCIS-codacy-quality| |SHIELD:png:UCIS-codacy-coverage| |SHIELD:png:UCIS-codecov-coverage|
 
@@ -105,8 +105,8 @@ Contributors
 ************
 
 * :gh:`Patrick Lehmann <Paebbels>` (Maintainer)
-* `Artur Porebski (Aldec Inc.) <https://github.com/por3bski>`__
-* `Michal Pacula (Aldec Inc.) <https://github.com/mikep996>`__
+* :gh:`Artur Porebski (Aldec Inc.) <https://github.com/por3bski>`
+* :gh:`Michal Pacula (Aldec Inc.) <https://github.com/mikep996>`
 * :gh:`Unai Martinez-Corral <umarcor>`
 * `and more... <https://GitHub.com/edaa-org/pyEDAA.UCIS/graphs/contributors>`__
 

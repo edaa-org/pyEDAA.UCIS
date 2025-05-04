@@ -29,9 +29,12 @@
 # ==================================================================================================================== #
 #
 """Testcase for UCDB file conversions."""
+from typing       import Tuple
+
 from pathlib      import Path
 from unittest     import TestCase
 
+from pyEDAA.UCIS.Cobertura import Coverage
 from pyEDAA.UCIS.UCDB import Parser
 
 
