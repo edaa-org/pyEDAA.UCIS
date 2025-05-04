@@ -34,7 +34,7 @@ from io            import StringIO
 from unittest      import TestCase
 from unittest.mock import patch
 
-from pyEDAA.UCIS.CLI import Program, main
+from pyEDAA.UCIS.CLI import Application, main
 
 
 if __name__ == "__main__": # pragma: no cover
@@ -46,17 +46,17 @@ if __name__ == "__main__": # pragma: no cover
 PROGRAM = "pyedaa-ucis"
 
 class Help(TestCase):
-	_program: Program
+	_application: Application
 
 	def setUp(self) -> None:
-		self._program = Program()
+		self._application = Application()
 
 	@patch('sys.stderr', new_callable=StringIO)
 	@patch('sys.stdout', new_callable=StringIO)
 	def test_NoOptions(self, stdoutStream: StringIO, stderrStream: StringIO):
 		sys.argv = [PROGRAM]
 
-		self._program.Run()
+		self._application.Run()
 
 		stdout = stdoutStream.getvalue()
 		stderr = stderrStream.getvalue()
@@ -69,7 +69,7 @@ class Help(TestCase):
 	def test_HelpCommand(self, stdoutStream: StringIO, stderrStream: StringIO):
 		sys.argv = [PROGRAM, "help"]
 
-		self._program.Run()
+		self._application.Run()
 
 		stdout = stdoutStream.getvalue()
 		stderr = stderrStream.getvalue()
@@ -82,7 +82,7 @@ class Help(TestCase):
 	def test_HelpForExport(self, stdoutStream: StringIO, stderrStream: StringIO):
 		sys.argv = [PROGRAM, "help", "export"]
 
-		self._program.Run()
+		self._application.Run()
 
 		stdout = stdoutStream.getvalue()
 		stderr = stderrStream.getvalue()
@@ -96,7 +96,7 @@ class Help(TestCase):
 		sys.argv = [PROGRAM, "expand"]
 
 		with self.assertRaises(SystemExit) as ex:
-			self._program.Run()
+			self._application.Run()
 
 		self.assertEqual(2, ex.exception.code)
 
@@ -110,7 +110,7 @@ class Help(TestCase):
 	def test_HelpCommandUnknownCommand(self, stdoutStream: StringIO, stderrStream: StringIO):
 		sys.argv = [PROGRAM, "help", "expand"]
 
-		self._program.Run()
+		self._application.Run()
 
 		stdout = stdoutStream.getvalue()
 		stderr = stderrStream.getvalue()
@@ -119,17 +119,17 @@ class Help(TestCase):
 
 
 class Version(TestCase):
-	_program: Program
+	_application: Application
 
 	def setUp(self) -> None:
-		self._program = Program()
+		self._application = Application()
 
 	@patch('sys.stderr', new_callable=StringIO)
 	@patch('sys.stdout', new_callable=StringIO)
 	def test_VersionCommand(self, stdoutStream: StringIO, stderrStream: StringIO):
 		sys.argv = [PROGRAM, "version"]
 
-		self._program.Run()
+		self._application.Run()
 
 		stdout = stdoutStream.getvalue()
 		stderr = stderrStream.getvalue()
@@ -139,10 +139,10 @@ class Version(TestCase):
 
 
 class Export(TestCase):
-	_program: Program
+	_application: Application
 
 	def setUp(self) -> None:
-		self._program = Program()
+		self._application = Application()
 
 	@patch('sys.stderr', new_callable=StringIO)
 	@patch('sys.stdout', new_callable=StringIO)
@@ -150,7 +150,7 @@ class Export(TestCase):
 		sys.argv = [PROGRAM, "export"]
 
 		with self.assertRaises(SystemExit) as ex:
-			self._program.Run()
+			self._application.Run()
 
 		self.assertEqual(3, ex.exception.code)
 

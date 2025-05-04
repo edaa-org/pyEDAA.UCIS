@@ -1,2 +1,2 @@
-pyTooling ~= 8.4
+pyTooling[terminal] ~= 8.4
 lxml ~= 5.4
