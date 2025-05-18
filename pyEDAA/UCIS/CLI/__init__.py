@@ -72,13 +72,13 @@ class ProgramBase(TerminalApplication):
 	programTitle: str
 
 	def __init__(self) -> None:
-		pass
+		super().__init__()
 
 	def _PrintHeadline(self) -> None:
 		"""Print the program's headline."""
-		print("{line}".format(line="=" * 120))
-		print("{headline: ^120s}".format(headline=self.programTitle))
-		print("{line}".format(line="=" * 120))
+		self.WriteNormal(f"{'=' * 120}")
+		self.WriteNormal(f"{self.programTitle: ^120s}")
+		self.WriteNormal(f"{'=' * 120}")
 
 
 @export
@@ -94,9 +94,9 @@ class Application(ProgramBase, ArgParseHelperMixin):
 		ArgParseHelperMixin.__init__(
 			self,
 			prog="pyedaa-ucis",
-		  description=dedent('''\
+		  description=dedent("""\
 				'pyEDAA.UCIS Service Program' to query and transform data to/from UCIS to any other format.
-				'''),
+				"""),
 		  epilog=dedent("""\
 		    Currently the following output formats are supported:
 		     * Cobertura (statement coverage - Java oriented format)
@@ -133,7 +133,7 @@ class Application(ProgramBase, ArgParseHelperMixin):
 
 	def _PrintVersion(self) -> None:
 		"""Helper function to print the version information."""
-		print(dedent(f"""\
+		self.WriteNormal(dedent(f"""\
 			Copyright: {__copyright__}
 			License:   {__license__}
 			Version:   v{__version__}
@@ -143,14 +143,16 @@ class Application(ProgramBase, ArgParseHelperMixin):
 	def _PrintHelp(self, command: Nullable[str] = None) -> None:
 		"""Helper function to print the command line parsers help page(s)."""
 		if command is None:
-			self.MainParser.print_help()
+			self.MainParser.print_help(file=self._stdout)
+			return
 		elif command == "help":
-			print("This is a recursion ...")
-		else:
-			try:
-				self.SubParsers[command].print_help()
-			except KeyError:
-				print(f"Command {command} is unknown.")
+			self.WriteWarning("This is a recursion ...")
+			return
+
+		try:
+			self.SubParsers[command].print_help(file=self._stdout)
+		except KeyError:
+			self.WriteError(f"Command {command} is unknown.")
 
 	@CommandHandler("export", help="Export data from UCDB.", description="Export data from UCDB.")
 	@LongValuedFlag("--ucdb",      dest="ucdb",      metaName='UCDBFile',      help="UCDB file in UCIS format (XML).")
@@ -162,25 +164,26 @@ class Application(ProgramBase, ArgParseHelperMixin):
 
 		returnCode = 0
 		if args.ucdb is None:
-			print(f"Option '--ucdb <UCDBFile' is missing.")
+			self.WriteError("Option '--ucdb <UCDBFile' is missing.")
 			returnCode = 3
 		if args.cobertura is None:
-			print(f"Option '--cobertura <CoberturaFile' is missing.")
+			self.WriteError("Option '--cobertura <CoberturaFile' is missing.")
 			returnCode = 3
 
 		if returnCode != 0:
-			exit(returnCode)
+			self.Exit(returnCode)
 
-		print(f"Exporting code coverage information from UCDB file to Cobertura format ...")
+		self.WriteNormal("Exporting code coverage information from UCDB file to Cobertura format ...")
 
 		ucdbPath = Path(args.ucdb)
 		if not ucdbPath.exists():
-			raise FileNotFoundError(f"UCDB databse file '{ucdbPath}' not found.")
+			self.WriteError(f"UCDB databse file '{ucdbPath}' not found.")
+			self.Exit(4)
 
 		coberturaPath = Path(args.cobertura)
 
-		print(f"  IN  -> UCIS (XML):      {ucdbPath}")
-		print(f"  OUT <- Cobertura (XML): {coberturaPath}")
+		self.WriteNormal(f"  IN  -> UCIS (XML):      {ucdbPath}")
+		self.WriteNormal(f"  OUT <- Cobertura (XML): {coberturaPath}")
 
 		parser = Parser(ucdbPath, args.mergeInstances)
 		model = parser.getCoberturaModel()
@@ -188,7 +191,7 @@ class Application(ProgramBase, ArgParseHelperMixin):
 		with coberturaPath.open('w') as file:
 			file.write(model.getXml().decode("utf-8"))
 
-		print()
+		self.WriteNormal()
 
 		try:
 			lineCoverage = model.linesCovered / model.linesValid * 100
@@ -200,33 +203,12 @@ class Application(ProgramBase, ArgParseHelperMixin):
 		except ZeroDivisionError:
 			statementCoverage = 100
 
-		print(dedent(f"""\
+		self.WriteNormal(dedent(f"""\
 			[DONE] Export and conversion complete.
 			  Line coverage: {lineCoverage} %
 			  Statement coverage: {statementCoverage} %
 			""")
 		)
-
-	def _PrintVersion(self) -> None:
-		"""Helper function to print the version information."""
-		print(dedent(f"""\
-			Copyright: {__copyright__}
-			License:   {__license__}
-			Version:   v{__version__}
-			""")
-		)
-
-	def _PrintHelp(self, command: Nullable[str] = None) -> None:
-		"""Helper function to print the command line parsers help page(s)."""
-		if command is None:
-			self.MainParser.print_help()
-		elif command == "help":
-			print("This is a recursion ...")
-		else:
-			try:
-				self.SubParsers[command].print_help()
-			except KeyError:
-				print(f"Command {command} is unknown.")
 
 
 @export
