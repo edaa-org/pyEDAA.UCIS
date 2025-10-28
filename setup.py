@@ -39,19 +39,21 @@ packageName =            "pyEDAA.UCIS"
 packageDirectory =       packageName.replace(".", "/")
 packageInformationFile = Path(f"{packageDirectory}/__init__.py")
 
-setup(**DescribePythonPackageHostedOnGitHub(
-	packageName=packageName,
-	description="Tools to extract and convert data from UCDB files.",
-	gitHubNamespace=gitHubNamespace,
-	sourceFileWithVersion=packageInformationFile,
-	developmentStatus="stable",
-	classifiers=list(DEFAULT_CLASSIFIERS) + [
-		"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
-	],
-	dataFiles={
-		packageName: ["py.typed"]
-	},
-	consoleScripts={
-		"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
-	}
-))
+setup(
+	**DescribePythonPackageHostedOnGitHub(
+		packageName=packageName,
+		description="Tools to extract and convert data from UCDB files.",
+		gitHubNamespace=gitHubNamespace,
+		sourceFileWithVersion=packageInformationFile,
+		developmentStatus="stable",
+		classifiers=list(DEFAULT_CLASSIFIERS) + [
+			"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+		],
+		dataFiles={
+			packageName: ["py.typed"]
+		},
+		consoleScripts={
+			"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
+		}
+	)
+)

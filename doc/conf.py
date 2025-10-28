@@ -174,6 +174,7 @@ extensions = [
 	"sphinx.ext.viewcode",
 # SphinxContrib extensions
 	"sphinxcontrib.mermaid",
+	"sphinxcontrib.autoprogram",
 # Other extensions
 	"sphinx_design",
 	"sphinx_copybutton",
