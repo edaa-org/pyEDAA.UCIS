@@ -13,7 +13,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2025 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -31,7 +31,7 @@
 # ==================================================================================================================== #
 #
 """
-Tools to extract data from UCDB files.
+Tools to extract data from ACDB files.
 
 .. rubric:: Usage
 
@@ -46,57 +46,51 @@ At next use this layer's service program to convert from UCDB to Cobertura forma
 
 .. code-block::
 
-   pyedaa-ucis export --ucdb ucdb.xml --cobertura cobertura.xml
+   acdb2cobertura --input ucdb.xml --output cobertura.xml
 """
-from argparse import RawDescriptionHelpFormatter, Namespace
+from argparse import RawDescriptionHelpFormatter
 from pathlib  import Path
 from textwrap import dedent
-from typing   import Optional as Nullable
 
-from pyTooling.Decorators                     import export
-from pyTooling.Attributes.ArgParse            import ArgParseHelperMixin, DefaultHandler, CommandHandler
-from pyTooling.Attributes.ArgParse.Argument   import StringArgument
-from pyTooling.Attributes.ArgParse.ValuedFlag import LongValuedFlag
-from pyTooling.Attributes.ArgParse.Flag       import LongFlag
-from pyTooling.TerminalUI                     import TerminalApplication
+from pyAttributes.ArgParseAttributes import ArgParseMixin, DefaultAttribute, CommandAttribute, ArgumentAttribute, SwitchArgumentAttribute
 
-from pyEDAA.UCIS           import __version__, __copyright__, __license__
-from pyEDAA.UCIS.UCDB      import Parser
+from pyTooling.Decorators import export
+
+from pyEDAA.UCIS      import __version__, __copyright__, __license__
+from pyEDAA.UCIS.UCDB import Parser
 from pyEDAA.UCIS.Cobertura import CoberturaException
 
 
 @export
-class ProgramBase(TerminalApplication):
+class ProgramBase():
 	"""Base-class for all program classes."""
 
-	programTitle: str
+	programTitle = "ACDB Converter Tool"
 
 	def __init__(self) -> None:
-		super().__init__()
+		pass
 
 	def _PrintHeadline(self) -> None:
-		"""Print the program's headline."""
-		self.WriteNormal(f"{'=' * 120}")
-		self.WriteNormal(f"{self.programTitle: ^120s}")
-		self.WriteNormal(f"{'=' * 120}")
+		"""Print the programs headline."""
+		print("{line}".format(line="=" * 120))
+		print("{headline: ^120s}".format(headline=self.programTitle))
+		print("{line}".format(line="=" * 120))
 
 
 @export
-class Application(ProgramBase, ArgParseHelperMixin):
+class Program(ProgramBase, ArgParseMixin):
 	"""Program class to implement the command line interface (CLI) using commands and options."""
-
-	programTitle = "UCDB Service Program"
 
 	def __init__(self) -> None:
 		super().__init__()
 
 		# Call the constructor of the ArgParseMixin
-		ArgParseHelperMixin.__init__(
+		ArgParseMixin.__init__(
 			self,
-			prog="pyedaa-ucis",
-		  description=dedent("""\
-				'pyEDAA.UCIS Service Program' to query and transform data to/from UCIS to any other format.
-				"""),
+			prog="acdb2cobertura",
+		  description=dedent('''\
+				'acdb2cobertura Converter Tool' to extract and convert code coverage data to the Cobertura format.
+				'''),
 		  epilog=dedent("""\
 		    Currently the following output formats are supported:
 		     * Cobertura (statement coverage - Java oriented format)
@@ -109,81 +103,58 @@ class Application(ProgramBase, ArgParseHelperMixin):
 #	@CommonSwitchArgumentAttribute("-v", "--verbose", dest="verbose", help="Print out detailed messages.")
 #	@CommonSwitchArgumentAttribute("-d", "--debug",   dest="debug",   help="Enable debug mode.")
 	def Run(self) -> None:
-		ArgParseHelperMixin.Run(self)
+		ArgParseMixin.Run(self)
 
-	@DefaultHandler()
-	def HandleDefault(self, _: Namespace) -> None:
+#	@DefaultAttribute()
+	def HandleDefault(self, _) -> None:
 		"""Handle program calls without any command."""
 		self._PrintHeadline()
 		self._PrintHelp()
 
-	@CommandHandler("help", help="Display help page(s) for the given command name.", description="Display help page(s) for the given command name.")
-	@StringArgument(dest="Command", metaName="Command", optional=True, help="Print help page(s) for a command.")
-	def HandleHelp(self, args: Namespace) -> None:
+	@CommandAttribute("help", help="Display help page(s) for the given command name.", description="Display help page(s) for the given command name.")
+	@ArgumentAttribute(metavar="Command", dest="Command", type=str, nargs="?", help="Print help page(s) for a command.")
+	def HandleHelp(self, args) -> None:
 		"""Handle program calls with command ``help``."""
 		self._PrintHeadline()
 		self._PrintHelp(args.Command)
 
-	@CommandHandler("version", help="Display version information.", description="Display version information.")
-	def HandleVersion(self, _: Namespace) -> None:
+	@CommandAttribute("version", help="Display version information.", description="Display version information.")
+	def HandleVersion(self, _) -> None:
 		"""Handle program calls with command ``version``."""
 		self._PrintHeadline()
 		self._PrintVersion()
 
-
-	def _PrintVersion(self) -> None:
-		"""Helper function to print the version information."""
-		self.WriteNormal(dedent(f"""\
-			Copyright: {__copyright__}
-			License:   {__license__}
-			Version:   v{__version__}
-			""")
-		)
-
-	def _PrintHelp(self, command: Nullable[str] = None) -> None:
-		"""Helper function to print the command line parsers help page(s)."""
-		if command is None:
-			self.MainParser.print_help(file=self._stdout)
-			return
-		elif command == "help":
-			self.WriteWarning("This is a recursion ...")
-			return
-
-		try:
-			self.SubParsers[command].print_help(file=self._stdout)
-		except KeyError:
-			self.WriteError(f"Command {command} is unknown.")
-
-	@CommandHandler("export", help="Export data from UCDB.", description="Export data from UCDB.")
-	@LongValuedFlag("--ucdb",      dest="ucdb",      metaName='UCDBFile',      help="UCDB file in UCIS format (XML).")
-	@LongValuedFlag("--cobertura", dest="cobertura", metaName='CoberturaFile', help="Cobertura code coverage file (XML).")
-	@LongFlag("--merge-instances", dest="mergeInstances", help="Merge statement coverage data for all instances of the same design unit.")
+#	@CommandAttribute("export", help="Export data from UCDB.", description="Export data from UCDB.")
+	@DefaultAttribute()
+	@ArgumentAttribute("-i", "--input",  metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
+	@ArgumentAttribute("-o", "--output", metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
+	@SwitchArgumentAttribute("--units", dest="units", help="Statement coverage summary based on design units (default).")
+	@SwitchArgumentAttribute("--hierarchy", dest="hierarchy", help="Statement coverage summary based on hierarchy.")
 	def HandleExport(self, args) -> None:
 		"""Handle program calls with command ``export``."""
 		self._PrintHeadline()
 
 		returnCode = 0
 		if args.ucdb is None:
-			self.WriteError("Option '--ucdb <UCDBFile>' is missing.")
+			print(f"Option '--input <UCDBFile>' is missing.")
 			returnCode = 3
 		if args.cobertura is None:
-			self.WriteError("Option '--cobertura <CoberturaFile>' is missing.")
+			print(f"Option '--output <CoberturaFile>' is missing.")
 			returnCode = 3
 
 		if returnCode != 0:
-			self.Exit(returnCode)
+			exit(returnCode)
 
-		self.WriteNormal("Exporting code coverage information from UCDB file to Cobertura format ...")
+		print(f"Exporting code coverage information from UCDB file to Cobertura format ...")
 
 		ucdbPath = Path(args.ucdb)
 		if not ucdbPath.exists():
-			self.WriteError(f"UCDB databse file '{ucdbPath}' not found.")
-			self.Exit(4)
+			raise FileNotFoundError(f"UCDB databse file '{ucdbPath}' not found.")
 
 		coberturaPath = Path(args.cobertura)
 
-		self.WriteNormal(f"  IN  -> UCIS (XML):      {ucdbPath}")
-		self.WriteNormal(f"  OUT <- Cobertura (XML): {coberturaPath}")
+		print(f"  IN  -> UCIS (XML):      {ucdbPath}")
+		print(f"  OUT <- Cobertura (XML): {coberturaPath}")
 
 		parser = Parser(ucdbPath, args.mergeInstances)
 		model = parser.getCoberturaModel()
@@ -191,7 +162,7 @@ class Application(ProgramBase, ArgParseHelperMixin):
 		with coberturaPath.open('w') as file:
 			file.write(model.getXml().decode("utf-8"))
 
-		self.WriteNormal()
+		print()
 
 		try:
 			lineCoverage = model.linesCovered / model.linesValid * 100
@@ -203,12 +174,33 @@ class Application(ProgramBase, ArgParseHelperMixin):
 		except ZeroDivisionError:
 			statementCoverage = 100
 
-		self.WriteNormal(dedent(f"""\
+		print(dedent(f"""\
 			[DONE] Export and conversion complete.
 			  Line coverage: {lineCoverage} %
 			  Statement coverage: {statementCoverage} %
 			""")
 		)
+
+	def _PrintVersion(self):
+		"""Helper function to print the version information."""
+		print(dedent(f"""\
+			Copyright: {__copyright__}
+			License:   {__license__}
+			Version:   v{__version__}
+			""")
+		)
+
+	def _PrintHelp(self, command: str=None):
+		"""Helper function to print the command line parsers help page(s)."""
+		if (command is None):
+			self.MainParser.print_help()
+		elif (command == "help"):
+			print("This is a recursion ...")
+		else:
+			try:
+				self.SubParsers[command].print_help()
+			except KeyError:
+				print(f"Command {command} is unknown.")
 
 
 @export
@@ -223,25 +215,17 @@ def main():
 	This function creates an instance of :class:`Program` in a ``try ... except`` environment. Any exception caught is
 	formatted and printed before the program returns with a non-zero exit code.
 	"""
-	from sys import argv
-
-	program = Application()
-	program.Configure(
-		verbose=("-v" in argv or "--verbose" in argv),
-		debug=("-d" in argv or "--debug" in argv),
-		quiet=("-q" in argv or "--quiet" in argv)
-	)
+	program = Program()
 	try:
 		program.Run()
+	except FileNotFoundError as ex:
+		print()
+		print(f"[ERROR] {ex}")
+		exit(1)
 	except CoberturaException as ex:
-		program.WriteLineToStdErr(f"{{RED}}[ERROR] {ex}{{NOCOLOR}}".format(**Application.Foreground))
-		if ex.__cause__ is not None:
-			program.WriteLineToStdErr(f"{{DARK_YELLOW}}Because of: {ex.__cause__}{{NOCOLOR}}".format(**Application.Foreground))
-
-	except NotImplementedError as ex:
-		program.PrintNotImplementedError(ex)
-	except Exception as ex:
-		program.PrintException(ex)
+		print()
+		print(f"[INTERNAL ERROR] {ex}")
+		exit(1)
 
 
 if __name__ == "__main__":

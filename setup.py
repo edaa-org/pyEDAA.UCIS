@@ -52,6 +52,7 @@ setup(**DescribePythonPackageHostedOnGitHub(
 		packageName: ["py.typed"]
 	},
 	consoleScripts={
-		"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
+		"pyedaa-ucis":    "pyEDAA.UCIS.CLI:main",
+		"acdb2cobertura": "pyEDAA.UCIS.CLI.ACDB:main"
 	}
 ))
