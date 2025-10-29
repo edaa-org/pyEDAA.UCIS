@@ -11,11 +11,14 @@ jobs:
   Pipeline:
     uses: pyTooling/Actions/.github/workflows/CompletePipeline.yml@r6
     with:
-      package_namespace: pyEDAA
-      package_name: UCIS
-      codecov:       true
-      codacy:        true
-      dorny:         true
+      package_namespace: 'pyEDAA'
+      package_name:      'UCIS'
+      unittest_python_version_list: '3.11 3.12 3.13 3.14 pypy-3.11'
+      bandit:            'true'
+      pylint:            'true'
+      codecov:           'true'
+      codacy:            'true'
+      dorny:             'true'
     secrets:
       PYPI_TOKEN:    ${{ secrets.PYPI_TOKEN }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

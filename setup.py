@@ -45,15 +45,16 @@ setup(
 		description="Tools to extract and convert data from UCDB files.",
 		gitHubNamespace=gitHubNamespace,
 		sourceFileWithVersion=packageInformationFile,
-		developmentStatus="stable",
 		classifiers=list(DEFAULT_CLASSIFIERS) + [
 			"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
 		],
-		dataFiles={
-			packageName: ["py.typed"]
-		},
+		developmentStatus="stable",
+		pythonVersions=("3.11", "3.12", "3.13", "3.14"),
 		consoleScripts={
 			"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
+		},
+		dataFiles={
+			packageName: ["py.typed"]
 		}
 	)
 )
