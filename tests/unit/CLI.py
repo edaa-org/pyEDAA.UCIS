@@ -74,7 +74,7 @@ class Testcase(TestCase):
 
 class Help(Testcase):
 	@patch("sys.argv", [])
-	def test_NoOptions(self):
+	def test_NoOptions(self) -> None:
 		print()
 
 		app = Application()
@@ -88,7 +88,7 @@ class Help(Testcase):
 		self.assertEqual("", stderr)
 
 	@patch("sys.argv", ["help"])
-	def test_HelpCommand(self):
+	def test_HelpCommand(self) -> None:
 		print()
 
 		app = Application()
@@ -102,7 +102,7 @@ class Help(Testcase):
 		self.assertEqual("", stderr)
 
 	@patch("sys.argv", ["help", "expand"])
-	def test_HelpForExport(self):
+	def test_HelpForExport(self) -> None:
 		print()
 
 		app = Application()
@@ -117,7 +117,7 @@ class Help(Testcase):
 		self.assertEqual("", stderr)
 
 	@patch("sys.argv", ["expand"])
-	def test_UnknownCommand(self):
+	def test_UnknownCommand(self) -> None:
 		print()
 
 		app = Application()
@@ -133,7 +133,7 @@ class Help(Testcase):
 		self.assertEqual("", stderr)
 
 	@patch("sys.argv", ["help", "expand"])
-	def test_HelpCommandUnknownCommand(self):
+	def test_HelpCommandUnknownCommand(self) -> None:
 		print()
 
 		sys.argv = [PROGRAM, "help", "expand"]
@@ -150,7 +150,7 @@ class Help(Testcase):
 
 class Version(Testcase):
 	@patch("sys.argv", ["ucis", "version"])
-	def test_VersionCommand(self):
+	def test_VersionCommand(self) -> None:
 		print()
 
 		app = Application()
@@ -166,7 +166,7 @@ class Version(Testcase):
 
 class Export(Testcase):
 	@patch("sys.argv", ["export"])
-	def test_ExportCommandNoFilenames(self):
+	def test_ExportCommandNoFilenames(self) -> None:
 		print()
 
 		app = Application()
@@ -182,7 +182,7 @@ class Export(Testcase):
 		self.assertEqual("", stderr)
 
 	@patch("sys.argv", ["export", "--ucdb", "file1.xml", "--cobertura", "file2.xml"])
-	def test_ExportCommandWithFilenames(self):
+	def test_ExportCommandWithFilenames(self) -> None:
 		print()
 
 		app = Application()

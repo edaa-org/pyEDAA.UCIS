@@ -75,7 +75,7 @@ class Class:
 	linesValid: int
 	linesCovered: int
 
-	def __init__(self, name: str, sourceFile: str):
+	def __init__(self, name: str, sourceFile: str) -> None:
 		self.name = name
 		self.sourceFile = sourceFile
 		self.lines = {}
@@ -129,7 +129,7 @@ class Package:
 	linesValid: int
 	linesCovered: int
 
-	def __init__(self, name: str):
+	def __init__(self, name: str) -> None:
 		self.name = name
 		self.classes = {}
 		self.linesValid = 0
