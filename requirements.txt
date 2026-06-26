@@ -1,2 +1,2 @@
-pyTooling[terminal] ~= 8.11
-lxml >= 5.4, <7.0
+pyTooling[terminal] ~= 8.15
+lxml >= 6.1 , <7.0
