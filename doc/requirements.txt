@@ -2,7 +2,7 @@
 
 # Enforce latest version on ReadTheDocs
 sphinx ~= 9.1
-docutils ~= 0.22.0
+docutils ~= 0.23.0
 docutils_stubs ~= 0.0.22
 
 # ReadTheDocs Theme
