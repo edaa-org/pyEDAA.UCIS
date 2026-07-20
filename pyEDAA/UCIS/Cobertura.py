@@ -12,7 +12,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2026 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -75,7 +75,7 @@ class Class:
 	linesValid: int
 	linesCovered: int
 
-	def __init__(self, name: str, sourceFile: str):
+	def __init__(self, name: str, sourceFile: str) -> None:
 		self.name = name
 		self.sourceFile = sourceFile
 		self.lines = {}
@@ -129,13 +129,13 @@ class Package:
 	linesValid: int
 	linesCovered: int
 
-	def __init__(self, name: str):
+	def __init__(self, name: str) -> None:
 		self.name = name
 		self.classes = {}
 		self.linesValid = 0
 		self.linesCovered = 0
 
-	def addClass(self, coberturaClass: Class):
+	def addClass(self, coberturaClass: Class) -> None:
 		if coberturaClass.name in self.classes:
 			raise DuplicatedClassName(f"Duplicated class name: '{coberturaClass.name}'.")
 
@@ -180,7 +180,7 @@ class Coverage:
 	linesValid: int
 	linesCovered: int
 
-	def __init__(self):
+	def __init__(self) -> None:
 		self.sources = set()
 		self.packages = {}
 		self.linesValid = 0

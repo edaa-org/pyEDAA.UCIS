@@ -1,3 +1,2 @@
-pyTooling>=1.9.5
-pyAttributes>=2.5.1
-lxml>=4.8
+pyTooling[terminal] ~= 8.16
+lxml >= 6.1 , <7.0

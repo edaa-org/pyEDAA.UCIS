@@ -15,7 +15,7 @@
 
 .. only:: html
 
-   |  |SHIELD:svg:UCIS-github| |SHIELD:svg:UCIS-src-license| |SHIELD:svg:UCIS-ghp-doc| |SHIELD:svg:UCIS-doc-license| |SHIELD:svg:UCIS-gitter|
+   |  |SHIELD:svg:UCIS-github| |SHIELD:svg:UCIS-src-license| |SHIELD:svg:UCIS-ghp-doc| |SHIELD:svg:UCIS-doc-license|
    |  |SHIELD:svg:UCIS-pypi-tag| |SHIELD:svg:UCIS-pypi-status| |SHIELD:svg:UCIS-pypi-python|
    |  |SHIELD:svg:UCIS-gha-test| |SHIELD:svg:UCIS-lib-status| |SHIELD:svg:UCIS-codacy-quality| |SHIELD:svg:UCIS-codacy-coverage| |SHIELD:svg:UCIS-codecov-coverage|
 
@@ -23,7 +23,7 @@
 
 .. only:: latex
 
-   |SHIELD:png:UCIS-github| |SHIELD:png:UCIS-src-license| |SHIELD:png:UCIS-ghp-doc| |SHIELD:png:UCIS-doc-license| |SHIELD:png:UCIS-gitter|
+   |SHIELD:png:UCIS-github| |SHIELD:png:UCIS-src-license| |SHIELD:png:UCIS-ghp-doc| |SHIELD:png:UCIS-doc-license|
    |SHIELD:png:UCIS-pypi-tag| |SHIELD:png:UCIS-pypi-status| |SHIELD:png:UCIS-pypi-python|
    |SHIELD:png:UCIS-gha-test| |SHIELD:png:UCIS-lib-status| |SHIELD:png:UCIS-codacy-quality| |SHIELD:png:UCIS-codacy-coverage| |SHIELD:png:UCIS-codecov-coverage|
 
@@ -35,17 +35,17 @@ The pyEDAA.UCIS Documentation
 Unified Coverage Interoperability Standard (UCIS).
 
 
-.. _goals:
+.. _GOALS:
 
 Main Goals
 **********
 
-* Parse UCDB files and provide a UCDB data model.
+* Convert UCDB files and provide a UCDB data model.
 * Export and convert code coverage information from UCDB to Cobertura format.
 * Also support flavors not following the Unified Coverage Interoperability Standard (UCIS).
 
 
-.. _usecase:
+.. _USECASES:
 
 Use Cases
 *********
@@ -54,7 +54,7 @@ Use Cases
   code coverage can be published to e.g. GitLab, Codacy or CodeCov.
 
 
-.. _news:
+.. _NEWS:
 
 News
 ****
@@ -99,32 +99,25 @@ News
 * Aldec Inc. gave permission to release the script as open source under *Apache License, version 2.0*.
 
 
-.. _contributors:
+.. _CONTRIBUTORS:
 
 Contributors
 ************
 
-* `Patrick Lehmann <https://GitHub.com/Paebbels>`__ (Maintainer)
-* `Artur Porebski (Aldec Inc.) <https://github.com/por3bski>`__
-* `Michal Pacula (Aldec Inc.) <https://github.com/mikep996>`__
-* `Unai Martinez-Corral <https://GitHub.com/umarcor/>`__
+* :gh:`Patrick Lehmann <Paebbels>` (Maintainer)
+* :gh:`Artur Porebski (Aldec Inc.) <https://github.com/por3bski>`
+* :gh:`Michal Pacula (Aldec Inc.) <https://github.com/mikep996>`
+* :gh:`Unai Martinez-Corral <umarcor>`
 * `and more... <https://GitHub.com/edaa-org/pyEDAA.UCIS/graphs/contributors>`__
 
 
-.. _license:
+.. _LICENSE:
 
 License
 *******
 
-.. only:: html
-
-   This Python package (source code) is licensed under `Apache License 2.0 <Code-License.html>`__. |br|
-   The accompanying documentation is licensed under `Creative Commons - Attribution 4.0 (CC-BY 4.0) <Doc-License.html>`__.
-
-.. only:: latex
-
-   This Python package (source code) is licensed under **Apache License 2.0**. |br|
-   The accompanying documentation is licensed under **Creative Commons - Attribution 4.0 (CC-BY 4.0)**.
+This Python package (source code) is licensed under :ref:`Apache License 2.0 <CODELICENSE>`. |br|
+The accompanying documentation is licensed under :ref:`Creative Commons - Attribution 4.0 (CC-BY 4.0) <DOCLICENSE>`.
 
 
 .. toctree::
@@ -151,14 +144,20 @@ License
 
 .. raw:: latex
 
-   \part{References}
+   \part{References and Reports}
 
 .. toctree::
-   :caption: References
+   :caption: References and Reports
    :hidden:
 
-   CommandLineInterface
-   pyEDAA.UCIS/index
+   Python Class Reference <pyEDAA.UCIS/pyEDAA.UCIS>
+   unittests/index
+   coverage/index
+   CodeCoverage
+   Doc. Coverage Report <DocCoverage>
+   Static Type Check Report ➚ <typing/index>
+
+.. Coverage Report ➚ <coverage/index>
 
 .. raw:: latex
 
@@ -168,12 +167,9 @@ License
    :caption: Appendix
    :hidden:
 
-   Coverage Report ➚ <coverage/index>
-   Static Type Check Report ➚ <typing/index>
    License
    Doc-License
    Glossary
    genindex
-
-.. #
-   py-modindex
+   Python Module Index <modindex>
+   TODO

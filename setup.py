@@ -11,7 +11,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2026 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -29,24 +29,32 @@
 # ==================================================================================================================== #
 #
 """Package installer for 'Tools to extract and convert data from UCDB files'."""
+from setuptools          import setup
+
 from pathlib             import Path
-from pyTooling.Packaging import DescribePythonPackageHostedOnGitHub
+from pyTooling.Packaging import DescribePythonPackageHostedOnGitHub, DEFAULT_CLASSIFIERS
 
 gitHubNamespace =        "pyEDAA"
 packageName =            "pyEDAA.UCIS"
 packageDirectory =       packageName.replace(".", "/")
 packageInformationFile = Path(f"{packageDirectory}/__init__.py")
 
-DescribePythonPackageHostedOnGitHub(
-	packageName=packageName,
-	description="Tools to extract and convert data from UCDB files.",
-	gitHubNamespace=gitHubNamespace,
-	sourceFileWithVersion=packageInformationFile,
-	developmentStatus="stable",
-	classifiers=[
-		"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
-	],
-	consoleScripts={
-		"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
-	}
+setup(
+	**DescribePythonPackageHostedOnGitHub(
+		packageName=packageName,
+		description="Tools to extract and convert data from UCDB files.",
+		gitHubNamespace=gitHubNamespace,
+		sourceFileWithVersion=packageInformationFile,
+		classifiers=list(DEFAULT_CLASSIFIERS) + [
+			"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+		],
+		developmentStatus="stable",
+		pythonVersions=("3.11", "3.12", "3.13", "3.14"),
+		consoleScripts={
+			"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
+		},
+		dataFiles={
+			packageName: ["py.typed"]
+		}
+	)
 )

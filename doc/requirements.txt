@@ -1,13 +1,18 @@
 -r ../requirements.txt
 
-pyTooling>=1.9.5
-
 # Enforce latest version on ReadTheDocs
-sphinx>=4.4.0
+sphinx ~= 9.1
+docutils ~= 0.22.0
+docutils_stubs ~= 0.0.22
+
+# ReadTheDocs Theme
+sphinx_rtd_theme ~= 3.1
 
 # Sphinx Extenstions
-autoapi>=2.0.1
-sphinxcontrib.autoprogram>=0.1.7
-sphinxcontrib-mermaid>=0.7.1
-sphinx_fontawesome>=0.0.6
-sphinx_autodoc_typehints>=1.17.0
+sphinxcontrib-mermaid ~= 2.1
+sphinxcontrib-autoprogram ~= 0.1.9
+autoapi >= 2.0.1
+sphinx_design ~= 0.7.0
+sphinx-copybutton >= 0.5.2
+sphinx_autodoc_typehints ~= 3.12
+sphinx_reports ~= 0.11.1

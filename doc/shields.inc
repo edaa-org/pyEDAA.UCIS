@@ -4,11 +4,11 @@
    # percent encoding so that the URL is properly parsed.
 
 .. # Sourcecode link to GitHub
-.. |SHIELD:svg:UCIS-github| image:: https://img.shields.io/badge/pyEDAA-UCIS-29b6f6.svg?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
+.. |SHIELD:svg:UCIS-github| image:: https://img.shields.io/badge/pyEDAA-UCIS-29b6f6?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
    :alt: Sourcecode on GitHub
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS
-.. |SHIELD:png:UCIS-github| image:: https://raster.shields.io/badge/pyEDAA-UCIS-29b6f6.svg?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
+.. |SHIELD:png:UCIS-github| image:: https://raster.shields.io/badge/pyEDAA-UCIS-29b6f6?longCache=true&style=flat-square&logo=GitHub&labelColor=0277bd
    :alt: Sourcecode on GitHub
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS
@@ -64,11 +64,11 @@
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS/network/dependents
 
 .. # GHA test and coverage
-.. |SHIELD:svg:UCIS-gha-test| image:: https://img.shields.io/github/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline/main?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
+.. |SHIELD:svg:UCIS-gha-test| image:: https://img.shields.io/github/actions/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline.yml?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
    :alt: GitHub Workflow - Build and Test Status
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml
-.. |SHIELD:png:UCIS-gha-test| image:: https://raster.shields.io/github/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline/main?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
+.. |SHIELD:png:UCIS-gha-test| image:: https://raster.shields.io/github/actions/workflow/status/edaa-org/pyEDAA.UCIS/Pipeline.yml?longCache=true&style=flat-square&label=Build%20and%20Test&logo=GitHub%20Actions&logoColor=FFFFFF
    :alt: GitHub Workflow - Build and Test Status
    :height: 22
    :target: https://GitHub.com/edaa-org/pyEDAA.UCIS/actions/workflows/Pipeline.yml
@@ -180,11 +180,11 @@
    :target: https://edaa-org.github.io/pyEDAA.UCIS/
 
 .. # Gitter
-.. |SHIELD:svg:UCIS-gitter| image:: https://img.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef
+.. |SHIELD:svg:UCIS-gitter| image:: https://img.shields.io/badge/chat-on%20gitter-4db797?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef
    :alt: Documentation License
    :height: 22
    :target: https://gitter.im/hdl/community
-.. |SHIELD:png:UCIS-gitter| image:: https://raster.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef
+.. |SHIELD:png:UCIS-gitter| image:: https://raster.shields.io/badge/chat-on%20gitter-4db797?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef
    :alt: Documentation License
    :height: 22
    :target: https://gitter.im/hdl/community

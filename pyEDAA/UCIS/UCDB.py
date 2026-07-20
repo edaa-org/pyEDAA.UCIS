@@ -12,7 +12,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2026 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -76,11 +76,11 @@ class Parser:
 	statementsCount: int
 	statementsCovered: int
 
-	def __init__(self, ucdbFile: Path, mergeInstances: bool):
+	def __init__(self, ucdbFile: Path, mergeInstances: bool) -> None:
 		self._mergeInstances = mergeInstances
 
-		with ucdbFile.open("r") as filename:
-			self._tree = etree.parse(filename)
+		with ucdbFile.open("r", encoding="utf-8") as fileHandle:
+			self._tree = etree.parse(fileHandle)
 
 		self._nsmap = {
 			k: v for (k, v) in self._tree.getroot().nsmap.items() if k is not None
@@ -121,13 +121,13 @@ class Parser:
 		)
 
 		if not isinstance(scopes, list):
-			raise InternalErrorOccurred(f"Unexpected type: '{scopes.__class__.__name__}'.")
+			raise InternalErrorOccurred(f"Unexpected type: '{getFullyQualifiedName(scopes)}'.")
 
 		nodes: List[etree._Element] = []
 
 		for scopeNode in scopes:
 			if not isinstance(scopeNode, etree._Element):
-				raise InternalErrorOccurred(f"Unexpected type: '{scopeNode.__class__.__name__}'.")
+				raise InternalErrorOccurred(f"Unexpected type: '{getFullyQualifiedName(scopeNode)}'.")
 
 			typeName = scopeNode.get("type")
 
@@ -140,11 +140,11 @@ class Parser:
 			statementBins = scopeNode.xpath(".//ux:bin[@type='STMTBIN']", namespaces=self._nsmap)
 
 			if not isinstance(statementBins, list):
-				raise InternalErrorOccurred(f"Unexpected type: '{statementBins.__class__.__name__}'.")
+				raise InternalErrorOccurred(f"Unexpected type: '{getFullyQualifiedName(statementBins)}'.")
 
 			for statementBin in statementBins:
 				if not isinstance(statementBin, etree._Element):
-					raise InternalErrorOccurred(f"Unexpected type: '{statementBin.__class__.__name__}'.")
+					raise InternalErrorOccurred(f"Unexpected type: '{getFullyQualifiedName(statementBin)}'.")
 
 				nodes.append(statementBin)
 

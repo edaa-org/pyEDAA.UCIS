@@ -13,7 +13,7 @@
 #                                                                                                                      #
 # License:                                                                                                             #
 # ==================================================================================================================== #
-# Copyright 2021-2022 Electronic Design Automation Abstraction (EDA²)                                                  #
+# Copyright 2021-2026 Electronic Design Automation Abstraction (EDA²)                                                  #
 #                                                                                                                      #
 # Licensed under the Apache License, Version 2.0 (the "License");                                                      #
 # you may not use this file except in compliance with the License.                                                     #
@@ -48,49 +48,55 @@ At next use this layer's service program to convert from UCDB to Cobertura forma
 
    pyedaa-ucis export --ucdb ucdb.xml --cobertura cobertura.xml
 """
-from argparse import RawDescriptionHelpFormatter
+from argparse import RawDescriptionHelpFormatter, Namespace
 from pathlib  import Path
 from textwrap import dedent
+from typing   import Optional as Nullable
 
-from pyAttributes.ArgParseAttributes import ArgParseMixin, DefaultAttribute, CommandAttribute, ArgumentAttribute, SwitchArgumentAttribute
+from pyTooling.Decorators                     import export
+from pyTooling.Attributes.ArgParse            import ArgParseHelperMixin, DefaultHandler, CommandHandler
+from pyTooling.Attributes.ArgParse.Argument   import StringArgument
+from pyTooling.Attributes.ArgParse.ValuedFlag import LongValuedFlag
+from pyTooling.Attributes.ArgParse.Flag       import LongFlag
+from pyTooling.TerminalUI                     import TerminalApplication
 
-from pyTooling.Decorators import export
-
-from pyEDAA.UCIS      import __version__, __copyright__, __license__
-from pyEDAA.UCIS.UCDB import Parser
+from pyEDAA.UCIS           import __version__, __copyright__, __license__
+from pyEDAA.UCIS.UCDB      import Parser
 from pyEDAA.UCIS.Cobertura import CoberturaException
 
 
 @export
-class ProgramBase():
+class ProgramBase(TerminalApplication):
 	"""Base-class for all program classes."""
 
-	programTitle = "UCDB Service Program"
+	programTitle: str
 
 	def __init__(self) -> None:
-		pass
+		super().__init__()
 
 	def _PrintHeadline(self) -> None:
-		"""Print the programs headline."""
-		print("{line}".format(line="=" * 120))
-		print("{headline: ^120s}".format(headline=self.programTitle))
-		print("{line}".format(line="=" * 120))
+		"""Print the program's headline."""
+		self.WriteNormal(f"{'=' * 120}")
+		self.WriteNormal(f"{self.programTitle: ^120s}")
+		self.WriteNormal(f"{'=' * 120}")
 
 
 @export
-class Program(ProgramBase, ArgParseMixin):
+class Application(ProgramBase, ArgParseHelperMixin):
 	"""Program class to implement the command line interface (CLI) using commands and options."""
+
+	programTitle = "UCDB Service Program"
 
 	def __init__(self) -> None:
 		super().__init__()
 
 		# Call the constructor of the ArgParseMixin
-		ArgParseMixin.__init__(
+		ArgParseHelperMixin.__init__(
 			self,
 			prog="pyedaa-ucis",
-		  description=dedent('''\
+		  description=dedent("""\
 				'pyEDAA.UCIS Service Program' to query and transform data to/from UCIS to any other format.
-				'''),
+				"""),
 		  epilog=dedent("""\
 		    Currently the following output formats are supported:
 		     * Cobertura (statement coverage - Java oriented format)
@@ -103,56 +109,81 @@ class Program(ProgramBase, ArgParseMixin):
 #	@CommonSwitchArgumentAttribute("-v", "--verbose", dest="verbose", help="Print out detailed messages.")
 #	@CommonSwitchArgumentAttribute("-d", "--debug",   dest="debug",   help="Enable debug mode.")
 	def Run(self) -> None:
-		ArgParseMixin.Run(self)
+		ArgParseHelperMixin.Run(self)
 
-	@DefaultAttribute()
-	def HandleDefault(self, _) -> None:
+	@DefaultHandler()
+	def HandleDefault(self, _: Namespace) -> None:
 		"""Handle program calls without any command."""
 		self._PrintHeadline()
 		self._PrintHelp()
 
-	@CommandAttribute("help", help="Display help page(s) for the given command name.", description="Display help page(s) for the given command name.")
-	@ArgumentAttribute(metavar="Command", dest="Command", type=str, nargs="?", help="Print help page(s) for a command.")
-	def HandleHelp(self, args) -> None:
+	@CommandHandler("help", help="Display help page(s) for the given command name.", description="Display help page(s) for the given command name.")
+	@StringArgument(dest="Command", metaName="Command", optional=True, help="Print help page(s) for a command.")
+	def HandleHelp(self, args: Namespace) -> None:
 		"""Handle program calls with command ``help``."""
 		self._PrintHeadline()
 		self._PrintHelp(args.Command)
 
-	@CommandAttribute("version", help="Display version information.", description="Display version information.")
-	def HandleVersion(self, _) -> None:
+	@CommandHandler("version", help="Display version information.", description="Display version information.")
+	def HandleVersion(self, _: Namespace) -> None:
 		"""Handle program calls with command ``version``."""
 		self._PrintHeadline()
 		self._PrintVersion()
 
-	@CommandAttribute("export", help="Export data from UCDB.", description="Export data from UCDB.")
-	@ArgumentAttribute("--ucdb",      metavar='UCDBFile',      dest="ucdb",      type=str, help="UCDB file in UCIS format (XML).")
-	@ArgumentAttribute("--cobertura", metavar='CoberturaFile', dest="cobertura", type=str, help="Cobertura code coverage file (XML).")
-	@SwitchArgumentAttribute("--merge-instances", dest="mergeInstances", help="Merge statement coverage data for all instances of the same design unit.")
+
+	def _PrintVersion(self) -> None:
+		"""Helper function to print the version information."""
+		self.WriteNormal(dedent(f"""\
+			Copyright: {__copyright__}
+			License:   {__license__}
+			Version:   v{__version__}
+			""")
+		)
+
+	def _PrintHelp(self, command: Nullable[str] = None) -> None:
+		"""Helper function to print the command line parsers help page(s)."""
+		if command is None:
+			self.MainParser.print_help(file=self._stdout)
+			return
+		elif command == "help":
+			self.WriteWarning("This is a recursion ...")
+			return
+
+		try:
+			self.SubParsers[command].print_help(file=self._stdout)
+		except KeyError:
+			self.WriteError(f"Command {command} is unknown.")
+
+	@CommandHandler("export", help="Export data from UCDB.", description="Export data from UCDB.")
+	@LongValuedFlag("--ucdb",      dest="ucdb",      metaName='UCDBFile',      help="UCDB file in UCIS format (XML).")
+	@LongValuedFlag("--cobertura", dest="cobertura", metaName='CoberturaFile', help="Cobertura code coverage file (XML).")
+	@LongFlag("--merge-instances", dest="mergeInstances", help="Merge statement coverage data for all instances of the same design unit.")
 	def HandleExport(self, args) -> None:
 		"""Handle program calls with command ``export``."""
 		self._PrintHeadline()
 
 		returnCode = 0
 		if args.ucdb is None:
-			print(f"Option '--ucdb <UCDBFile' is missing.")
+			self.WriteError("Option '--ucdb <UCDBFile' is missing.")
 			returnCode = 3
 		if args.cobertura is None:
-			print(f"Option '--cobertura <CoberturaFile' is missing.")
+			self.WriteError("Option '--cobertura <CoberturaFile' is missing.")
 			returnCode = 3
 
 		if returnCode != 0:
-			exit(returnCode)
+			self.Exit(returnCode)
 
-		print(f"Exporting code coverage information from UCDB file to Cobertura format ...")
+		self.WriteNormal("Exporting code coverage information from UCDB file to Cobertura format ...")
 
 		ucdbPath = Path(args.ucdb)
 		if not ucdbPath.exists():
-			raise FileNotFoundError(f"UCDB databse file '{ucdbPath}' not found.")
+			self.WriteError(f"UCDB databse file '{ucdbPath}' not found.")
+			self.Exit(4)
 
 		coberturaPath = Path(args.cobertura)
 
-		print(f"  IN  -> UCIS (XML):      {ucdbPath}")
-		print(f"  OUT <- Cobertura (XML): {coberturaPath}")
+		self.WriteNormal(f"  IN  -> UCIS (XML):      {ucdbPath}")
+		self.WriteNormal(f"  OUT <- Cobertura (XML): {coberturaPath}")
 
 		parser = Parser(ucdbPath, args.mergeInstances)
 		model = parser.getCoberturaModel()
@@ -160,7 +191,7 @@ class Program(ProgramBase, ArgParseMixin):
 		with coberturaPath.open('w') as file:
 			file.write(model.getXml().decode("utf-8"))
 
-		print()
+		self.WriteNormal()
 
 		try:
 			lineCoverage = model.linesCovered / model.linesValid * 100
@@ -172,33 +203,12 @@ class Program(ProgramBase, ArgParseMixin):
 		except ZeroDivisionError:
 			statementCoverage = 100
 
-		print(dedent(f"""\
+		self.WriteNormal(dedent(f"""\
 			[DONE] Export and conversion complete.
 			  Line coverage: {lineCoverage} %
 			  Statement coverage: {statementCoverage} %
 			""")
 		)
-
-	def _PrintVersion(self):
-		"""Helper function to print the version information."""
-		print(dedent(f"""\
-			Copyright: {__copyright__}
-			License:   {__license__}
-			Version:   v{__version__}
-			""")
-		)
-
-	def _PrintHelp(self, command: str=None):
-		"""Helper function to print the command line parsers help page(s)."""
-		if (command is None):
-			self.MainParser.print_help()
-		elif (command == "help"):
-			print("This is a recursion ...")
-		else:
-			try:
-				self.SubParsers[command].print_help()
-			except KeyError:
-				print(f"Command {command} is unknown.")
 
 
 @export
@@ -213,17 +223,25 @@ def main():
 	This function creates an instance of :class:`Program` in a ``try ... except`` environment. Any exception caught is
 	formatted and printed before the program returns with a non-zero exit code.
 	"""
-	program = Program()
+	from sys import argv
+
+	program = Application()
+	program.Configure(
+		verbose=("-v" in argv or "--verbose" in argv),
+		debug=("-d" in argv or "--debug" in argv),
+		quiet=("-q" in argv or "--quiet" in argv)
+	)
 	try:
 		program.Run()
-	except FileNotFoundError as ex:
-		print()
-		print(f"[ERROR] {ex}")
-		exit(1)
 	except CoberturaException as ex:
-		print()
-		print(f"[INTERNAL ERROR] {ex}")
-		exit(1)
+		program.WriteLineToStdErr(f"{{RED}}[ERROR] {ex}{{NOCOLOR}}".format(**Application.Foreground))
+		if ex.__cause__ is not None:
+			program.WriteLineToStdErr(f"{{DARK_YELLOW}}Because of: {ex.__cause__}{{NOCOLOR}}".format(**Application.Foreground))
+
+	except NotImplementedError as ex:
+		program.PrintNotImplementedError(ex)
+	except Exception as ex:
+		program.PrintException(ex)
 
 
 if __name__ == "__main__":
