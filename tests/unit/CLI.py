@@ -101,7 +101,7 @@ class Help(Testcase):
 		self.assertIn(f"usage: {PROGRAM}", stdout)
 		self.assertEqual("", stderr)
 
-	@patch("sys.argv", ["help", "expand"])
+	@patch("sys.argv", [PROGRAM, "help", "export"])
 	def test_HelpForExport(self) -> None:
 		print()
 
@@ -181,8 +181,9 @@ class Export(Testcase):
 		self.assertIn("UCDB Service Program", stdout)
 		self.assertEqual("", stderr)
 
-	@patch("sys.argv", ["export", "--ucdb", "file1.xml", "--cobertura", "file2.xml"])
+	@patch("sys.argv", [PROGRAM, "export", "--ucdb", "file1.xml", "--cobertura", "file2.xml"])
 	def test_ExportCommandWithFilenames(self) -> None:
+		"""A UCDB file, which doesn't exist, ends the program with exit code 4."""
 		print()
 
 		app = Application()
@@ -190,7 +191,7 @@ class Export(Testcase):
 		try:
 			app.Run()
 		except SystemExit as ex:
-			self.assertEqual(2, ex.code)
+			self.assertEqual(4, ex.code)
 
 		stdout, stderr = self._PrintToStdOutAndStdErr(out, err)
 
