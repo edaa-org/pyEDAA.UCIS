@@ -49,7 +49,7 @@ setup(
 			"Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
 		],
 		developmentStatus="stable",
-		pythonVersions=("3.11", "3.12", "3.13", "3.14"),
+		pythonVersions=("3.11", "3.12", "3.13", "3.14", "3.15"),
 		consoleScripts={
 			"pyedaa-ucis": "pyEDAA.UCIS.CLI:main"
 		},
