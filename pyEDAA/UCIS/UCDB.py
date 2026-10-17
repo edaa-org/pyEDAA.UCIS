@@ -37,6 +37,7 @@ from pathlib import Path
 from typing import List, Tuple, Dict, DefaultDict
 
 from lxml import etree
+from pyTooling.Common import getFullyQualifiedName
 from pyTooling.Decorators import export
 
 from pyEDAA.UCIS.Cobertura import Class, Coverage, Package
