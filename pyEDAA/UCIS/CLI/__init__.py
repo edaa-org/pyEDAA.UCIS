@@ -51,7 +51,7 @@ At next use this layer's service program to convert from UCDB to Cobertura forma
 from argparse import RawDescriptionHelpFormatter, Namespace
 from pathlib  import Path
 from textwrap import dedent
-from typing   import Optional as Nullable
+from typing   import ClassVar, Optional as Nullable
 
 from pyTooling.Decorators                     import export
 from pyTooling.Attributes.ArgParse            import ArgParseHelperMixin, DefaultHandler, CommandHandler
@@ -69,7 +69,7 @@ from pyEDAA.UCIS.Cobertura import CoberturaException
 class ProgramBase(TerminalApplication):
 	"""Base-class for all program classes."""
 
-	programTitle: str
+	programTitle: ClassVar[str]  #: The program's title, printed in the headline.
 
 	def __init__(self) -> None:
 		super().__init__()
@@ -234,9 +234,9 @@ def main():
 	try:
 		program.Run()
 	except CoberturaException as ex:
-		program.WriteLineToStdErr(f"{{RED}}[ERROR] {ex}{{NOCOLOR}}".format(**Application.Foreground))
+		program.WriteLineToStdErr(f"{{RED}}[ERROR] {ex}{{NOCOLOR}}".format(**Application.FOREGROUND))
 		if ex.__cause__ is not None:
-			program.WriteLineToStdErr(f"{{DARK_YELLOW}}Because of: {ex.__cause__}{{NOCOLOR}}".format(**Application.Foreground))
+			program.WriteLineToStdErr(f"{{DARK_YELLOW}}Because of: {ex.__cause__}{{NOCOLOR}}".format(**Application.FOREGROUND))
 
 	except NotImplementedError as ex:
 		program.PrintNotImplementedError(ex)
